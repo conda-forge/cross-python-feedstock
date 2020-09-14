@@ -1,4 +1,5 @@
-{% set build_number = "1" %}
+{% set build_number = "2" %}
+
 package:
   name: cross-python
   version: {{ version }}
@@ -19,7 +20,7 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/etc/conda/activate.d/activate-cross-python.sh
+    - test -f $PREFIX/etc/conda/activate.d/activate-z-cross-python.sh
 
 about:
   home: https://github.com/conda-forge/cross-python-feedstock
