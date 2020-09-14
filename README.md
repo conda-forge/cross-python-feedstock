@@ -15,7 +15,21 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>Travis</td>
+    <td>
+      <a href="https://travis-ci.com/conda-forge/cross-python-feedstock">
+        <img alt="macOS" src="https://img.shields.io/travis/com/conda-forge/cross-python-feedstock/master.svg?label=macOS">
+      </a>
+    </td>
+  </tr><tr>
+    <td>Drone</td>
+    <td>
+      <a href="https://cloud.drone.io/conda-forge/cross-python-feedstock">
+        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/cross-python-feedstock/master.svg?label=Linux">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
@@ -47,6 +61,48 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_version3.8" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_version3.6</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_version3.6" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_version3.7</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_version3.7" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_version3.8</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_version3.8" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_version3.6</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_version3.6" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_version3.7</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_version3.7" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_version3.8</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_version3.8" alt="variant">
                 </a>
               </td>
             </tr><tr>

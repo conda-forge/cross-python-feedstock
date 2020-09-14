@@ -1,4 +1,4 @@
-{% set build_number = "0" %}
+{% set build_number = "1" %}
 package:
   name: cross-python
   version: {{ version }}
@@ -7,6 +7,9 @@ build:
   number: {{ build_number }}
   string: {{ build_number }}_cpython
   skip: True  # [win]
+  run_exports:
+    strong:
+      - python {{ version }}.*
 
 requirements:
   run:
