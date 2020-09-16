@@ -8,16 +8,64 @@ jobs:
     vmImage: ubuntu-16.04
   strategy:
     matrix:
-      linux_64_version3.6:
-        CONFIG: linux_64_version3.6
+      linux_64_cross_target_platformlinux-64target_platformlinux-64version3.6:
+        CONFIG: linux_64_cross_target_platformlinux-64target_platformlinux-64version3.6
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_version3.7:
-        CONFIG: linux_64_version3.7
+      linux_64_cross_target_platformlinux-64target_platformlinux-64version3.7:
+        CONFIG: linux_64_cross_target_platformlinux-64target_platformlinux-64version3.7
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_version3.8:
-        CONFIG: linux_64_version3.8
+      linux_64_cross_target_platformlinux-64target_platformlinux-64version3.8:
+        CONFIG: linux_64_cross_target_platformlinux-64target_platformlinux-64version3.8
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_cross_target_platformlinux-aarch64target_platformlinux-64version3.6:
+        CONFIG: linux_64_cross_target_platformlinux-aarch64target_platformlinux-64version3.6
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_cross_target_platformlinux-aarch64target_platformlinux-64version3.7:
+        CONFIG: linux_64_cross_target_platformlinux-aarch64target_platformlinux-64version3.7
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_cross_target_platformlinux-aarch64target_platformlinux-64version3.8:
+        CONFIG: linux_64_cross_target_platformlinux-aarch64target_platformlinux-64version3.8
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_cross_target_platformlinux-ppc64letarget_platformlinux-64version3.6:
+        CONFIG: linux_64_cross_target_platformlinux-ppc64letarget_platformlinux-64version3.6
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_cross_target_platformlinux-ppc64letarget_platformlinux-64version3.7:
+        CONFIG: linux_64_cross_target_platformlinux-ppc64letarget_platformlinux-64version3.7
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_cross_target_platformlinux-ppc64letarget_platformlinux-64version3.8:
+        CONFIG: linux_64_cross_target_platformlinux-ppc64letarget_platformlinux-64version3.8
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_cross_target_platformosx-64target_platformlinux-64version3.6:
+        CONFIG: linux_64_cross_target_platformosx-64target_platformlinux-64version3.6
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_cross_target_platformosx-64target_platformlinux-64version3.7:
+        CONFIG: linux_64_cross_target_platformosx-64target_platformlinux-64version3.7
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_cross_target_platformosx-64target_platformlinux-64version3.8:
+        CONFIG: linux_64_cross_target_platformosx-64target_platformlinux-64version3.8
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_cross_target_platformosx-arm64target_platformlinux-64version3.6:
+        CONFIG: linux_64_cross_target_platformosx-arm64target_platformlinux-64version3.6
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_cross_target_platformosx-arm64target_platformlinux-64version3.7:
+        CONFIG: linux_64_cross_target_platformosx-arm64target_platformlinux-64version3.7
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_cross_target_platformosx-arm64target_platformlinux-64version3.8:
+        CONFIG: linux_64_cross_target_platformosx-arm64target_platformlinux-64version3.8
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
     maxParallel: 8

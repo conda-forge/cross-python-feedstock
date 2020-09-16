@@ -1,12 +1,12 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
-macos_machine:
-- x86_64-apple-darwin13.4.0
+cross_target_platform:
+- linux-ppc64le
+docker_image:
+- condaforge/linux-anvil-ppc64le
 target_platform:
-- osx-64
+- linux-ppc64le
 version:
 - '3.7'

@@ -1,0 +1,14 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+cross_target_platform:
+- linux-ppc64le
+macos_machine:
+- x86_64-apple-darwin13.4.0
+target_platform:
+- osx-64
+version:
+- '3.8'

@@ -8,14 +8,50 @@ jobs:
     vmImage: macOS-10.15
   strategy:
     matrix:
-      osx_64_version3.6:
-        CONFIG: osx_64_version3.6
+      osx_64_cross_target_platformlinux-64target_platformosx-64version3.6:
+        CONFIG: osx_64_cross_target_platformlinux-64target_platformosx-64version3.6
         UPLOAD_PACKAGES: 'True'
-      osx_64_version3.7:
-        CONFIG: osx_64_version3.7
+      osx_64_cross_target_platformlinux-64target_platformosx-64version3.7:
+        CONFIG: osx_64_cross_target_platformlinux-64target_platformosx-64version3.7
         UPLOAD_PACKAGES: 'True'
-      osx_64_version3.8:
-        CONFIG: osx_64_version3.8
+      osx_64_cross_target_platformlinux-64target_platformosx-64version3.8:
+        CONFIG: osx_64_cross_target_platformlinux-64target_platformosx-64version3.8
+        UPLOAD_PACKAGES: 'True'
+      osx_64_cross_target_platformlinux-aarch64target_platformosx-64version3.6:
+        CONFIG: osx_64_cross_target_platformlinux-aarch64target_platformosx-64version3.6
+        UPLOAD_PACKAGES: 'True'
+      osx_64_cross_target_platformlinux-aarch64target_platformosx-64version3.7:
+        CONFIG: osx_64_cross_target_platformlinux-aarch64target_platformosx-64version3.7
+        UPLOAD_PACKAGES: 'True'
+      osx_64_cross_target_platformlinux-aarch64target_platformosx-64version3.8:
+        CONFIG: osx_64_cross_target_platformlinux-aarch64target_platformosx-64version3.8
+        UPLOAD_PACKAGES: 'True'
+      osx_64_cross_target_platformlinux-ppc64letarget_platformosx-64version3.6:
+        CONFIG: osx_64_cross_target_platformlinux-ppc64letarget_platformosx-64version3.6
+        UPLOAD_PACKAGES: 'True'
+      osx_64_cross_target_platformlinux-ppc64letarget_platformosx-64version3.7:
+        CONFIG: osx_64_cross_target_platformlinux-ppc64letarget_platformosx-64version3.7
+        UPLOAD_PACKAGES: 'True'
+      osx_64_cross_target_platformlinux-ppc64letarget_platformosx-64version3.8:
+        CONFIG: osx_64_cross_target_platformlinux-ppc64letarget_platformosx-64version3.8
+        UPLOAD_PACKAGES: 'True'
+      osx_64_cross_target_platformosx-64target_platformosx-64version3.6:
+        CONFIG: osx_64_cross_target_platformosx-64target_platformosx-64version3.6
+        UPLOAD_PACKAGES: 'True'
+      osx_64_cross_target_platformosx-64target_platformosx-64version3.7:
+        CONFIG: osx_64_cross_target_platformosx-64target_platformosx-64version3.7
+        UPLOAD_PACKAGES: 'True'
+      osx_64_cross_target_platformosx-64target_platformosx-64version3.8:
+        CONFIG: osx_64_cross_target_platformosx-64target_platformosx-64version3.8
+        UPLOAD_PACKAGES: 'True'
+      osx_64_cross_target_platformosx-arm64target_platformosx-64version3.6:
+        CONFIG: osx_64_cross_target_platformosx-arm64target_platformosx-64version3.6
+        UPLOAD_PACKAGES: 'True'
+      osx_64_cross_target_platformosx-arm64target_platformosx-64version3.7:
+        CONFIG: osx_64_cross_target_platformosx-arm64target_platformosx-64version3.7
+        UPLOAD_PACKAGES: 'True'
+      osx_64_cross_target_platformosx-arm64target_platformosx-64version3.8:
+        CONFIG: osx_64_cross_target_platformosx-arm64target_platformosx-64version3.8
         UPLOAD_PACKAGES: 'True'
     maxParallel: 8
   timeoutInMinutes: 360
