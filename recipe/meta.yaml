@@ -1,13 +1,19 @@
-{% set build_number = "2" %}
+{% set build_number = "0" %}
+{% if cross_target_platform is undefined %}
+{% set cross_target_platform = "linux-64" %}
+{% endif %}
 
 package:
-  name: cross-python
+  name: cross-python_{{ cross_target_platform }}
   version: {{ version }}
 
 build:
   number: {{ build_number }}
   string: {{ build_number }}_cpython
   skip: True  # [win]
+{% if (cross_target_platform == "osx-arm64" and version != "3.8") or (cross_target_platform == target_platform) %}
+  skip: True
+{% endif %}
   run_exports:
     strong:
       - python {{ version }}.*
@@ -17,10 +23,20 @@ requirements:
     - python {{ version }}.* *_cpython
     - crossenv
     - rsync
+    - sed
+{% if cross_target_platform.startswith("osx-") %}
+    - clang_{{ cross_target_platform }}
+{% endif %}
+{% if cross_target_platform.startswith("linux-") %}
+    - gcc_{{ cross_target_platform }}
+{% endif %}
 
+
+{% if target_platform == "linux-64" or (cross_target_platform.startswith("osx") and target_platform.startswith("osx")) %}
 test:
   commands:
     - test -f $PREFIX/etc/conda/activate.d/activate-z-cross-python.sh
+{% endif %}
 
 about:
   home: https://github.com/conda-forge/cross-python-feedstock

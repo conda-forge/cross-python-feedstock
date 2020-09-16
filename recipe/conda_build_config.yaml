@@ -2,3 +2,9 @@ version:
   - 3.6
   - 3.7
   - 3.8
+cross_target_platform:
+  - "linux-64"              # [linux64]
+  - "linux-ppc64le"         # [linux64]
+  - "linux-aarch64"         # [linux64]
+  - "osx-64"
+  - "osx-arm64"
