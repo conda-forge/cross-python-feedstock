@@ -5,6 +5,9 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
       --sysroot $CONDA_BUILD_SYSROOT \
       --without-pip $BUILD_PREFIX/venv \
       --sysconfigdata-file $PREFIX/lib/python$PY_VER/${_CONDA_PYTHON_SYSCONFIGDATA_NAME}.py
+  if [[ ${target_platform} == "osx-64" ]]; then
+    sed -i.bak "s@release =@release = 13.4.0@g" $BUILD_PREFIX/venv/crossenv.cfg
+  fi
   if [[ ${target_platform} == "osx-arm64" ]]; then
     sed -i.bak "s@release =@release = 20.0.0@g" $BUILD_PREFIX/venv/crossenv.cfg
   fi
