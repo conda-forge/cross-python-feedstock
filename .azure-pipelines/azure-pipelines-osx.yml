@@ -8,8 +8,8 @@ jobs:
     vmImage: macOS-10.15
   strategy:
     matrix:
-      osx_64_cross_target_platformosx-arm64target_platformosx-64version3.8:
-        CONFIG: osx_64_cross_target_platformosx-arm64target_platformosx-64version3.8
+      osx_64_cross_target_platformosx-arm64version3.8:
+        CONFIG: osx_64_cross_target_platformosx-arm64version3.8
         UPLOAD_PACKAGES: 'True'
     maxParallel: 8
   timeoutInMinutes: 360

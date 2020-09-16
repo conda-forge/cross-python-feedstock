@@ -1,5 +1,5 @@
 channel_sources:
-- conda-forge,defaults
+- conda-forge/label/llvm_rc,conda-forge
 channel_targets:
 - conda-forge main
 cross_target_platform:
@@ -9,4 +9,4 @@ docker_image:
 target_platform:
 - linux-64
 version:
-- '3.6'
+- '3.7'
