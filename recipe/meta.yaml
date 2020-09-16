@@ -31,8 +31,7 @@ requirements:
     - gcc_{{ cross_target_platform }}
 {% endif %}
 
-
-{% if target_platform == "linux-64" or (cross_target_platform.startswith("osx") and target_platform.startswith("osx")) %}
+{% if cross_target_platform.startswith("linux-") %}
 test:
   commands:
     - test -f $PREFIX/etc/conda/activate.d/activate-z-cross-python.sh
