@@ -34,7 +34,7 @@ requirements:
 {% if cross_target_platform.startswith("linux-") %}
 test:
   commands:
-    - test -f $PREFIX/etc/conda/activate.d/activate-z-cross-python_{{ cross_target_platform }}.sh
+    - test -f $PREFIX/etc/conda/activate.d/activate_z-cross-python_{{ cross_target_platform }}.sh
 {% endif %}
 
 about:
