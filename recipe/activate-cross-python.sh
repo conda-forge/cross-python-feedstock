@@ -5,13 +5,16 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
       --sysroot $CONDA_BUILD_SYSROOT \
       --without-pip $BUILD_PREFIX/venv \
       --sysconfigdata-file $PREFIX/lib/python$PY_VER/${_CONDA_PYTHON_SYSCONFIGDATA_NAME}.py
-  if [[ ${target_platform} == "osx-64" ]]; then
-    sed -i.bak "s@release =@release = 13.4.0@g" $BUILD_PREFIX/venv/crossenv.cfg
-  fi
-  if [[ ${target_platform} == "osx-arm64" ]]; then
-    sed -i.bak "s@release =@release = 20.0.0@g" $BUILD_PREFIX/venv/crossenv.cfg
-  fi
+
+  # For recipes using {{ PYTHON }}
   cp $BUILD_PREFIX/venv/cross/bin/python $PREFIX/bin/python
+
+  # For recipes looking at python on PATH
+  rm $BUILD_PREFIX/bin/python
+  echo "#!/bin/bash" > $BUILD_PREFIX/bin/python
+  echo "exec $PREFIX/bin/python \"\$@\"" >> $BUILD_PREFIX/bin/python
+  chmod +x $BUILD_PREFIX/bin/python
+
   rm -rf $BUILD_PREFIX/venv/cross
   if [[ -d "$PREFIX/lib/python$PY_VER/site-packages/" ]]; then
     find $PREFIX/lib/python$PY_VER/site-packages/ -name "*-darwin.so" -exec rm {} \;
