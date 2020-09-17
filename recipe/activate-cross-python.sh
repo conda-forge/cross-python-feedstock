@@ -20,6 +20,7 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     find $PREFIX/lib/python$PY_VER/site-packages/ -name "*-darwin.so" -exec rm {} \;
     rsync -a -I $PREFIX/lib/python$PY_VER/site-packages/ $BUILD_PREFIX/lib/python$PY_VER/site-packages/
     rm -rf $PREFIX/lib/python$PY_VER/site-packages
+    mkdir $PREFIX/lib/python$PY_VER/site-packages
   fi
   rm -rf $BUILD_PREFIX/venv/lib/python$PY_VER/site-packages
   ln -s $BUILD_PREFIX/lib/python$PY_VER/site-packages $BUILD_PREFIX/venv/lib/python$PY_VER/site-packages
