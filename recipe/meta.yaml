@@ -11,7 +11,7 @@ build:
   number: {{ build_number }}
   string: {{ build_number }}_cpython
   skip: True  # [win]
-{% if (cross_target_platform == "osx-arm64" and version != "3.8") or (cross_target_platform == target_platform) %}
+{% if (cross_target_platform == "osx-arm64" and (version == "3.8" or version == "3.9")) or (cross_target_platform == target_platform) %}
   skip: True
 {% endif %}
   run_exports:
@@ -31,7 +31,7 @@ requirements:
     - gcc_{{ cross_target_platform }}
 {% endif %}
 
-{% if cross_target_platform.startswith("linux-") %}
+{% if cross_target_platform.startswith("linux-") and version != "3.9" %}
 test:
   commands:
     - test -f $PREFIX/etc/conda/activate.d/activate_z-cross-python_{{ cross_target_platform }}.sh
