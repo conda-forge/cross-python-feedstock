@@ -1,10 +1,12 @@
 #!/bin/bash
 
 if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
+  _CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP=${_CONDA_PYTHON_SYSCONFIGDATA_NAME}
+  unset _CONDA_PYTHON_SYSCONFIGDATA_NAME
   $BUILD_PREFIX/bin/python -m crossenv $PREFIX/bin/python \
       --sysroot $CONDA_BUILD_SYSROOT \
       --without-pip $BUILD_PREFIX/venv \
-      --sysconfigdata-file $PREFIX/lib/python$PY_VER/${_CONDA_PYTHON_SYSCONFIGDATA_NAME}.py
+      --sysconfigdata-file $PREFIX/lib/python$PY_VER/${_CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP}.py
 
   # For recipes using {{ PYTHON }}
   cp $BUILD_PREFIX/venv/cross/bin/python $PREFIX/bin/python
