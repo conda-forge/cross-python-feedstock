@@ -11,4 +11,4 @@ macos_machine:
 target_platform:
 - osx-64
 version:
-- '3.6'
+- '3.9'
