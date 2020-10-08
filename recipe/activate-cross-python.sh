@@ -1,6 +1,7 @@
 #!/bin/bash
 
 if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
+  unset _CONDA_PYTHON_SYSCONFIGDATA_NAME
   $BUILD_PREFIX/bin/python -m crossenv $PREFIX/bin/python \
       --sysroot $CONDA_BUILD_SYSROOT \
       --without-pip $BUILD_PREFIX/venv \
