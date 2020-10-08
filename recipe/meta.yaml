@@ -11,7 +11,7 @@ build:
   number: {{ build_number }}
   string: {{ build_number }}_cpython
   skip: True  # [win]
-{% if (cross_target_platform == "osx-arm64" and (version == "3.8" or version == "3.9")) or (cross_target_platform == target_platform) %}
+{% if (cross_target_platform == "osx-arm64" and not (version == "3.8" or version == "3.9")) or (cross_target_platform == target_platform) %}
   skip: True
 {% endif %}
   run_exports:
