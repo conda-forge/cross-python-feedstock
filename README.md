@@ -5,11 +5,9 @@ Home: https://github.com/conda-forge/cross-python-feedstock
 
 Package license: LicenseRef-OTHER
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cross-python-feedstock/blob/master/LICENSE.txt)
 
 Summary: A meta-package to set up a cross compiling env for python in conda-build
-
-
 
 Current build status
 ====================
@@ -50,6 +48,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_cross_target_platformlinux-aarch64version3.9</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_cross_target_platformlinux-aarch64version3.9" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_cross_target_platformlinux-ppc64leversion3.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
@@ -68,6 +73,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_cross_target_platformlinux-ppc64leversion3.8" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_cross_target_platformlinux-ppc64leversion3.9</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_cross_target_platformlinux-ppc64leversion3.9" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -92,6 +104,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_cross_target_platformosx-64version3.9</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_cross_target_platformosx-64version3.9" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_cross_target_platformosx-arm64version3.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
@@ -113,10 +132,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_cross_target_platformosx-arm64version3.8</td>
+              <td>linux_64_cross_target_platformosx-arm64version3.9</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_cross_target_platformosx-arm64version3.8" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_cross_target_platformosx-arm64version3.9" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_cross_target_platformosx-arm64version3.6</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_cross_target_platformosx-arm64version3.6" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_cross_target_platformosx-arm64version3.7</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_cross_target_platformosx-arm64version3.7" alt="variant">
                 </a>
               </td>
             </tr>
@@ -224,7 +257,4 @@ Feedstock Maintainers
 =====================
 
 * [@isuruf](https://github.com/isuruf/)
-
-
-<!-- dummy commit to enable rerendering -->
 
