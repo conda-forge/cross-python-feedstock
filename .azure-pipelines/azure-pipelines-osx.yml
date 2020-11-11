@@ -14,7 +14,6 @@ jobs:
       osx_64_cross_target_platformosx-arm64version3.9:
         CONFIG: osx_64_cross_target_platformosx-arm64version3.9
         UPLOAD_PACKAGES: 'True'
-    maxParallel: 8
   timeoutInMinutes: 360
 
   steps:
