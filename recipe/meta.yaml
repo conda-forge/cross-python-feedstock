@@ -1,4 +1,4 @@
-{% set build_number = "4" %}
+{% set build_number = "5" %}
 {% if cross_target_platform is undefined %}
 {% set cross_target_platform = "linux-64" %}
 {% endif %}
@@ -21,7 +21,7 @@ build:
 requirements:
   run:
     - python {{ version }}.* *_cpython
-    - crossenv
+    - crossenv >=1.0
     - rsync
     - sed
 {% if cross_target_platform.startswith("osx-") %}
