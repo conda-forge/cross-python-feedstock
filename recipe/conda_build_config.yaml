@@ -9,5 +9,3 @@ cross_target_platform:
   - "linux-aarch64"         # [linux64]
   - "osx-64"
   - "osx-arm64"
-channel_sources:
-  - conda-forge/label/llvm_rc,conda-forge

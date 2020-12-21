@@ -1,11 +1,13 @@
+cdt_name:
+- cos6
 channel_sources:
-- conda-forge/label/llvm_rc,conda-forge
+- conda-forge,defaults
 channel_targets:
 - conda-forge main
 cross_target_platform:
 - osx-arm64
 docker_image:
-- condaforge/linux-anvil-comp7
+- quay.io/condaforge/linux-anvil-comp7
 target_platform:
 - linux-64
 version:
