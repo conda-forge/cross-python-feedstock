@@ -1,14 +1,14 @@
-cdt_name:
-- cos6
+MACOSX_DEPLOYMENT_TARGET:
+- '11.0'
 channel_sources:
 - conda-forge/label/llvm_rc,conda-forge
 channel_targets:
 - conda-forge main
 cross_target_platform:
 - osx-64
-docker_image:
-- quay.io/condaforge/linux-anvil-comp7
+macos_machine:
+- arm64-apple-darwin20.0.0
 target_platform:
-- linux-64
+- osx-arm64
 version:
-- '3.6'
+- '3.7'
