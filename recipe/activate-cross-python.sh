@@ -13,7 +13,7 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     cp $BUILD_PREFIX/venv/cross/bin/python $PREFIX/bin/python
 
     # For recipes using python.app
-    if [[ -d "$PREFIX/python.app" ]]; then
+    if [[ -f "$PREFIX/python.app/Contents/MacOS/python" ]]; then
       cp $PREFIX/bin/python $PREFIX/python.app/Contents/MacOS/python
     fi
 
