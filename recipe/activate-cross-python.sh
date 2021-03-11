@@ -26,7 +26,8 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
 
     rm -rf $BUILD_PREFIX/venv/cross
     if [[ -d "$PREFIX/lib/python$PY_VER/site-packages/" ]]; then
-      find $PREFIX/lib/python$PY_VER/site-packages/ -name "*-darwin.so" -or -name "*.dylib" -exec rm {} \;
+      find $PREFIX/lib/python$PY_VER/site-packages/ -name "*.so" -exec rm {} \;
+      find $PREFIX/lib/python$PY_VER/site-packages/ -name "*.dylib" -exec rm {} \;
       rsync -a -I $PREFIX/lib/python$PY_VER/site-packages/ $BUILD_PREFIX/lib/python$PY_VER/site-packages/
       rm -rf $PREFIX/lib/python$PY_VER/site-packages
       mkdir $PREFIX/lib/python$PY_VER/site-packages
