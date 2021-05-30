@@ -2,7 +2,7 @@
 
 if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
   _CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP=${_CONDA_PYTHON_SYSCONFIGDATA_NAME}
-  find $SP_DIR/../ -name "_sysconfigdata*.py" -not -name "${_CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP}.py" -type f -exec rm -f {} +
+  find $PREFIX/lib/ -name "_sysconfigdata*.py" -not -name "${_CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP}.py" -type f -exec rm -f {} +
   unset _CONDA_PYTHON_SYSCONFIGDATA_NAME
   if [[ ! -d $BUILD_PREFIX/venv ]]; then
     $BUILD_PREFIX/bin/python -m crossenv $PREFIX/bin/python \
