@@ -4,6 +4,7 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
   _CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP=${_CONDA_PYTHON_SYSCONFIGDATA_NAME}
   find $PREFIX/lib/ -name "_sysconfigdata*.py" -not -name "${_CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP}.py" -type f -exec rm -f {} +
   unset _CONDA_PYTHON_SYSCONFIGDATA_NAME
+  PY_VER=$($BUILD_PREFIX/bin/python -c "import sys; print('{}.{}'.format(*sys.version_info[:2]))")
   if [[ ! -d $BUILD_PREFIX/venv ]]; then
     $BUILD_PREFIX/bin/python -m crossenv $PREFIX/bin/python \
         --sysroot $CONDA_BUILD_SYSROOT \
