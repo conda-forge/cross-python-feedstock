@@ -1,7 +1,7 @@
 cdt_name:
 - cos6
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 cross_target_platform:
@@ -12,3 +12,6 @@ target_platform:
 - linux-64
 version:
 - '3.7'
+zip_keys:
+- - cdt_name
+  - docker_image

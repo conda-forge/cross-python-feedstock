@@ -1,7 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '11.0'
 channel_sources:
-- conda-forge/label/rust_dev,conda-forge
+- conda-forge
 channel_targets:
 - conda-forge main
 cross_target_platform:
@@ -11,4 +11,4 @@ macos_machine:
 target_platform:
 - osx-arm64
 version:
-- '3.6'
+- '3.10'

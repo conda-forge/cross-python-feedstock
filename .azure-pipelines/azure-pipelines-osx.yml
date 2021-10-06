@@ -14,8 +14,8 @@ jobs:
       osx_64_cross_target_platformosx-arm64version3.9:
         CONFIG: osx_64_cross_target_platformosx-arm64version3.9
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_cross_target_platformosx-64version3.6:
-        CONFIG: osx_arm64_cross_target_platformosx-64version3.6
+      osx_arm64_cross_target_platformosx-64version3.10:
+        CONFIG: osx_arm64_cross_target_platformosx-64version3.10
         UPLOAD_PACKAGES: 'True'
       osx_arm64_cross_target_platformosx-64version3.7:
         CONFIG: osx_arm64_cross_target_platformosx-64version3.7
