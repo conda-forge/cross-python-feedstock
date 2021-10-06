@@ -5,11 +5,11 @@
 jobs:
 - job: linux
   pool:
-    vmImage: ubuntu-16.04
+    vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_cross_target_platformlinux-aarch64version3.6:
-        CONFIG: linux_64_cross_target_platformlinux-aarch64version3.6
+      linux_64_cross_target_platformlinux-aarch64version3.10:
+        CONFIG: linux_64_cross_target_platformlinux-aarch64version3.10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
       linux_64_cross_target_platformlinux-aarch64version3.7:
@@ -24,8 +24,8 @@ jobs:
         CONFIG: linux_64_cross_target_platformlinux-aarch64version3.9
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_cross_target_platformlinux-ppc64leversion3.6:
-        CONFIG: linux_64_cross_target_platformlinux-ppc64leversion3.6
+      linux_64_cross_target_platformlinux-ppc64leversion3.10:
+        CONFIG: linux_64_cross_target_platformlinux-ppc64leversion3.10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
       linux_64_cross_target_platformlinux-ppc64leversion3.7:
@@ -40,8 +40,8 @@ jobs:
         CONFIG: linux_64_cross_target_platformlinux-ppc64leversion3.9
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_cross_target_platformosx-64version3.6:
-        CONFIG: linux_64_cross_target_platformosx-64version3.6
+      linux_64_cross_target_platformosx-64version3.10:
+        CONFIG: linux_64_cross_target_platformosx-64version3.10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
       linux_64_cross_target_platformosx-64version3.7:
@@ -56,8 +56,8 @@ jobs:
         CONFIG: linux_64_cross_target_platformosx-64version3.9
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_cross_target_platformosx-arm64version3.6:
-        CONFIG: linux_64_cross_target_platformosx-arm64version3.6
+      linux_64_cross_target_platformosx-arm64version3.10:
+        CONFIG: linux_64_cross_target_platformosx-arm64version3.10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
       linux_64_cross_target_platformosx-arm64version3.7:
