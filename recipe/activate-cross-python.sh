@@ -19,6 +19,16 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
         --cc $CC \
         --cxx $CXX
 
+    # pypy generates _sysconfigdata.py dynamically so fix it up
+    if [ -d "$PREFIX/lib_pypy" ]; then
+      sed -i.bak "s@x86_64-linux@linux@g" "$BUILD_PREFIX/venv/lib/_sysconfigdata.py"
+      diff "$BUILD_PREFIX/venv/lib/_sysconfigdata.py.bak" "$BUILD_PREFIX/venv/lib/_sysconfigdata.py" || true
+      # Also fix the PYTHONPATH in the shell wrapper
+      stdlib=$(pypy -c "import sysconfig; print(sysconfig.get_path('stdlib'))")
+      sed -i.bak "s@$stdlib'@$stdlib', '$PREFIX/lib_pypy'@g" "$BUILD_PREFIX/venv/cross/bin/python"
+      diff "$BUILD_PREFIX/venv/cross/bin/python.bak" "$BUILD_PREFIX/venv/cross/bin/python" || true
+    fi
+
     # For recipes using {{ PYTHON }}
     cp $BUILD_PREFIX/venv/cross/bin/python $PREFIX/bin/python
 
