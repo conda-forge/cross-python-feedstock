@@ -1,0 +1,19 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '11.0'
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+cross_target_platform:
+- osx-64
+macos_machine:
+- arm64-apple-darwin20.0.0
+py_impl:
+- cpython
+target_platform:
+- osx-arm64
+version:
+- '3.10'
+zip_keys:
+- - version
+  - py_impl
