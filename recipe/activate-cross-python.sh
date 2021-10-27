@@ -2,14 +2,25 @@
 
 if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
   _CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP=${_CONDA_PYTHON_SYSCONFIGDATA_NAME}
-  find $PREFIX/lib/ -name "_sysconfigdata*.py" -not -name "${_CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP}.py" -type f -exec rm -f {} +
+  if [ -d "$PREFIX/lib_pypy" ]; then
+    find "$PREFIX/lib_pypy/" -name "_sysconfigdata*.py" -not -name "_sysconfigdata.py" -type f -exec rm -f {} +
+    sysconfigdata_fn="$PREFIX/lib_pypy/_sysconfigdata.py"
+  elif [ -d "$PREFIX/lib/pypy$PY_VER" ]; then
+    find "$PREFIX/lib/" -name "_sysconfigdata*.py" -not -name ${_CONDA_PYTHON_SYSCONFIGDATA_NAME} -type f -exec rm -f {} +
+    sysconfigdata_fn="$PREFIX/lib/pypy$PY_VER/${_CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP}.py"
+  else
+    find "$PREFIX/lib/" -name "_sysconfigdata*.py" -not -name ${_CONDA_PYTHON_SYSCONFIGDATA_NAME} -type f -exec rm -f {} +
+    sysconfigdata_fn="$PREFIX/lib/python$PY_VER/${_CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP}.py"
+  fi
   unset _CONDA_PYTHON_SYSCONFIGDATA_NAME
   PY_VER=$($BUILD_PREFIX/bin/python -c "import sys; print('{}.{}'.format(*sys.version_info[:2]))")
   if [[ ! -d $BUILD_PREFIX/venv ]]; then
     $BUILD_PREFIX/bin/python -m crossenv $PREFIX/bin/python \
         --sysroot $CONDA_BUILD_SYSROOT \
         --without-pip $BUILD_PREFIX/venv \
-        --sysconfigdata-file $PREFIX/lib/python$PY_VER/${_CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP}.py
+        --sysconfigdata-file "$sysconfigdata_fn" \
+        --cc $CC \
+        --cxx $CXX
 
     # For recipes using {{ PYTHON }}
     cp $BUILD_PREFIX/venv/cross/bin/python $PREFIX/bin/python
@@ -46,5 +57,6 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
       _CONDA_BACKUP_PYTHONPATH=${PYTHONPATH}
     fi
   fi
+  unset sysconfigdata_fn
   export PYTHONPATH=$BUILD_PREFIX/venv/lib/python$PY_VER/site-packages
 fi

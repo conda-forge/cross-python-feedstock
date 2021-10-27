@@ -8,7 +8,12 @@ cross_target_platform:
 - osx-64
 macos_machine:
 - arm64-apple-darwin20.0.0
+py_impl:
+- 73_pypy
 target_platform:
 - osx-arm64
 version:
 - '3.7'
+zip_keys:
+- - version
+  - py_impl
