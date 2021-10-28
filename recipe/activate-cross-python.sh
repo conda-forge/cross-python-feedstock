@@ -18,8 +18,8 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
         --sysroot $CONDA_BUILD_SYSROOT \
         --without-pip $BUILD_PREFIX/venv \
         --sysconfigdata-file "$sysconfigdata_fn" \
-        --cc $CC \
-        --cxx $CXX
+        --cc ${CC} \
+        --cxx ${CXX:-c++}
 
     # For recipes using {{ PYTHON }}
     cp $BUILD_PREFIX/venv/cross/bin/python $PREFIX/bin/python
