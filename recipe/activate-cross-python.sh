@@ -1,18 +1,17 @@
 #!/bin/bash
 
 if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
+  echo "Setting up cross-python"
+  PY_VER=$($BUILD_PREFIX/bin/python -c "import sys; print('{}.{}'.format(*sys.version_info[:2]))")
   if [ -d "$PREFIX/lib_pypy" ]; then
-    find "$PREFIX/lib_pypy/" -name "_sysconfigdata*.py" -not -name "_sysconfigdata.py" -type f -exec rm -f {} +
-    sysconfigdata_fn="$PREFIX/lib_pypy/_sysconfigdata.py"
+    sysconfigdata_fn=$(find "$PREFIX/lib_pypy/" -name "_sysconfigdata_*.py" -type f)
   elif [ -d "$PREFIX/lib/pypy$PY_VER" ]; then
-    find "$PREFIX/lib/" -name "_sysconfigdata*.py" -not -name ${_CONDA_PYTHON_SYSCONFIGDATA_NAME}.py -type f -exec rm -f {} +
-    sysconfigdata_fn="$PREFIX/lib/pypy$PY_VER/${_CONDA_PYTHON_SYSCONFIGDATA_NAME}.py"
+    sysconfigdata_fn=$(find "$PREFIX/lib/pypy$PY_VER/" -name "_sysconfigdata_*.py" -type f)
   else
     find "$PREFIX/lib/" -name "_sysconfigdata*.py" -not -name ${_CONDA_PYTHON_SYSCONFIGDATA_NAME}.py -type f -exec rm -f {} +
     sysconfigdata_fn="$PREFIX/lib/python$PY_VER/${_CONDA_PYTHON_SYSCONFIGDATA_NAME}.py"
   fi
   unset _CONDA_PYTHON_SYSCONFIGDATA_NAME
-  PY_VER=$($BUILD_PREFIX/bin/python -c "import sys; print('{}.{}'.format(*sys.version_info[:2]))")
   if [[ ! -d $BUILD_PREFIX/venv ]]; then
     $BUILD_PREFIX/bin/python -m crossenv $PREFIX/bin/python \
         --sysroot $CONDA_BUILD_SYSROOT \
@@ -39,6 +38,12 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     echo "exec $PREFIX/bin/python \"\$@\"" >> $BUILD_PREFIX/bin/python
     chmod +x $BUILD_PREFIX/bin/python
 
+    if [[ -f "$PREFIX/bin/pypy" ]]; then
+      rm -rf $BUILD_PREFIX/venv/lib/pypy$PY_VER
+      mkdir -p $BUILD_PREFIX/venv/lib/python$PY_VER
+      ln -s $BUILD_PREFIX/venv/lib/python$PY_VER $BUILD_PREFIX/venv/lib/pypy$PY_VER
+    fi
+
     rm -rf $BUILD_PREFIX/venv/cross
     if [[ -d "$PREFIX/lib/python$PY_VER/site-packages/" ]]; then
       find $PREFIX/lib/python$PY_VER/site-packages/ -name "*.so" -exec rm {} \;
@@ -58,4 +63,5 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
   fi
   unset sysconfigdata_fn
   export PYTHONPATH=$BUILD_PREFIX/venv/lib/python$PY_VER/site-packages
+  echo "Finished setting up cross-python"
 fi
