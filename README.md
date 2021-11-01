@@ -1,5 +1,5 @@
-About cross-python_linux-aarch64
-================================
+About cross-python_osx-arm64
+============================
 
 Home: https://github.com/conda-forge/cross-python-feedstock
 
@@ -167,6 +167,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_64_cross_target_platformosx-arm64py_implcpythonversion3.10</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_cross_target_platformosx-arm64py_implcpythonversion3.10" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_cross_target_platformosx-arm64py_implcpythonversion3.8</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=master">
@@ -228,32 +235,29 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-cross--python_linux--64-green.svg)](https://anaconda.org/conda-forge/cross-python_linux-64) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cross-python_linux-64.svg)](https://anaconda.org/conda-forge/cross-python_linux-64) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cross-python_linux-64.svg)](https://anaconda.org/conda-forge/cross-python_linux-64) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cross-python_linux-64.svg)](https://anaconda.org/conda-forge/cross-python_linux-64) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-cross--python_linux--aarch64-green.svg)](https://anaconda.org/conda-forge/cross-python_linux-aarch64) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cross-python_linux-aarch64.svg)](https://anaconda.org/conda-forge/cross-python_linux-aarch64) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cross-python_linux-aarch64.svg)](https://anaconda.org/conda-forge/cross-python_linux-aarch64) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cross-python_linux-aarch64.svg)](https://anaconda.org/conda-forge/cross-python_linux-aarch64) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-cross--python_linux--ppc64le-green.svg)](https://anaconda.org/conda-forge/cross-python_linux-ppc64le) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cross-python_linux-ppc64le.svg)](https://anaconda.org/conda-forge/cross-python_linux-ppc64le) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cross-python_linux-ppc64le.svg)](https://anaconda.org/conda-forge/cross-python_linux-ppc64le) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cross-python_linux-ppc64le.svg)](https://anaconda.org/conda-forge/cross-python_linux-ppc64le) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cross--python_osx--64-green.svg)](https://anaconda.org/conda-forge/cross-python_osx-64) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cross-python_osx-64.svg)](https://anaconda.org/conda-forge/cross-python_osx-64) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cross-python_osx-64.svg)](https://anaconda.org/conda-forge/cross-python_osx-64) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cross-python_osx-64.svg)](https://anaconda.org/conda-forge/cross-python_osx-64) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cross--python_osx--arm64-green.svg)](https://anaconda.org/conda-forge/cross-python_osx-arm64) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cross-python_osx-arm64.svg)](https://anaconda.org/conda-forge/cross-python_osx-arm64) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cross-python_osx-arm64.svg)](https://anaconda.org/conda-forge/cross-python_osx-arm64) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cross-python_osx-arm64.svg)](https://anaconda.org/conda-forge/cross-python_osx-arm64) |
 
-Installing cross-python_linux-aarch64
-=====================================
+Installing cross-python_osx-arm64
+=================================
 
-Installing `cross-python_linux-aarch64` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `cross-python_osx-arm64` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `cross-python_linux-64, cross-python_linux-aarch64, cross-python_linux-ppc64le, cross-python_osx-64, cross-python_osx-arm64` can be installed with:
+Once the `conda-forge` channel has been enabled, `cross-python_osx-64, cross-python_osx-arm64` can be installed with:
 
 ```
-conda install cross-python_linux-64 cross-python_linux-aarch64 cross-python_linux-ppc64le cross-python_osx-64 cross-python_osx-arm64
+conda install cross-python_osx-64 cross-python_osx-arm64
 ```
 
-It is possible to list all of the versions of `cross-python_linux-64` available on your platform with:
+It is possible to list all of the versions of `cross-python_osx-64` available on your platform with:
 
 ```
-conda search cross-python_linux-64 --channel conda-forge
+conda search cross-python_osx-64 --channel conda-forge
 ```
 
 
@@ -295,17 +299,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating cross-python_linux-aarch64-feedstock
-=============================================
+Updating cross-python_osx-arm64-feedstock
+=========================================
 
-If you would like to improve the cross-python_linux-aarch64 recipe or build a new
+If you would like to improve the cross-python_osx-arm64 recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/cross-python_linux-aarch64-feedstock are
+Note that all branches in the conda-forge/cross-python_osx-arm64-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
