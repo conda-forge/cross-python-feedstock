@@ -21,6 +21,7 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
         --cxx ${CXX:-c++}
 
     # Undo cross-python's changes
+    # See https://github.com/conda-forge/h5py-feedstock/pull/104
     rm $BUILD_PREFIX/venv/$(basename $sysconfigdata_fn)
     cp $sysconfigdata_fn $BUILD_PREFIX/venv/lib/$(basename $sysconfigdata_fn)
 
