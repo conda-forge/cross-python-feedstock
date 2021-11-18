@@ -28,6 +28,11 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     # For recipes using {{ PYTHON }}
     cp $BUILD_PREFIX/venv/cross/bin/python $PREFIX/bin/python
 
+    # don't set LIBRARY_PATH
+    # See https://github.com/conda-forge/matplotlib-feedstock/pull/309#issuecomment-972213735
+    sed -i 's/extra_envs = .*/extra_envs = []/g' $PREFIX/bin/python        || true
+    sed -i 's/extra_envs = .*/extra_envs = []/d' $PREFIX/bin/python$PY_VER || true
+
     # undo symlink
     rm $BUILD_PREFIX/venv/build/bin/python
     cp $BUILD_PREFIX/bin/python $BUILD_PREFIX/venv/build/bin/python
