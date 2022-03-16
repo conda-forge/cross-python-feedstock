@@ -11,83 +11,83 @@ jobs:
       linux_64_cross_target_platformlinux-aarch64py_impl73_pypyversion3.7:
         CONFIG: linux_64_cross_target_platformlinux-aarch64py_impl73_pypyversion3.7
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.10:
         CONFIG: linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.7:
         CONFIG: linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.7
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.8:
         CONFIG: linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.8
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.9:
         CONFIG: linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.9
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformlinux-ppc64lepy_impl73_pypyversion3.7:
         CONFIG: linux_64_cross_target_platformlinux-ppc64lepy_impl73_pypyversion3.7
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.10:
         CONFIG: linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.7:
         CONFIG: linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.7
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.8:
         CONFIG: linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.8
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.9:
         CONFIG: linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.9
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformosx-64py_impl73_pypyversion3.7:
         CONFIG: linux_64_cross_target_platformosx-64py_impl73_pypyversion3.7
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformosx-64py_implcpythonversion3.10:
         CONFIG: linux_64_cross_target_platformosx-64py_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformosx-64py_implcpythonversion3.7:
         CONFIG: linux_64_cross_target_platformosx-64py_implcpythonversion3.7
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformosx-64py_implcpythonversion3.8:
         CONFIG: linux_64_cross_target_platformosx-64py_implcpythonversion3.8
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformosx-64py_implcpythonversion3.9:
         CONFIG: linux_64_cross_target_platformosx-64py_implcpythonversion3.9
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformosx-arm64py_impl73_pypyversion3.7:
         CONFIG: linux_64_cross_target_platformosx-arm64py_impl73_pypyversion3.7
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformosx-arm64py_implcpythonversion3.10:
         CONFIG: linux_64_cross_target_platformosx-arm64py_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformosx-arm64py_implcpythonversion3.7:
         CONFIG: linux_64_cross_target_platformosx-arm64py_implcpythonversion3.7
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformosx-arm64py_implcpythonversion3.8:
         CONFIG: linux_64_cross_target_platformosx-arm64py_implcpythonversion3.8
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_cross_target_platformosx-arm64py_implcpythonversion3.9:
         CONFIG: linux_64_cross_target_platformosx-arm64py_implcpythonversion3.9
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360
 
   steps:
