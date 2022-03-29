@@ -1,19 +1,19 @@
-cdt_name:
-- cos6
+MACOSX_DEPLOYMENT_TARGET:
+- '11.0'
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cross_target_platform:
-- linux-ppc64le
-docker_image:
-- quay.io/condaforge/linux-anvil-cos7-x86_64
+- osx-64
+macos_machine:
+- arm64-apple-darwin20.0.0
 py_impl:
 - 73_pypy
 target_platform:
-- linux-64
+- osx-arm64
 version:
-- '3.7'
+- '3.9'
 zip_keys:
 - - version
   - py_impl

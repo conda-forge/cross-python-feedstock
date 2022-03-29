@@ -13,7 +13,7 @@ py_impl:
 target_platform:
 - linux-64
 version:
-- '3.7'
+- '3.8'
 zip_keys:
 - - version
   - py_impl
