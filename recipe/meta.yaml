@@ -11,9 +11,8 @@ build:
   number: {{ build_number }}
   string: {{ build_number }}_{{ py_impl }}
   skip: True  # [win]
-{% if (cross_target_platform == "osx-arm64" and version in ("3.6", "3.7")) or (cross_target_platform == target_platform) %}
-  skip: True
-{% endif %}
+  skip: True  # [cross_target_platform == target_platform]
+  skip: True  # [cross_target_platform == "osx-arm64" and (py_impl == "73_pypy" or version == "3.7")]
   run_exports:
     strong:
       - python {{ version }}.* *_{{ py_impl }}
@@ -45,3 +44,4 @@ about:
 extra:
   recipe-maintainers:
     - isuruf
+  feedstock-name: cross-python
