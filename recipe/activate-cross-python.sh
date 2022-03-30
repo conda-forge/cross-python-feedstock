@@ -33,9 +33,10 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     sed -i 's/extra_envs = .*/extra_envs = []/g' $PREFIX/bin/python        || true
     sed -i 's/extra_envs = .*/extra_envs = []/g' $PREFIX/bin/python$PY_VER || true
 
-    # undo symlink
+    # rewrite symlink $BUILD_PREFIX/bin/python -> $BUILD_PREFIX/venv/build/bin/python
+    # to a symlink $BUILD_PREFIX/bin/python3.x -> $BUILD_PREFIX/venv/build/bin/python
     rm $BUILD_PREFIX/venv/build/bin/python
-    cp $BUILD_PREFIX/bin/python $BUILD_PREFIX/venv/build/bin/python
+    ln -sf $BUILD_PREFIX/bin/$(readlink $BUILD_PREFIX/bin/python) $BUILD_PREFIX/venv/build/bin/python
 
     # For recipes looking at python on PATH
     rm $BUILD_PREFIX/bin/python
