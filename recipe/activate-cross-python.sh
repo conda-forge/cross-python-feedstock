@@ -27,13 +27,13 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
 
     # For recipes using {{ PYTHON }}
     # Remove the file first as it might be a hardlink and make sure to resolve symlinks
-    rm $(readlink -f $PREFIX/bin/python)
-    cp $BUILD_PREFIX/venv/cross/bin/python $(readlink -f $PREFIX/bin/python)
+    python_real_path=$($BUILD_PREFIX/bin/python -c "import os; print(os.path.realpath('$PREFIX/bin/python'))")
+    rm $python_real_path
+    cp $BUILD_PREFIX/venv/cross/bin/python $python_real_path
 
     # don't set LIBRARY_PATH
     # See https://github.com/conda-forge/matplotlib-feedstock/pull/309#issuecomment-972213735
-    sed -i 's/extra_envs = .*/extra_envs = []/g' $PREFIX/bin/python        || true
-    sed -i 's/extra_envs = .*/extra_envs = []/g' $PREFIX/bin/python$PY_VER || true
+    sed -i 's/extra_envs = .*/extra_envs = []/g' $python_real_path || true
 
     # rewrite symlink $BUILD_PREFIX/bin/python -> $BUILD_PREFIX/venv/build/bin/python
     # to a symlink $BUILD_PREFIX/bin/python3.x -> $BUILD_PREFIX/venv/build/bin/python
@@ -62,8 +62,10 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     fi
     rm -rf $BUILD_PREFIX/venv/lib/python$PY_VER/site-packages
     ln -s $BUILD_PREFIX/lib/python$PY_VER/site-packages $BUILD_PREFIX/venv/lib/python$PY_VER/site-packages
-    sed -i.bak "s@$BUILD_PREFIX/venv/lib@$BUILD_PREFIX/venv/lib', '$BUILD_PREFIX/venv/lib/python$PY_VER/site-packages@g" $PYTHON
+    sed -i.bak "s@$BUILD_PREFIX/venv/lib@$BUILD_PREFIX/venv/lib', '$BUILD_PREFIX/venv/lib/python$PY_VER/site-packages@g" $python_real_path
     rm -f $PYTHON.bak
+
+    unset python_real_path
 
     if [[ "${PYTHONPATH}" != "" ]]; then
       _CONDA_BACKUP_PYTHONPATH=${PYTHONPATH}
