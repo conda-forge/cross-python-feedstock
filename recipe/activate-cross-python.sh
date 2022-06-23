@@ -26,7 +26,9 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     cp $sysconfigdata_fn $BUILD_PREFIX/venv/lib/$(basename $sysconfigdata_fn)
 
     # For recipes using {{ PYTHON }}
-    cp $BUILD_PREFIX/venv/cross/bin/python $PREFIX/bin/python
+    # Remove the file first as it might be a hardlink and make sure to resolve symlinks
+    rm $(readlink -f $PREFIX/bin/python)
+    cp $BUILD_PREFIX/venv/cross/bin/python $(readlink -f $PREFIX/bin/python)
 
     # don't set LIBRARY_PATH
     # See https://github.com/conda-forge/matplotlib-feedstock/pull/309#issuecomment-972213735
