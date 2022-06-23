@@ -1,4 +1,4 @@
-{% set build_number = 23 %}
+{% set build_number = 24 %}
 {% if cross_target_platform is undefined %}
 {% set cross_target_platform = "linux-64" %}
 {% endif %}

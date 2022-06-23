@@ -270,7 +270,6 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-cross--python_linux--64-green.svg)](https://anaconda.org/conda-forge/cross-python_linux-64) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cross-python_linux-64.svg)](https://anaconda.org/conda-forge/cross-python_linux-64) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cross-python_linux-64.svg)](https://anaconda.org/conda-forge/cross-python_linux-64) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cross-python_linux-64.svg)](https://anaconda.org/conda-forge/cross-python_linux-64) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cross--python_linux--aarch64-green.svg)](https://anaconda.org/conda-forge/cross-python_linux-aarch64) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cross-python_linux-aarch64.svg)](https://anaconda.org/conda-forge/cross-python_linux-aarch64) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cross-python_linux-aarch64.svg)](https://anaconda.org/conda-forge/cross-python_linux-aarch64) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cross-python_linux-aarch64.svg)](https://anaconda.org/conda-forge/cross-python_linux-aarch64) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cross--python_linux--ppc64le-green.svg)](https://anaconda.org/conda-forge/cross-python_linux-ppc64le) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cross-python_linux-ppc64le.svg)](https://anaconda.org/conda-forge/cross-python_linux-ppc64le) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cross-python_linux-ppc64le.svg)](https://anaconda.org/conda-forge/cross-python_linux-ppc64le) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cross-python_linux-ppc64le.svg)](https://anaconda.org/conda-forge/cross-python_linux-ppc64le) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cross--python_osx--64-green.svg)](https://anaconda.org/conda-forge/cross-python_osx-64) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cross-python_osx-64.svg)](https://anaconda.org/conda-forge/cross-python_osx-64) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cross-python_osx-64.svg)](https://anaconda.org/conda-forge/cross-python_osx-64) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cross-python_osx-64.svg)](https://anaconda.org/conda-forge/cross-python_osx-64) |
@@ -286,41 +285,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `cross-python_linux-64, cross-python_linux-aarch64, cross-python_linux-ppc64le, cross-python_osx-64, cross-python_osx-arm64` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `cross-python_linux-aarch64, cross-python_linux-ppc64le, cross-python_osx-64, cross-python_osx-arm64` can be installed with `conda`:
 
 ```
-conda install cross-python_linux-64 cross-python_linux-aarch64 cross-python_linux-ppc64le cross-python_osx-64 cross-python_osx-arm64
-```
-
-or with `mamba`:
-
-```
-mamba install cross-python_linux-64 cross-python_linux-aarch64 cross-python_linux-ppc64le cross-python_osx-64 cross-python_osx-arm64
-```
-
-It is possible to list all of the versions of `cross-python_linux-64` available on your platform with `conda`:
-
-```
-conda search cross-python_linux-64 --channel conda-forge
+conda install cross-python_linux-aarch64 cross-python_linux-ppc64le cross-python_osx-64 cross-python_osx-arm64
 ```
 
 or with `mamba`:
 
 ```
-mamba search cross-python_linux-64 --channel conda-forge
+mamba install cross-python_linux-aarch64 cross-python_linux-ppc64le cross-python_osx-64 cross-python_osx-arm64
+```
+
+It is possible to list all of the versions of `cross-python_linux-aarch64` available on your platform with `conda`:
+
+```
+conda search cross-python_linux-aarch64 --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search cross-python_linux-aarch64 --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search cross-python_linux-64 --channel conda-forge
+mamba repoquery search cross-python_linux-aarch64 --channel conda-forge
 
-# List packages depending on `cross-python_linux-64`:
-mamba repoquery whoneeds cross-python_linux-64 --channel conda-forge
+# List packages depending on `cross-python_linux-aarch64`:
+mamba repoquery whoneeds cross-python_linux-aarch64 --channel conda-forge
 
-# List dependencies of `cross-python_linux-64`:
-mamba repoquery depends cross-python_linux-64 --channel conda-forge
+# List dependencies of `cross-python_linux-aarch64`:
+mamba repoquery depends cross-python_linux-aarch64 --channel conda-forge
 ```
 
 
