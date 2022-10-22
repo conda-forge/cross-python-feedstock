@@ -5,15 +5,20 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
   PY_VER=$($BUILD_PREFIX/bin/python -c "import sys; print('{}.{}'.format(*sys.version_info[:2]))")
   if [ -d "$PREFIX/lib_pypy" ]; then
     sysconfigdata_fn=$(find "$PREFIX/lib_pypy/" -name "_sysconfigdata_*.py" -type f)
+    export PYO3_CROSS_LIB_DIR=$PREFIX/lib_pypy
+    export PYO3_CROSS_PYTHON_IMPLEMENTATION=PyPy
   elif [ -d "$PREFIX/lib/pypy$PY_VER" ]; then
     sysconfigdata_fn=$(find "$PREFIX/lib/pypy$PY_VER/" -name "_sysconfigdata_*.py" -type f)
     export PYO3_CROSS_LIB_DIR=$PREFIX/lib/pypy$PY_VER
-    export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include
-    export PYO3_CROSS_PYTHON_VERSION=$PY_VER
+    export PYO3_CROSS_PYTHON_IMPLEMENTATION=PyPy
   else
     find "$PREFIX/lib/" -name "_sysconfigdata*.py" -not -name ${_CONDA_PYTHON_SYSCONFIGDATA_NAME}.py -type f -exec rm -f {} +
     sysconfigdata_fn="$PREFIX/lib/python$PY_VER/${_CONDA_PYTHON_SYSCONFIGDATA_NAME}.py"
+    export PYO3_CROSS_LIB_DIR=$PREFIX/lib/python$PY_VER
+    export PYO3_CROSS_PYTHON_IMPLEMENTATION=CPython
   fi
+  export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include
+  export PYO3_CROSS_PYTHON_VERSION=$PY_VER
   unset _CONDA_PYTHON_SYSCONFIGDATA_NAME
   if [[ ! -d $BUILD_PREFIX/venv ]]; then
     $BUILD_PREFIX/bin/python -m crossenv $PREFIX/bin/python \
