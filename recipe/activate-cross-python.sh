@@ -8,6 +8,8 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
   elif [ -d "$PREFIX/lib/pypy$PY_VER" ]; then
     sysconfigdata_fn=$(find "$PREFIX/lib/pypy$PY_VER/" -name "_sysconfigdata_*.py" -type f)
     export PYO3_CROSS_LIB_DIR=$PREFIX/lib/pypy$PY_VER
+    export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include
+    export PYO3_CROSS_PYTHON_VERSION=$PY_VER
   else
     find "$PREFIX/lib/" -name "_sysconfigdata*.py" -not -name ${_CONDA_PYTHON_SYSCONFIGDATA_NAME}.py -type f -exec rm -f {} +
     sysconfigdata_fn="$PREFIX/lib/python$PY_VER/${_CONDA_PYTHON_SYSCONFIGDATA_NAME}.py"
