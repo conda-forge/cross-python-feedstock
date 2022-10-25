@@ -5,9 +5,11 @@ version:
   - 3.8
   - 3.9
   - 3.10
+  - 3.11
 py_impl:
   - 73_pypy
   - 73_pypy
+  - cpython
   - cpython
   - cpython
   - cpython
