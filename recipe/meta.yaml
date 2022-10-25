@@ -43,5 +43,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - chrisburr
     - isuruf
   feedstock-name: cross-python
