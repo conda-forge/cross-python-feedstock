@@ -73,6 +73,12 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     sed -i.bak "s@$BUILD_PREFIX/venv/lib@$BUILD_PREFIX/venv/lib', '$BUILD_PREFIX/lib/python$PY_VER/lib-dynload', '$BUILD_PREFIX/venv/lib/python$PY_VER/site-packages@g" $python_real_path
     rm -f ${python_real_path}.bak
 
+    if [[ "$PY_VER" == "3.1"* && "$PY_VER" != "3.10" ]]; then
+      # python 3.11 and up uses frozen modules to import site.py, so the custom doesn't get
+      # picked up.
+      ln -sf $BUILD_PREFIX/venv/lib/site.py $BUILD_PREFIX/lib/python$PY_VER/site-packages/sitecustomize.py
+    fi
+
     unset python_real_path
 
     if [[ "${PYTHONPATH}" != "" ]]; then
