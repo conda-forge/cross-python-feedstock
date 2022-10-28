@@ -76,7 +76,7 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     if [[ "$PY_VER" == "3.1"* && "$PY_VER" != "3.10" ]]; then
       # python 3.11 and up uses frozen modules to import site.py, so the custom doesn't get
       # picked up.
-      ln -sf $BUILD_PREFIX/venv/lib/site.py $BUILD_PREFIX/lib/python$PY_VER/site-packages/sitecustomize.py
+      ln -sf $BUILD_PREFIX/venv/lib/site.py $BUILD_PREFIX/venv/lib/sitecustomize.py
     fi
 
     unset python_real_path
