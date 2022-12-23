@@ -2,7 +2,9 @@
 
 if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
   echo "Setting up cross-python"
+
   PY_VER=$($BUILD_PREFIX/bin/python -c "import sys; print('{}.{}'.format(*sys.version_info[:2]))")
+
   if [ -d "$PREFIX/lib_pypy" ]; then
     sysconfigdata_fn=$(find "$PREFIX/lib_pypy/" -name "_sysconfigdata_*.py" -type f)
     export PYO3_CROSS_LIB_DIR=$PREFIX/lib_pypy
@@ -17,9 +19,11 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     export PYO3_CROSS_LIB_DIR=$PREFIX/lib/python$PY_VER
     export PYO3_CROSS_PYTHON_IMPLEMENTATION=CPython
   fi
+
   export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include
   export PYO3_CROSS_PYTHON_VERSION=$PY_VER
   unset _CONDA_PYTHON_SYSCONFIGDATA_NAME
+
   if [[ ! -d $BUILD_PREFIX/venv ]]; then
     $BUILD_PREFIX/bin/python -m crossenv $PREFIX/bin/python \
         --sysroot $CONDA_BUILD_SYSROOT \
@@ -61,6 +65,7 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     fi
 
     rm -rf $BUILD_PREFIX/venv/cross
+
     if [[ -d "$PREFIX/lib/python$PY_VER/site-packages/" ]]; then
       find $PREFIX/lib/python$PY_VER/site-packages/ -name "*.so" -exec rm {} \;
       find $PREFIX/lib/python$PY_VER/site-packages/ -name "*.dylib" -exec rm {} \;
@@ -68,6 +73,7 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
       rm -rf $PREFIX/lib/python$PY_VER/site-packages
       mkdir $PREFIX/lib/python$PY_VER/site-packages
     fi
+
     rm -rf $BUILD_PREFIX/venv/lib/python$PY_VER/site-packages
     ln -s $BUILD_PREFIX/lib/python$PY_VER/site-packages $BUILD_PREFIX/venv/lib/python$PY_VER/site-packages
     sed -i.bak "s@$BUILD_PREFIX/venv/lib@$BUILD_PREFIX/venv/lib', '$BUILD_PREFIX/lib/python$PY_VER/lib-dynload', '$BUILD_PREFIX/venv/lib/python$PY_VER/site-packages@g" $python_real_path
@@ -85,6 +91,7 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
       _CONDA_BACKUP_PYTHONPATH=${PYTHONPATH}
     fi
   fi
+
   unset sysconfigdata_fn
   export PYTHONPATH=$BUILD_PREFIX/venv/lib/python$PY_VER/site-packages
   echo "Finished setting up cross-python"
