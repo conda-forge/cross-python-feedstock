@@ -13,11 +13,15 @@ build:
   skip: True  # [win]
   skip: True  # [cross_target_platform == target_platform]
   skip: True  # [cross_target_platform == "osx-arm64" and (py_impl == "73_pypy" or version == "3.7")]
+  binary_has_prefix_files:
+    - bin/_cross_python_launcher_shim
   run_exports:
     strong:
       - python {{ version }}.* *_{{ py_impl }}
 
 requirements:
+  build:
+    - {{ compiler('rust') }}
   run:
     - python {{ version }}.* *_{{ py_impl }}
     - crossenv >=1.0
