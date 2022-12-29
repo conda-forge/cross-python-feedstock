@@ -21,7 +21,7 @@ build:
 
 requirements:
   build:
-    - {{ compiler('rust') }}
+    - {{ compiler('rust') }}  # [not win]
   run:
     - python {{ version }}.* *_{{ py_impl }}
     - crossenv >=1.0
