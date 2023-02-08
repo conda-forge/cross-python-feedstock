@@ -49,10 +49,9 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     ln -sf $BUILD_PREFIX/bin/$(readlink $BUILD_PREFIX/bin/python) $BUILD_PREFIX/venv/build/bin/python
 
     # For recipes looking at python on PATH
+    # Install the binary shim which execs $PREFIX/bin/python
     rm $BUILD_PREFIX/bin/python
-    echo "#!/bin/bash" > $BUILD_PREFIX/bin/python
-    echo "exec $PREFIX/bin/python \"\$@\"" >> $BUILD_PREFIX/bin/python
-    chmod +x $BUILD_PREFIX/bin/python
+    cp $BUILD_PREFIX/bin/cross_python_shim $BUILD_PREFIX/bin/python
 
     if [[ -f "$PREFIX/bin/pypy" ]]; then
       rm -rf $BUILD_PREFIX/venv/lib/pypy$PY_VER
