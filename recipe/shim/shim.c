@@ -29,7 +29,7 @@ int main(int argc, char **argv) {
     }
 
     // The cross-python executable we want to run lives in $PREFIX/bin/python
-    snprintf(cross_py, MAX_PATHLEN, "%s/bin/python", prefix);
+    snprintf(cross_py, MAX_PATHLEN, "%s/venv/build/bin/python", prefix);
 
     // Now exec the cross-python, with the given arguments.
     execv(cross_py, argv);
