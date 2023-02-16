@@ -22,7 +22,7 @@
 */
 
 int main(int argc, char **argv) {
-    char cross_py[MAX_PATHLEN] = "@PREFIX@/venv/build/bin/python";
+    char cross_py[MAX_PATHLEN] = "@PREFIX@/venv/bin/cross-python";
     // Now exec the cross-python, with the given arguments.
     execv(cross_py, argv);
 }
