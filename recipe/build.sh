@@ -14,5 +14,6 @@ cp "${RECIPE_DIR}"/deactivate-cross-python.sh ${PREFIX}/etc/conda/deactivate.d/d
 cp -r "${RECIPE_DIR}/shim" .
 pushd shim
 mkdir -p ${PREFIX}/bin
+sed -i.bak "s#@PREFIX@#$PREFIX#g" shim.c
 ${CC} ${CFLAGS} ${LDFLAGS} shim.c -o ${PREFIX}/bin/cross_python_shim
 popd

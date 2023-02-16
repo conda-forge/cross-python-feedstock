@@ -22,20 +22,7 @@
 */
 
 int main(int argc, char **argv) {
-    char *prefix;
-    char cross_py[MAX_PATHLEN];
-
-    // Get the PREFIX environment variable.
-    prefix = getenv("BUILD_PREFIX");
-
-    if (prefix == NULL) {
-        fprintf(stderr, "Could not find PREFIX environment variable.\n");
-        return -1;
-    }
-
-    // The cross-python executable we want to run lives in $PREFIX/bin/python
-    snprintf(cross_py, MAX_PATHLEN, "%s/venv/build/bin/python", prefix);
-
+    char cross_py[MAX_PATHLEN] = "@PREFIX@/venv/build/bin/python";
     // Now exec the cross-python, with the given arguments.
     execv(cross_py, argv);
 }
