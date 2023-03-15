@@ -1,4 +1,4 @@
-{% set build_number = 35 %}
+{% set build_number = 36 %}
 {% if cross_target_platform is undefined %}
 {% set cross_target_platform = "linux-64" %}
 {% endif %}
@@ -22,7 +22,7 @@ requirements:
     - {{ compiler('c') }}
   run:
     - python {{ version }}.* *_{{ py_impl }}
-    - crossenv >=1.0
+    - crossenv >=1.1.4
     - rsync
     - sed
 {% if cross_target_platform.startswith("osx-") %}

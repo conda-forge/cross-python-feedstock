@@ -21,10 +21,19 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
   export PYO3_CROSS_PYTHON_VERSION=$PY_VER
   unset _CONDA_PYTHON_SYSCONFIGDATA_NAME
   if [[ ! -d $BUILD_PREFIX/venv ]]; then
+    case "${target_platform}" in
+      *-64)
+        machine=x86_64
+        ;;
+      *)
+	machine=${target_platform#*-}
+	;;
+    esac
     $BUILD_PREFIX/bin/python -m crossenv $PREFIX/bin/python \
         --sysroot $CONDA_BUILD_SYSROOT \
         --without-pip $BUILD_PREFIX/venv \
         --sysconfigdata-file "$sysconfigdata_fn" \
+	--machine ${machine} \
         --cc ${CC} \
         --cxx ${CXX:-c++}
 
