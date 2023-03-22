@@ -59,6 +59,9 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     # See https://github.com/conda-forge/matplotlib-feedstock/pull/309#issuecomment-972213735
     sed -i 's/extra_envs = .*/extra_envs = []/g' $BUILD_PREFIX/venv/bin/cross-python || true
 
+    # set sys.executable
+    sed -i "s@import sys@import sys\nsys.argv[0] = '$PREFIX/bin/python'@g" $BUILD_PREFIX/venv/bin/cross-python
+
     # rewrite symlink $BUILD_PREFIX/bin/python -> $BUILD_PREFIX/venv/build/bin/python
     # to a symlink $BUILD_PREFIX/bin/python3.x -> $BUILD_PREFIX/venv/build/bin/python
     rm $BUILD_PREFIX/venv/build/bin/python
