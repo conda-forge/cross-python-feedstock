@@ -50,7 +50,7 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     rm $python_real_path
     if [ -d "$PREFIX/lib/pypy$PY_VER" ]; then
 	# TODO: Remove this when pypy supports PYTHONHOME env variable
-        cp $BUILD_PREFIX/venv/cross/bin/python $python_real_path
+        ln -sf $BUILD_PREFIX/venv/bin/cross-python $python_real_path
     else
         cp $BUILD_PREFIX/bin/cross_python_shim $python_real_path
     fi
