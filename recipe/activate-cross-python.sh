@@ -42,25 +42,26 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     rm -rf $BUILD_PREFIX/venv/lib/$(basename $sysconfigdata_fn)
     cp $sysconfigdata_fn $BUILD_PREFIX/venv/lib/$(basename $sysconfigdata_fn)
 
+    cp $BUILD_PREFIX/venv/cross/bin/python $BUILD_PREFIX/venv/bin/cross-python
+    # don't set LIBRARY_PATH
+    # See https://github.com/conda-forge/matplotlib-feedstock/pull/309#issuecomment-972213735
+    sed -i 's/extra_envs = .*/extra_envs = []/g' $BUILD_PREFIX/venv/bin/cross-python || true
+    # set sys.executable
+    sed -i "s@import sys@import sys\nsys.argv[0] = '$PREFIX/bin/python'@g" $BUILD_PREFIX/venv/bin/cross-python
+    # Load BUILD_PREFIX's packages first
+    sed -i.bak "s@$BUILD_PREFIX/venv/lib@$BUILD_PREFIX/venv/lib', '$BUILD_PREFIX/lib/python$PY_VER/lib-dynload', '$BUILD_PREFIX/venv/lib/python$PY_VER/site-packages@g" $BUILD_PREFIX/venv/bin/cross-python
+
     # For recipes using {{ PYTHON }}
     # Install the binary shim which execs $BUILD_PREFIX/venv/bin/cross-python
     # Remove the file first as it might be a hardlink and make sure to resolve symlinks
     python_real_path=$($BUILD_PREFIX/bin/python -c "import os; print(os.path.realpath('$PREFIX/bin/python'))")
-    cp $BUILD_PREFIX/venv/cross/bin/python $BUILD_PREFIX/venv/bin/cross-python
     rm $python_real_path
     if [ -d "$PREFIX/lib/pypy$PY_VER" ]; then
 	# TODO: Remove this when pypy supports PYTHONHOME env variable
-        ln -sf $BUILD_PREFIX/venv/bin/cross-python $python_real_path
+        cp $BUILD_PREFIX/venv/bin/cross-python $python_real_path
     else
         cp $BUILD_PREFIX/bin/cross_python_shim $python_real_path
     fi
-
-    # don't set LIBRARY_PATH
-    # See https://github.com/conda-forge/matplotlib-feedstock/pull/309#issuecomment-972213735
-    sed -i 's/extra_envs = .*/extra_envs = []/g' $BUILD_PREFIX/venv/bin/cross-python || true
-
-    # set sys.executable
-    sed -i "s@import sys@import sys\nsys.argv[0] = '$PREFIX/bin/python'@g" $BUILD_PREFIX/venv/bin/cross-python
 
     # rewrite symlink $BUILD_PREFIX/bin/python -> $BUILD_PREFIX/venv/build/bin/python
     # to a symlink $BUILD_PREFIX/bin/python3.x -> $BUILD_PREFIX/venv/build/bin/python
@@ -84,7 +85,6 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     fi
     rm -rf $BUILD_PREFIX/venv/lib/python$PY_VER/site-packages
     ln -s $BUILD_PREFIX/lib/python$PY_VER/site-packages $BUILD_PREFIX/venv/lib/python$PY_VER/site-packages
-    sed -i.bak "s@$BUILD_PREFIX/venv/lib@$BUILD_PREFIX/venv/lib', '$BUILD_PREFIX/lib/python$PY_VER/lib-dynload', '$BUILD_PREFIX/venv/lib/python$PY_VER/site-packages@g" $BUILD_PREFIX/venv/bin/cross-python
 
     if [[ "$PY_VER" == "3.1"* && "$PY_VER" != "3.10" ]]; then
       # python 3.11 and up uses frozen modules to import site.py, so the custom doesn't get
