@@ -6,6 +6,7 @@ version:
   - 3.9
   - 3.10
   - 3.11
+  - 3.12
 py_impl:
   - 73_pypy
   - 73_pypy
@@ -14,6 +15,16 @@ py_impl:
   - cpython
   - cpython
   - cpython
+  - cpython
+channel_sources:
+  - conda-forge
+  - conda-forge
+  - conda-forge
+  - conda-forge
+  - conda-forge
+  - conda-forge
+  - conda-forge
+  - conda-forge/label/python_rc,conda-forge
 cross_target_platform:
   - "linux-64"              # [linux64]
   - "linux-ppc64le"         # [linux64]
@@ -23,3 +34,4 @@ cross_target_platform:
 zip_keys:
   - - version
     - py_impl
+    - channel_sources

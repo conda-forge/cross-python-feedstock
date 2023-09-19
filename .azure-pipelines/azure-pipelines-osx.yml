@@ -14,6 +14,9 @@ jobs:
       osx_64_cross_target_platformosx-arm64py_implcpythonversion3.11:
         CONFIG: osx_64_cross_target_platformosx-arm64py_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
+      osx_64_cross_target_platformosx-arm64py_implcpythonversion3.12:
+        CONFIG: osx_64_cross_target_platformosx-arm64py_implcpythonversion3.12
+        UPLOAD_PACKAGES: 'True'
       osx_64_cross_target_platformosx-arm64py_implcpythonversion3.8:
         CONFIG: osx_64_cross_target_platformosx-arm64py_implcpythonversion3.8
         UPLOAD_PACKAGES: 'True'
@@ -31,6 +34,9 @@ jobs:
         UPLOAD_PACKAGES: 'True'
       osx_arm64_cross_target_platformosx-64py_implcpythonversion3.11:
         CONFIG: osx_arm64_cross_target_platformosx-64py_implcpythonversion3.11
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_cross_target_platformosx-64py_implcpythonversion3.12:
+        CONFIG: osx_arm64_cross_target_platformosx-64py_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
       osx_arm64_cross_target_platformosx-64py_implcpythonversion3.7:
         CONFIG: osx_arm64_cross_target_platformosx-64py_implcpythonversion3.7
