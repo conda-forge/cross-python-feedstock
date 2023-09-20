@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '14'
+- '15'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -21,3 +21,4 @@ version:
 zip_keys:
 - - version
   - py_impl
+  - channel_sources

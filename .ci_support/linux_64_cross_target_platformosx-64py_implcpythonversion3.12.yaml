@@ -5,11 +5,11 @@ c_compiler_version:
 cdt_name:
 - cos6
 channel_sources:
-- conda-forge
+- conda-forge/label/python_rc,conda-forge
 channel_targets:
 - conda-forge main
 cross_target_platform:
-- osx-arm64
+- osx-64
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 py_impl:
@@ -17,7 +17,7 @@ py_impl:
 target_platform:
 - linux-64
 version:
-- '3.10'
+- '3.12'
 zip_keys:
 - - version
   - py_impl
