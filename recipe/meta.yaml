@@ -20,6 +20,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib('c') }}
   run:
     - python {{ version }}.* *_{{ py_impl }}
     - crossenv >=1.1.4
