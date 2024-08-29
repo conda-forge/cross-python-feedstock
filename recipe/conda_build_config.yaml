@@ -17,7 +17,7 @@ py_impl:
   - cpython
   - cpython
   - cpython
-  - cpython
+  - cp313
 channel_sources:
   - conda-forge
   - conda-forge
