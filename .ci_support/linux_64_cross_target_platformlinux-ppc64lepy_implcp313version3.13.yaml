@@ -17,7 +17,7 @@ cross_target_platform:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 py_impl:
-- cpython
+- cp313
 target_platform:
 - linux-64
 version:

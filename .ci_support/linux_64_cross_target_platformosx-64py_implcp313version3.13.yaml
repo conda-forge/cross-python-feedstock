@@ -13,11 +13,11 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cross_target_platform:
-- linux-aarch64
+- osx-64
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 py_impl:
-- cpython
+- cp313
 target_platform:
 - linux-64
 version:
