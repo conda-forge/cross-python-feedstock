@@ -27,7 +27,7 @@ channel_sources:
   - conda-forge
   - conda-forge
   - conda-forge
-  - conda-forge
+  - conda-forge/label/python_rc,conda-forge
 cross_target_platform:
   - "linux-64"              # [linux64]
   - "linux-ppc64le"         # [linux64]
