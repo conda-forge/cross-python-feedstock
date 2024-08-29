@@ -9,19 +9,19 @@ c_stdlib_version:
 cdt_name:
 - cos7
 channel_sources:
-- conda-forge
+- conda-forge/label/python_rc,conda-forge
 channel_targets:
 - conda-forge main
 cross_target_platform:
-- linux-ppc64le
+- osx-arm64
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 py_impl:
-- 73_pypy
+- cp313t
 target_platform:
 - linux-64
 version:
-- '3.9'
+- '3.13'
 zip_keys:
 - - c_stdlib_version
   - cdt_name
