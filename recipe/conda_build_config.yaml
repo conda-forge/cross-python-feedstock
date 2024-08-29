@@ -7,9 +7,11 @@ version:
   - 3.10
   - 3.11
   - 3.12
+  - 3.13
 py_impl:
   - 73_pypy
   - 73_pypy
+  - cpython
   - cpython
   - cpython
   - cpython
@@ -24,7 +26,8 @@ channel_sources:
   - conda-forge
   - conda-forge
   - conda-forge
-  - conda-forge/label/python_rc,conda-forge
+  - conda-forge
+  - conda-forge
 cross_target_platform:
   - "linux-64"              # [linux64]
   - "linux-ppc64le"         # [linux64]
