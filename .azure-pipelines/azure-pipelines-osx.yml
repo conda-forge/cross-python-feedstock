@@ -5,7 +5,7 @@
 jobs:
 - job: osx
   pool:
-    vmImage: macOS-11
+    vmImage: macOS-12
   strategy:
     matrix:
       osx_64_cross_target_platformosx-arm64py_implcpythonversion3.10:
@@ -20,6 +20,10 @@ jobs:
         CONFIG: osx_64_cross_target_platformosx-arm64py_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_cross_target_platformosx-arm_h4d2f3aa03c
+      osx_64_cross_target_platformosx-arm64py_implcpythonversion3.13:
+        CONFIG: osx_64_cross_target_platformosx-arm64py_implcpythonversion3.13
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_cross_target_platformosx-arm_h2bd22b2786
       osx_64_cross_target_platformosx-arm64py_implcpythonversion3.8:
         CONFIG: osx_64_cross_target_platformosx-arm64py_implcpythonversion3.8
         UPLOAD_PACKAGES: 'True'
@@ -48,6 +52,10 @@ jobs:
         CONFIG: osx_arm64_cross_target_platformosx-64py_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_arm64_cross_target_platformosx-_hf7b2b2ab8b
+      osx_arm64_cross_target_platformosx-64py_implcpythonversion3.13:
+        CONFIG: osx_arm64_cross_target_platformosx-64py_implcpythonversion3.13
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_cross_target_platformosx-_h8fb8f57c76
       osx_arm64_cross_target_platformosx-64py_implcpythonversion3.7:
         CONFIG: osx_arm64_cross_target_platformosx-64py_implcpythonversion3.7
         UPLOAD_PACKAGES: 'True'
@@ -60,12 +68,17 @@ jobs:
         CONFIG: osx_arm64_cross_target_platformosx-64py_implcpythonversion3.9
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_arm64_cross_target_platformosx-_h6d0ca628db
+    maxParallel: 15
   timeoutInMinutes: 360
+  variables: {}
 
   steps:
   # TODO: Fast finish on azure pipelines?
   - script: |
       export CI=azure
+      export flow_run_id=azure_$(Build.BuildNumber).$(System.JobAttempt)
+      export remote_url=$(Build.Repository.Uri)
+      export sha=$(Build.SourceVersion)
       export OSX_FORCE_SDK_DOWNLOAD="1"
       export GIT_BRANCH=$BUILD_SOURCEBRANCHNAME
       export FEEDSTOCK_NAME=$(basename ${BUILD_REPOSITORY_NAME})
