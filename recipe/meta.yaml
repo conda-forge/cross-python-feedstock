@@ -1,4 +1,4 @@
-{% set build_number = 41 %}
+{% set build_number = 42 %}
 {% if cross_target_platform is undefined %}
 {% set cross_target_platform = "linux-64" %}
 {% endif %}
@@ -20,6 +20,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib('c') }}
   run:
     - python {{ version }}.* *_{{ py_impl }}
     - crossenv >=1.1.4

@@ -8,16 +8,16 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_cross_target_platformlinux-aarch64py_impl73_pypyversion3.8:
-        CONFIG: linux_64_cross_target_platformlinux-aarch64py_impl73_pypyversion3.8
+      linux_64_cross_target_platformlinux-aarch64py_implcp313tversion3.13:
+        CONFIG: linux_64_cross_target_platformlinux-aarch64py_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformlinux_h1e7453c042
-      linux_64_cross_target_platformlinux-aarch64py_impl73_pypyversion3.9:
-        CONFIG: linux_64_cross_target_platformlinux-aarch64py_impl73_pypyversion3.9
+        SHORT_CONFIG: linux_64_cross_target_platformlinux_h14e6d350f7
+      linux_64_cross_target_platformlinux-aarch64py_implcp313version3.13:
+        CONFIG: linux_64_cross_target_platformlinux-aarch64py_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformlinux_hb04670c468
+        SHORT_CONFIG: linux_64_cross_target_platformlinux_h469da5b521
       linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.10:
         CONFIG: linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
@@ -33,31 +33,21 @@ jobs:
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_cross_target_platformlinux_h06eb2497af
-      linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.7:
-        CONFIG: linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.7
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformlinux_h2de9792fd4
-      linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.8:
-        CONFIG: linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.8
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformlinux_hf17d408802
       linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.9:
         CONFIG: linux_64_cross_target_platformlinux-aarch64py_implcpythonversion3.9
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_cross_target_platformlinux_h516de36deb
-      linux_64_cross_target_platformlinux-ppc64lepy_impl73_pypyversion3.8:
-        CONFIG: linux_64_cross_target_platformlinux-ppc64lepy_impl73_pypyversion3.8
+      linux_64_cross_target_platformlinux-ppc64lepy_implcp313tversion3.13:
+        CONFIG: linux_64_cross_target_platformlinux-ppc64lepy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformlinux_h7662215c27
-      linux_64_cross_target_platformlinux-ppc64lepy_impl73_pypyversion3.9:
-        CONFIG: linux_64_cross_target_platformlinux-ppc64lepy_impl73_pypyversion3.9
+        SHORT_CONFIG: linux_64_cross_target_platformlinux_hb4fffc6d6d
+      linux_64_cross_target_platformlinux-ppc64lepy_implcp313version3.13:
+        CONFIG: linux_64_cross_target_platformlinux-ppc64lepy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformlinux_h63b52767c2
+        SHORT_CONFIG: linux_64_cross_target_platformlinux_h41dbc3a816
       linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.10:
         CONFIG: linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
@@ -73,31 +63,21 @@ jobs:
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_cross_target_platformlinux_h97bf6e864d
-      linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.7:
-        CONFIG: linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.7
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformlinux_h5afeb07fa2
-      linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.8:
-        CONFIG: linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.8
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformlinux_hdc82e478aa
       linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.9:
         CONFIG: linux_64_cross_target_platformlinux-ppc64lepy_implcpythonversion3.9
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_cross_target_platformlinux_h6126a1ccdf
-      linux_64_cross_target_platformosx-64py_impl73_pypyversion3.8:
-        CONFIG: linux_64_cross_target_platformosx-64py_impl73_pypyversion3.8
+      linux_64_cross_target_platformosx-64py_implcp313tversion3.13:
+        CONFIG: linux_64_cross_target_platformosx-64py_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformosx-6_hd309189d09
-      linux_64_cross_target_platformosx-64py_impl73_pypyversion3.9:
-        CONFIG: linux_64_cross_target_platformosx-64py_impl73_pypyversion3.9
+        SHORT_CONFIG: linux_64_cross_target_platformosx-6_h2af47aebce
+      linux_64_cross_target_platformosx-64py_implcp313version3.13:
+        CONFIG: linux_64_cross_target_platformosx-64py_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformosx-6_hcc9a3616f1
+        SHORT_CONFIG: linux_64_cross_target_platformosx-6_h1e598dbb0e
       linux_64_cross_target_platformosx-64py_implcpythonversion3.10:
         CONFIG: linux_64_cross_target_platformosx-64py_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
@@ -113,31 +93,21 @@ jobs:
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_cross_target_platformosx-6_hd271f93f3e
-      linux_64_cross_target_platformosx-64py_implcpythonversion3.7:
-        CONFIG: linux_64_cross_target_platformosx-64py_implcpythonversion3.7
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformosx-6_hfe9401e803
-      linux_64_cross_target_platformosx-64py_implcpythonversion3.8:
-        CONFIG: linux_64_cross_target_platformosx-64py_implcpythonversion3.8
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformosx-6_h021a073de7
       linux_64_cross_target_platformosx-64py_implcpythonversion3.9:
         CONFIG: linux_64_cross_target_platformosx-64py_implcpythonversion3.9
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_cross_target_platformosx-6_hc2c03856c8
-      linux_64_cross_target_platformosx-arm64py_impl73_pypyversion3.8:
-        CONFIG: linux_64_cross_target_platformosx-arm64py_impl73_pypyversion3.8
+      linux_64_cross_target_platformosx-arm64py_implcp313tversion3.13:
+        CONFIG: linux_64_cross_target_platformosx-arm64py_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformosx-a_h34d62ee53a
-      linux_64_cross_target_platformosx-arm64py_impl73_pypyversion3.9:
-        CONFIG: linux_64_cross_target_platformosx-arm64py_impl73_pypyversion3.9
+        SHORT_CONFIG: linux_64_cross_target_platformosx-a_hbc09e41713
+      linux_64_cross_target_platformosx-arm64py_implcp313version3.13:
+        CONFIG: linux_64_cross_target_platformosx-arm64py_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformosx-a_hb7c017d810
+        SHORT_CONFIG: linux_64_cross_target_platformosx-a_h89bc5bdee6
       linux_64_cross_target_platformosx-arm64py_implcpythonversion3.10:
         CONFIG: linux_64_cross_target_platformosx-arm64py_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
@@ -153,22 +123,13 @@ jobs:
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_cross_target_platformosx-a_he75d61edf3
-      linux_64_cross_target_platformosx-arm64py_implcpythonversion3.7:
-        CONFIG: linux_64_cross_target_platformosx-arm64py_implcpythonversion3.7
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformosx-a_hbf4e9bfc92
-      linux_64_cross_target_platformosx-arm64py_implcpythonversion3.8:
-        CONFIG: linux_64_cross_target_platformosx-arm64py_implcpythonversion3.8
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_cross_target_platformosx-a_haab06c6b27
       linux_64_cross_target_platformosx-arm64py_implcpythonversion3.9:
         CONFIG: linux_64_cross_target_platformosx-arm64py_implcpythonversion3.9
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_cross_target_platformosx-a_haa7366718c
   timeoutInMinutes: 360
+  variables: {}
 
   steps:
   # configure qemu binfmt-misc running.  This allows us to run docker containers
@@ -181,6 +142,9 @@ jobs:
 
   - script: |
         export CI=azure
+        export flow_run_id=azure_$(Build.BuildNumber).$(System.JobAttempt)
+        export remote_url=$(Build.Repository.Uri)
+        export sha=$(Build.SourceVersion)
         export GIT_BRANCH=$BUILD_SOURCEBRANCHNAME
         export FEEDSTOCK_NAME=$(basename ${BUILD_REPOSITORY_NAME})
         if [[ "${BUILD_REASON:-}" == "PullRequest" ]]; then
