@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 set -xeuo pipefail
 
@@ -6,6 +6,52 @@ set -xeuo pipefail
 
 mkdir -p ${PREFIX}/etc/conda/activate.d
 mkdir -p ${PREFIX}/etc/conda/deactivate.d
+
+get_cpu_arch() {
+  local CPU_ARCH
+  if [[ "$1" == *"-64" ]]; then
+    CPU_ARCH="x86_64"
+  elif [[ "$1" == *"-ppc64le" ]]; then
+    CPU_ARCH="powerpc64le"
+  elif [[ "$1" == *"-aarch64" ]]; then
+    CPU_ARCH="aarch64"
+  elif [[ "$1" == *"-s390x" ]]; then
+    CPU_ARCH="s390x"
+  else
+    echo "Unknown architecture"
+    exit 1
+  fi
+  echo $CPU_ARCH
+}
+
+get_triplet() {
+  if [[ "$1" == linux-* ]]; then
+    echo "$(get_cpu_arch $1)-conda-linux-gnu"
+  elif [[ "$1" == osx-64 ]]; then
+    echo "x86_64-apple-darwin13.4.0"
+  elif [[ "$1" == osx-arm64 ]]; then
+    echo "arm64-apple-darwin20.0.0"
+  elif [[ "$1" == win-64 ]]; then
+    echo "x86_64-w64-mingw32"
+  else
+    echo "unknown platform"
+  fi
+}
+
+TARGET="$(get_triplet $cross_target_platform)"
+if [[ "$cross_target_platform" == linux-* ]]; then
+  CC_FOR_TARGET="${TARGET}-gcc"
+  CXX_FOR_TARGET="${TARGET}-g++"
+else
+  CC_FOR_TARGET="${TARGET}-clang"
+  CXX_FOR_TARGET="${TARGET}-clang++"
+fi
+
+find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@CC@|${CC_FOR_TARGET}|g"  "{}" \;
+find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@CXX@|${CXX_FOR_TARGET}|g"  "{}" \;
+
+cat "${RECIPE_DIR}"/activate-cross-python.sh
+
 cp "${RECIPE_DIR}"/activate-cross-python.sh ${PREFIX}/etc/conda/activate.d/activate_z-${PKG_NAME}.sh
 cp "${RECIPE_DIR}"/deactivate-cross-python.sh ${PREFIX}/etc/conda/deactivate.d/deactivate_z-${PKG_NAME}.sh
 

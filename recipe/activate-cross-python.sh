@@ -34,8 +34,8 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
         --without-pip $BUILD_PREFIX/venv \
         --sysconfigdata-file "$sysconfigdata_fn" \
 	--machine ${machine} \
-        --cc ${CC} \
-        --cxx ${CXX:-c++}
+        --cc ${CC:-@CC@} \
+        --cxx ${CXX:-@CXX@}
 
     # Undo cross-python's changes
     # See https://github.com/conda-forge/h5py-feedstock/pull/104
