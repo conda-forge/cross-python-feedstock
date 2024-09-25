@@ -22,10 +22,10 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
 {% if cross_target_platform.startswith("osx-") %}
-    - clang_{{ cross_target_platform }}
+    - clangxx_{{ cross_target_platform }}
 {% endif %}
 {% if cross_target_platform.startswith("linux-") %}
-    - gcc_{{ cross_target_platform }}
+    - gxx_{{ cross_target_platform }}
 {% endif %}
   run:
     - python {{ version }}.* *_{{ py_impl }}
@@ -33,10 +33,10 @@ requirements:
     - rsync
     - sed
 {% if cross_target_platform.startswith("osx-") %}
-    - clang_impl_{{ cross_target_platform }}
+    - clangxx_impl_{{ cross_target_platform }}
 {% endif %}
 {% if cross_target_platform.startswith("linux-") %}
-    - gcc_impl_{{ cross_target_platform }}
+    - gxx_impl_{{ cross_target_platform }}
 {% endif %}
 
 {% if cross_target_platform.startswith("linux-") and version != "3.9" %}
