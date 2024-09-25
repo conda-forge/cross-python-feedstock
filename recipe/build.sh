@@ -6,6 +6,15 @@ set -xeuo pipefail
 
 mkdir -p ${PREFIX}/etc/conda/activate.d
 mkdir -p ${PREFIX}/etc/conda/deactivate.d
+
+CC=$(basename ${CC})
+CXX=$(basename ${CXX})
+
+find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@CC@|${CC}|g"  "{}" \;
+find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@CXX@|${CXX}|g"  "{}" \;
+
+cat "${RECIPE_DIR}"/activate-cross-python.sh
+
 cp "${RECIPE_DIR}"/activate-cross-python.sh ${PREFIX}/etc/conda/activate.d/activate_z-${PKG_NAME}.sh
 cp "${RECIPE_DIR}"/deactivate-cross-python.sh ${PREFIX}/etc/conda/deactivate.d/deactivate_z-${PKG_NAME}.sh
 

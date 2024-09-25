@@ -1,4 +1,4 @@
-{% set build_number = 42 %}
+{% set build_number = 43 %}
 {% if cross_target_platform is undefined %}
 {% set cross_target_platform = "linux-64" %}
 {% endif %}
@@ -21,16 +21,22 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
+{% if cross_target_platform.startswith("osx-") %}
+    - clang_{{ cross_target_platform }}
+{% endif %}
+{% if cross_target_platform.startswith("linux-") %}
+    - gcc_{{ cross_target_platform }}
+{% endif %}
   run:
     - python {{ version }}.* *_{{ py_impl }}
     - crossenv >=1.1.4
     - rsync
     - sed
 {% if cross_target_platform.startswith("osx-") %}
-    - clang_{{ cross_target_platform }}
+    - clang_impl_{{ cross_target_platform }}
 {% endif %}
 {% if cross_target_platform.startswith("linux-") %}
-    - gcc_{{ cross_target_platform }}
+    - gcc_impl_{{ cross_target_platform }}
 {% endif %}
 
 {% if cross_target_platform.startswith("linux-") and version != "3.9" %}
