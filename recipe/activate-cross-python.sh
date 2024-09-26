@@ -29,8 +29,12 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
 	machine=${target_platform#*-}
 	;;
     esac
+
+    if [[ "${CONDA_BUILD_SYSROOT:-}" != "" ]]; then
+      _SYSROOT_ARG="--sysroot $CONDA_BUILD_SYSROOT"
+    fi
     $BUILD_PREFIX/bin/python -m crossenv $PREFIX/bin/python \
-        --sysroot $CONDA_BUILD_SYSROOT \
+        ${_SYSROOT_ARG:-} \
         --without-pip $BUILD_PREFIX/venv \
         --sysconfigdata-file "$sysconfigdata_fn" \
 	--machine ${machine} \
