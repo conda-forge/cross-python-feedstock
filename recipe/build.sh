@@ -47,8 +47,15 @@ else
   CXX_FOR_TARGET="${TARGET}-clang++"
 fi
 
+if [[ "$freethreading" == "yes" ]]; then
+  PY_THREAD="t"
+else
+  PY_THREAD=""
+fi
+
 find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@CC@|${CC_FOR_TARGET}|g"  "{}" \;
 find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@CXX@|${CXX_FOR_TARGET}|g"  "{}" \;
+find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@PY_THREAD@|${PY_THREAD}|g"  "{}" \;
 
 cat "${RECIPE_DIR}"/activate-cross-python.sh
 
