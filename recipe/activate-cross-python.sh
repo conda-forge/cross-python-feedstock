@@ -12,8 +12,9 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     export PYO3_CROSS_LIB_DIR=$PREFIX/lib/pypy$PY_VER
     export PYO3_CROSS_PYTHON_IMPLEMENTATION=PyPy
   else
-    find "$PREFIX/lib/" -name "_sysconfigdata*.py" -not -name ${_CONDA_PYTHON_SYSCONFIGDATA_NAME}.py -type f -exec rm -f {} +
-    sysconfigdata_fn="$PREFIX/lib/python$PY_VER/${_CONDA_PYTHON_SYSCONFIGDATA_NAME}.py"
+    sysconfigdata_fn=$(find "$PREFIX/lib/python$PY_VER/" -name "_sysconfigdata_*.py.orig" -type f)
+    sysconfigdata_fn=${sysconfigdata_fn%.orig}
+    find "$PREFIX/lib/" -name "_sysconfigdata*.py" -not -name $(basename ${sysconfigdata_fn}) -type f -exec rm -f {} +
     export PYO3_CROSS_LIB_DIR=$PREFIX/lib/python$PY_VER
     export PYO3_CROSS_PYTHON_IMPLEMENTATION=CPython
   fi
@@ -38,8 +39,8 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
         --without-pip $BUILD_PREFIX/venv \
         --sysconfigdata-file "$sysconfigdata_fn" \
 	--machine ${machine} \
-        --cc ${CC:-@CC@} \
-        --cxx ${CXX:-@CXX@}
+        --cc ${CC:-aarch64-conda-linux-gnu-gcc} \
+        --cxx ${CXX:-aarch64-conda-linux-gnu-g++}
 
     # Undo cross-python's changes
     # See https://github.com/conda-forge/h5py-feedstock/pull/104
