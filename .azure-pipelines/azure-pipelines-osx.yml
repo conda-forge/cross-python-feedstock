@@ -28,6 +28,10 @@ jobs:
         CONFIG: osx_64_cross_target_platformosx-arm64py_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_cross_target_platformosx-arm_h4d2f3aa03c
+      osx_64_cross_target_platformosx-arm64py_implcpythonversion3.8:
+        CONFIG: osx_64_cross_target_platformosx-arm64py_implcpythonversion3.8
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_cross_target_platformosx-arm_ha189f8b0e8
       osx_64_cross_target_platformosx-arm64py_implcpythonversion3.9:
         CONFIG: osx_64_cross_target_platformosx-arm64py_implcpythonversion3.9
         UPLOAD_PACKAGES: 'True'
@@ -52,6 +56,10 @@ jobs:
         CONFIG: osx_arm64_cross_target_platformosx-64py_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_arm64_cross_target_platformosx-_hf7b2b2ab8b
+      osx_arm64_cross_target_platformosx-64py_implcpythonversion3.8:
+        CONFIG: osx_arm64_cross_target_platformosx-64py_implcpythonversion3.8
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_cross_target_platformosx-_h1837bedfa7
       osx_arm64_cross_target_platformosx-64py_implcpythonversion3.9:
         CONFIG: osx_arm64_cross_target_platformosx-64py_implcpythonversion3.9
         UPLOAD_PACKAGES: 'True'
