@@ -90,7 +90,9 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     fi
     rm -rf $BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages
     ln -s $BUILD_PREFIX/lib/python@PY_VER@@PY_THREAD@/site-packages $BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages
-
+    if [[ "@PY_THREAD@" == "t" ]]; then
+      ln -s $BUILD_PREFIX/lib/python@PY_VER@/site-packages/* $BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages/
+    fi
     if [[ "@PY_VER@" == "3.1"* && "@PY_VER@" != "3.10" ]]; then
       # python 3.11 and up uses frozen modules to import site.py, so the custom doesn't get
       # picked up.
