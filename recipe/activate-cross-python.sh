@@ -7,19 +7,19 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     sysconfigdata_fn=$(find "$PREFIX/lib_pypy/" -name "_sysconfigdata_*.py" -type f)
     export PYO3_CROSS_LIB_DIR=$PREFIX/lib_pypy
     export PYO3_CROSS_PYTHON_IMPLEMENTATION=PyPy
-  elif [ -d "$PREFIX/lib/pypy$PY_VER" ]; then
-    sysconfigdata_fn=$(find "$PREFIX/lib/pypy$PY_VER/" -name "_sysconfigdata_*.py" -type f)
-    export PYO3_CROSS_LIB_DIR=$PREFIX/lib/pypy$PY_VER
+  elif [ -d "$PREFIX/lib/pypy@PY_VER@" ]; then
+    sysconfigdata_fn=$(find "$PREFIX/lib/pypy@PY_VER@/" -name "_sysconfigdata_*.py" -type f)
+    export PYO3_CROSS_LIB_DIR=$PREFIX/lib/pypy@PY_VER@
     export PYO3_CROSS_PYTHON_IMPLEMENTATION=PyPy
   else
-    sysconfigdata_fn=$(find "$PREFIX/lib/python$PY_VER@PY_THREAD@/" -name "_sysconfigdata_*.py.orig" -type f)
+    sysconfigdata_fn=$(find "$PREFIX/lib/python@PY_VER@@PY_THREAD@/" -name "_sysconfigdata_*.py.orig" -type f)
     sysconfigdata_fn=${sysconfigdata_fn%.orig}
     find "$PREFIX/lib/" -name "_sysconfigdata*.py" -not -name $(basename ${sysconfigdata_fn}) -type f -exec rm -f {} +
-    export PYO3_CROSS_LIB_DIR=$PREFIX/lib/python$PY_VER@PY_THREAD@
+    export PYO3_CROSS_LIB_DIR=$PREFIX/lib/python@PY_VER@@PY_THREAD@
     export PYO3_CROSS_PYTHON_IMPLEMENTATION=CPython
   fi
   export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include
-  export PYO3_CROSS_PYTHON_VERSION=$PY_VER
+  export PYO3_CROSS_PYTHON_VERSION=@PY_VER@
   unset _CONDA_PYTHON_SYSCONFIGDATA_NAME
   if [[ ! -d $BUILD_PREFIX/venv ]]; then
     case "${target_platform}" in
@@ -54,14 +54,14 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     # set sys.executable
     sed -i "s@import sys@import sys\nsys.argv[0] = '$PREFIX/bin/python'@g" $BUILD_PREFIX/venv/bin/cross-python
     # Load BUILD_PREFIX's packages first
-    sed -i.bak "s@$BUILD_PREFIX/venv/lib@$BUILD_PREFIX/venv/lib', '$BUILD_PREFIX/lib/python$PY_VER@PY_THREAD@/lib-dynload', '$BUILD_PREFIX/venv/lib/python$PY_VER@PY_THREAD@/site-packages@g" $BUILD_PREFIX/venv/bin/cross-python
+    sed -i.bak "s@$BUILD_PREFIX/venv/lib@$BUILD_PREFIX/venv/lib', '$BUILD_PREFIX/lib/python@PY_VER@@PY_THREAD@/lib-dynload', '$BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages@g" $BUILD_PREFIX/venv/bin/cross-python
 
     # For recipes using {{ PYTHON }}
     # Install the binary shim which execs $BUILD_PREFIX/venv/bin/cross-python
     # Remove the file first as it might be a hardlink and make sure to resolve symlinks
     python_real_path=$($BUILD_PREFIX/bin/python -c "import os; print(os.path.realpath('$PREFIX/bin/python'))")
     rm $python_real_path
-    if [ -d "$PREFIX/lib/pypy$PY_VER" ]; then
+    if [ -d "$PREFIX/lib/pypy@PY_VER@" ]; then
 	# TODO: Remove this when pypy supports PYTHONHOME env variable
         cp $BUILD_PREFIX/venv/bin/cross-python $python_real_path
     else
@@ -79,19 +79,19 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     cp $BUILD_PREFIX/bin/cross_python_shim $BUILD_PREFIX/bin/python
 
     if [[ -f "$PREFIX/bin/pypy" ]]; then
-      rm -rf $BUILD_PREFIX/venv/lib/pypy$PY_VER
-      mkdir -p $BUILD_PREFIX/venv/lib/python$PY_VER
-      ln -s $BUILD_PREFIX/venv/lib/python$PY_VER $BUILD_PREFIX/venv/lib/pypy$PY_VER
+      rm -rf $BUILD_PREFIX/venv/lib/pypy@PY_VER@
+      mkdir -p $BUILD_PREFIX/venv/lib/python@PY_VER@
+      ln -s $BUILD_PREFIX/venv/lib/python@PY_VER@ $BUILD_PREFIX/venv/lib/pypy@PY_VER@
     fi
 
     rm -rf $BUILD_PREFIX/venv/cross
-    if [[ -d "$PREFIX/lib/python$PY_VER@PY_THREAD@/site-packages/" ]]; then
-      rsync -a --exclude="*.so" --exclude="*.dylib" -I $PREFIX/lib/python$PY_VER@PY_THREAD@/site-packages/ $BUILD_PREFIX/lib/python$PY_VER@PY_THREAD@/site-packages/
+    if [[ -d "$PREFIX/lib/python@PY_VER@@PY_THREAD@/site-packages/" ]]; then
+      rsync -a --exclude="*.so" --exclude="*.dylib" -I $PREFIX/lib/python@PY_VER@@PY_THREAD@/site-packages/ $BUILD_PREFIX/lib/python@PY_VER@@PY_THREAD@/site-packages/
     fi
-    rm -rf $BUILD_PREFIX/venv/lib/python$PY_VER@PY_THREAD@/site-packages
-    ln -s $BUILD_PREFIX/lib/python$PY_VER@PY_THREAD@/site-packages $BUILD_PREFIX/venv/lib/python$PY_VER@PY_THREAD@/site-packages
+    rm -rf $BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages
+    ln -s $BUILD_PREFIX/lib/python@PY_VER@@PY_THREAD@/site-packages $BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages
 
-    if [[ "$PY_VER" == "3.1"* && "$PY_VER" != "3.10" ]]; then
+    if [[ "@PY_VER@" == "3.1"* && "@PY_VER@" != "3.10" ]]; then
       # python 3.11 and up uses frozen modules to import site.py, so the custom doesn't get
       # picked up.
       ln -sf $BUILD_PREFIX/venv/lib/site.py $BUILD_PREFIX/venv/lib/sitecustomize.py
@@ -104,6 +104,6 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     fi
   fi
   unset sysconfigdata_fn
-  export PYTHONPATH=$BUILD_PREFIX/venv/lib/python$PY_VER@PY_THREAD@/site-packages
+  export PYTHONPATH=$BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages
   echo "Finished setting up cross-python"
 fi
