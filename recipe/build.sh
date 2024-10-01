@@ -38,6 +38,29 @@ get_triplet() {
   fi
 }
 
+# These sysconfigdata do not have -B $PREFIX/share/compiler_compat
+# which is bad for cross compilation
+case ${cross_target_platform} in
+  linux-64)
+    _CONDA_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_x86_64_conda_cos6_linux_gnu
+    ;;
+  linux-ppc64le|linux-aarch64)
+    _CONDA_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(get_cpu_arch ${cross_target_platform})_conda_cos7_linux_gnu
+    ;;
+  linux-*)
+    _CONDA_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(get_cpu_arch ${cross_target_platform})_conda_linux_gnu
+    ;;
+  osx-64)
+    _CONDA_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_x86_64_apple_darwin13_4_0
+    ;;
+  osx-arm64)
+    _CONDA_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_arm64_apple_darwin20_0_0
+    ;;
+  *)
+    exit 1
+    ;;
+esac
+
 TARGET="$(get_triplet $cross_target_platform)"
 if [[ "$cross_target_platform" == linux-* ]]; then
   CC_FOR_TARGET="${TARGET}-gcc"
@@ -57,6 +80,7 @@ find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@CC@|${CC_FOR_TARGE
 find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@CXX@|${CXX_FOR_TARGET}|g"  "{}" \;
 find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@PY_THREAD@|${PY_THREAD}|g"  "{}" \;
 find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@PY_VER@|${version}|g"  "{}" \;
+find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@_CONDA_PYTHON_SYSCONFIGDATA_NAME@|${_CONDA_PYTHON_SYSCONFIGDATA_NAME}|g"  "{}" \;
 
 cat "${RECIPE_DIR}"/activate-cross-python.sh
 
