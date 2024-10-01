@@ -12,8 +12,9 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     export PYO3_CROSS_LIB_DIR=$PREFIX/lib/pypy@PY_VER@
     export PYO3_CROSS_PYTHON_IMPLEMENTATION=PyPy
   else
-    sysconfigdata_fn=$(find "$PREFIX/lib/python@PY_VER@@PY_THREAD@/" -name "_sysconfigdata_*.py.orig" -type f)
-    sysconfigdata_fn=${sysconfigdata_fn%.orig}
+    # sysconfigdata_fn=$(find "$PREFIX/lib/python@PY_VER@@PY_THREAD@/" -name "_sysconfigdata_*.py.orig" -type f)
+    # sysconfigdata_fn=${sysconfigdata_fn%.orig}
+    sysconfigdata_fn="$PREFIX/lib/python@PY_VER@@PY_THREAD@/@_CONDA_PYTHON_SYSCONFIGDATA_NAME@.py"
     find "$PREFIX/lib/" -name "_sysconfigdata*.py" -not -name $(basename ${sysconfigdata_fn}) -type f -exec rm -f {} +
     export PYO3_CROSS_LIB_DIR=$PREFIX/lib/python@PY_VER@@PY_THREAD@
     export PYO3_CROSS_PYTHON_IMPLEMENTATION=CPython
