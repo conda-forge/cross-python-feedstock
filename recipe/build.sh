@@ -41,12 +41,6 @@ get_triplet() {
 # These sysconfigdata do not have -B $PREFIX/share/compiler_compat
 # which is bad for cross compilation
 case ${cross_target_platform} in
-  linux-64)
-    _CONDA_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_x86_64_conda_cos6_linux_gnu
-    ;;
-  linux-ppc64le|linux-aarch64)
-    _CONDA_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(get_cpu_arch ${cross_target_platform})_conda_cos7_linux_gnu
-    ;;
   linux-*)
     _CONDA_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(get_cpu_arch ${cross_target_platform})_conda_linux_gnu
     ;;
