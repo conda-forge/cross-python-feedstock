@@ -11,142 +11,142 @@ jobs:
       linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13:
         CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformlinux_he994de81bb
       linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10:
         CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformlinux_hae9683325e
       linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11:
         CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformlinux_h41b5a5e21f
       linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12:
         CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformlinux_h4addbf02f0
       linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.8:
         CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.8
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformlinux_h584d6c2039
       linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.9:
         CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.9
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformlinux_hff39e7f714
       linux_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13:
         CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformlinux_he49dbdc8af
       linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13:
         CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformlinux_he2cebb8b55
       linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10:
         CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformlinux_h0168ee04a3
       linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11:
         CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformlinux_h6ab2913535
       linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12:
         CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformlinux_hc34454ebf8
       linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.8:
         CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.8
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformlinux_h46d284c53e
       linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.9:
         CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.9
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformlinux_h43853e2c0b
       linux_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13:
         CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformlinux_hd31f42a5c5
       linux_64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13:
         CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformosx-6_hd4a705c47a
       linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.10:
         CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformosx-6_h300a779519
       linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.11:
         CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformosx-6_h7b8367bacc
       linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.12:
         CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformosx-6_h57eb09c81d
       linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.8:
         CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.8
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformosx-6_hb09b3fb8fc
       linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.9:
         CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.9
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformosx-6_h9100d17736
       linux_64_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13:
         CONFIG: linux_64_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformosx-6_hcb23f077fd
       linux_64_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13:
         CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformosx-a_h54c8c94cda
       linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10:
         CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformosx-a_h80f2dc6d22
       linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11:
         CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformosx-a_h6e3671091b
       linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12:
         CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformosx-a_h7707338c53
       linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.8:
         CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.8
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformosx-a_h0ac2e0ce66
       linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.9:
         CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.9
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformosx-a_h925e609e53
       linux_64_cross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13:
         CONFIG: linux_64_cross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_cross_target_platformosx-a_h146fbc325d
   timeoutInMinutes: 360
   variables: {}
