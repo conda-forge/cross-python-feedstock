@@ -1,29 +1,31 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '11.0'
+MACOSX_SDK_VERSION:
+- '11.0'
 c_compiler:
-- gcc
+- clang
 c_compiler_version:
-- '13'
+- '19'
 c_stdlib:
-- sysroot
+- macosx_deployment_target
 c_stdlib_version:
-- '2.17'
-cdt_name:
-- conda
+- '11.0'
 channel_sources:
-- conda-forge
+- conda-forge/label/python_rc,conda-forge
 channel_targets:
 - conda-forge main
 cross_target_platform:
-- osx-arm64
-docker_image:
-- quay.io/condaforge/linux-anvil-x86_64:alma9
+- osx-64
 freethreading:
 - 'no'
+macos_machine:
+- arm64-apple-darwin20.0.0
 py_impl:
-- cpython
+- cp314
 target_platform:
-- linux-64
+- osx-arm64
 version:
-- '3.9'
+- '3.14'
 zip_keys:
 - - version
   - py_impl

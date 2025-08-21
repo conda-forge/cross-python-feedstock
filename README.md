@@ -34,6 +34,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
@@ -55,20 +62,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.8</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.8" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.9</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.9" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
@@ -76,10 +69,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -104,20 +111,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.8</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.8" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.9</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.9" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
@@ -125,10 +118,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_cross_target_platformosx-64freethreadingnopy_implcp314version3.14</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformosx-64freethreadingnopy_implcp314version3.14" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -153,20 +160,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.8</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.8" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.9</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.9" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_64_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
@@ -174,10 +167,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_cross_target_platformosx-arm64freethreadingnopy_implcp314version3.14</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformosx-arm64freethreadingnopy_implcp314version3.14" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -202,20 +209,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.8</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.8" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.9</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.9" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_64_cross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
@@ -223,10 +216,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_cross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_cross_target_platformosx-arm64freethreadingnopy_implcp314version3.14</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_cross_target_platformosx-arm64freethreadingnopy_implcp314version3.14" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -251,20 +258,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.8</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.8" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.9</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.9" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_64_cross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
@@ -272,10 +265,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_64_cross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_cross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_arm64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_cross_target_platformosx-64freethreadingnopy_implcp314version3.14</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cross_target_platformosx-64freethreadingnopy_implcp314version3.14" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -300,24 +307,17 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.8</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.8" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.9</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.9" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_arm64_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14" alt="variant">
                 </a>
               </td>
             </tr>
