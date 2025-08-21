@@ -9,7 +9,7 @@ c_stdlib_version:
 cdt_name:
 - conda
 channel_sources:
-- conda-forge/label/python_rc,conda-forge
+- conda-forge,conda-forge/label/python_rc
 channel_targets:
 - conda-forge main
 cross_target_platform:
