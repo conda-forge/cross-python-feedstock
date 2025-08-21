@@ -1,25 +1,25 @@
 version:
-  - 3.8
-  - 3.9
   - 3.10
   - 3.11
   - 3.12
   - 3.13
   - 3.13
+  - 3.14
+  - 3.14
 py_impl:
-  - cpython
-  - cpython
   - cpython
   - cpython
   - cpython
   - cp313
   - cp313t
+  - cp314
+  - cp314t
 freethreading:
   - no
   - no
   - no
   - no
-  - no
+  - yes
   - no
   - yes
 channel_sources:
@@ -28,8 +28,8 @@ channel_sources:
   - conda-forge
   - conda-forge
   - conda-forge
-  - conda-forge/label/python_rc,conda-forge
-  - conda-forge/label/python_rc,conda-forge
+  - conda-forge,conda-forge/label/python_rc
+  - conda-forge,conda-forge/label/python_rc
 cross_target_platform:
   - "linux-64"              # [linux64]
   - "linux-ppc64le"         # [linux64]
