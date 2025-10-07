@@ -105,6 +105,10 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     if [[ "${PYTHONPATH}" != "" ]]; then
       _CONDA_BACKUP_PYTHONPATH=${PYTHONPATH}
     fi
+
+    if [[ -f ${BUILD_PREFIX}/meson_cross_file.txt ]]; then
+      echo "python = '${PREFIX}/bin/python'" >> ${BUILD_PREFIX}/meson_cross_file.txt
+    fi
   fi
   unset sysconfigdata_fn
   export PYTHONPATH=$BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages
