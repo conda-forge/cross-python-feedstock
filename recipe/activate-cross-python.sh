@@ -105,6 +105,22 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     if [[ "${PYTHONPATH}" != "" ]]; then
       _CONDA_BACKUP_PYTHONPATH=${PYTHONPATH}
     fi
+
+    if [[ -f "${BUILD_PREFIX}/meson_cross_file.txt" && (-f "${BUILD_PREFIX}/bin/meson" || -f "${PREFIX}/bin/meson") ]]; then
+      if ! grep -q "python =" "${BUILD_PREFIX}/meson_cross_file.txt"; then
+        if [[ -f "${SRC_DIR}/conda_build.sh" ]]; then
+          if grep -q "meson_cross_file" "${SRC_DIR}/conda_build.sh"; then
+            echo "WARNING: Not adding python to meson_cross_file.txt as that file is being manipulated by the recipe"
+          else
+            echo "Adding python to meson_cross_file.txt."
+            echo "python = '${PREFIX}/bin/python'" >> ${BUILD_PREFIX}/meson_cross_file.txt
+          fi
+        else
+          echo "WARNING: Adding python to meson_cross_file.txt"
+          echo "python = '${PREFIX}/bin/python'" >> ${BUILD_PREFIX}/meson_cross_file.txt
+        fi
+      fi
+    fi
   fi
   unset sysconfigdata_fn
   export PYTHONPATH=$BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages
