@@ -91,7 +91,9 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     fi
     rm -rf $BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages
     ln -s $BUILD_PREFIX/lib/python@PY_VER@@PY_THREAD@/site-packages $BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages
-    if [[ "@PY_THREAD@" == "t" ]]; then
+    # if nogil-specific SP_DIR does not exist yet (either as dir or symlink), create a symlink to
+    # the one without the "t" suffix (which will always be used for noarch packages, for example)
+    if [[ "@PY_THREAD@" == "t" && ! -e $BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages ]]; then
       ln -s $BUILD_PREFIX/lib/python@PY_VER@/site-packages/* $BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages/
     fi
     if [[ "@PY_VER@" == "3.1"* && "@PY_VER@" != "3.10" ]]; then
