@@ -28,8 +28,8 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
         machine=x86_64
         ;;
       *)
-	machine=${target_platform#*-}
-	;;
+        machine=${target_platform#*-}
+        ;;
     esac
 
     if [[ "${CONDA_BUILD_SYSROOT:-}" != "" ]]; then
@@ -39,7 +39,7 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
         ${_SYSROOT_ARG:-} \
         --without-pip $BUILD_PREFIX/venv \
         --sysconfigdata-file "$sysconfigdata_fn" \
-	--machine ${machine} \
+        --machine ${machine} \
         --cc ${CC:-@CC@} \
         --cxx ${CXX:-@CXX@}
 
@@ -63,7 +63,7 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     python_real_path=$($BUILD_PREFIX/bin/python -c "import os; print(os.path.realpath('$PREFIX/bin/python'))")
     rm $python_real_path
     if [ -d "$PREFIX/lib/pypy@PY_VER@" ]; then
-	# TODO: Remove this when pypy supports PYTHONHOME env variable
+        # TODO: Remove this when pypy supports PYTHONHOME env variable
         cp $BUILD_PREFIX/venv/bin/cross-python $python_real_path
     else
         cp $BUILD_PREFIX/bin/cross_python_shim $python_real_path
@@ -91,7 +91,9 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     fi
     rm -rf $BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages
     ln -s $BUILD_PREFIX/lib/python@PY_VER@@PY_THREAD@/site-packages $BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages
-    if [[ "@PY_THREAD@" == "t" ]]; then
+    # if nogil-specific SP_DIR does not exist yet (either as dir or symlink), create a symlink to
+    # the one without the "t" suffix (which will always be used for noarch packages, for example)
+    if [[ "@PY_THREAD@" == "t" && ! -e $BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages ]]; then
       ln -s $BUILD_PREFIX/lib/python@PY_VER@/site-packages/* $BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages/
     fi
     if [[ "@PY_VER@" == "3.1"* && "@PY_VER@" != "3.10" ]]; then
