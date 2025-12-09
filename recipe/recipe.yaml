@@ -4,8 +4,8 @@ context:
   build_number: 54
 
 package:
-  name: cross-python_${{ cross_target_platform }}
-  version: ${{ version }}
+  name: cross-python_${{ cross_target_platform|default("linux-64") }}
+  version: ${{ version|default("0.1") }}
 
 build:
   number: ${{ build_number }}
@@ -22,7 +22,7 @@ requirements:
     - crossenv >=1.1.4
     - rsync
     - sed
-    - if: cross_target_platform.startswith("osx-*")
+    - if: cross_target_platform in ("osx-64", "osx-arm64")
       then: clangxx_impl_${{ cross_target_platform }}
       else: gxx_impl_${{ cross_target_platform }}
   run_exports:

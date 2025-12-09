@@ -36,7 +36,6 @@ cross_target_platform:
   - "linux-aarch64"
   - "osx-64"
   - "osx-arm64"
-  - "win-64"
 zip_keys:
   - - version
     - py_impl

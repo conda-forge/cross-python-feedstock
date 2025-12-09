@@ -50,18 +50,21 @@ case ${cross_target_platform} in
   osx-arm64)
     _CONDA_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_arm64_apple_darwin20_0_0
     ;;
+  win-64)
+    _CONDA_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_win_64
+    ;;
   *)
     exit 1
     ;;
 esac
 
 TARGET="$(get_triplet $cross_target_platform)"
-if [[ "$cross_target_platform" == linux-* ]]; then
-  CC_FOR_TARGET="${TARGET}-gcc"
-  CXX_FOR_TARGET="${TARGET}-g++"
-else
+if [[ "$cross_target_platform" == osx-* ]]; then
   CC_FOR_TARGET="${TARGET}-clang"
   CXX_FOR_TARGET="${TARGET}-clang++"
+else
+  CC_FOR_TARGET="${TARGET}-gcc"
+  CXX_FOR_TARGET="${TARGET}-g++"
 fi
 
 if [[ "$freethreading" == "yes" ]]; then
