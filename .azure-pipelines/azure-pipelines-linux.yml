@@ -8,146 +8,532 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13:
-        CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13
+      ? linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
+      : CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformlinux-aarc_he994de81
-      linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14:
-        CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgeconda_h1c7eec34
+      ? linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
+      : CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformlinux-aarc_haa10bf0d
-      linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10:
-        CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgeconda_hfc43d166
+      ? linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
+      : CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformlinux-aarc_hae968332
-      linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11:
-        CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgeconda_h96cafbfb
+      ? linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
+      : CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformlinux-aarc_h41b5a5e2
-      linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12:
-        CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgeconda_h2bb4fd02
+      ? linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingnopy_implcp314version3.14
+      : CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformlinux-aarc_h4addbf02
-      linux_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13:
-        CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgeconda_ha273b604
+      ? linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
+      : CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformlinux-aarc_he49dbdc8
-      linux_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14:
-        CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgeconda_h85421472
+      ? linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
+      : CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformlinux-aarc_hfdb88413
-      linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13:
-        CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgeconda_hb219998f
+      ? linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
+      : CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformlinux-ppc6_he2cebb8b
-      linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14:
-        CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgeconda_h9caccc34
+      ? linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformwin-64freethreadingnopy_implcp314version3.14
+      : CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformwin-64freethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformlinux-ppc6_h1c0a0708
-      linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10:
-        CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgeconda_h0ffb200e
+      ? linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformwin-64freethreadingyespy_implcp314tversion3.14
+      : CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformwin-64freethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformlinux-ppc6_h0168ee04
-      linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11:
-        CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgeconda_h2feab6d0
+      linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformlinux-ppc6_h6ab29135
-      linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12:
-        CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h7637226c
+      linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformlinux-ppc6_hc34454eb
-      linux_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13:
-        CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h1bff1bfe
+      linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformlinux-ppc6_hd31f42a5
-      linux_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14:
-        CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h29dd13d9
+      linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformlinux-ppc6_h5eabf47c
-      linux_64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13:
-        CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_hbbd267dd
+      linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformosx-64free_hd4a705c4
-      linux_64_cross_target_platformosx-64freethreadingnopy_implcp314version3.14:
-        CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcp314version3.14
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h45cdf3a7
+      linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformosx-64free_h85e56045
-      linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.10:
-        CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.10
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h34c49c32
+      linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformosx-64free_h300a7795
-      linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.11:
-        CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h014ae785
+      linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformosx-64free_h7b8367ba
-      linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.12:
-        CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h45548c44
+      linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformosx-64free_h57eb09c8
-      linux_64_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13:
-        CONFIG: linux_64_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h337fe348
+      linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformosx-64free_hcb23f077
-      linux_64_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14:
-        CONFIG: linux_64_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h2c8b291b
+      linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcp313version3.13:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformosx-64free_h0de48762
-      linux_64_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13:
-        CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h8c09b196
+      linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformosx-arm64f_h54c8c94c
-      linux_64_cross_target_platformosx-arm64freethreadingnopy_implcp314version3.14:
-        CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_hcedb3d98
+      linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformosx-arm64f_h54b3e475
-      linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10:
-        CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h543b2834
+      linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformosx-arm64f_h80f2dc6d
-      linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11:
-        CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h092df182
+      linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformosx-arm64f_h6e367109
-      linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12:
-        CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h4fed8a82
+      linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcp313version3.13:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformosx-arm64f_h7707338c
-      linux_64_cross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13:
-        CONFIG: linux_64_cross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h66fb394d
+      linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformosx-arm64f_h146fbc32
-      linux_64_cross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14:
-        CONFIG: linux_64_cross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h550d07a7
+      linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cross_target_platformosx-arm64f_h8f621f24
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_hfd0807b2
+      linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h6adb4732
+      linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h63b4d4a9
+      linux_64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcp313version3.13:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcp313version3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h275fa713
+      linux_64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h089c10f6
+      linux_64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.11
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h781af529
+      linux_64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h05b77e57
+      linux_64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingyespy_implcp313tversion3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_64_channel_sourcesconda-forgecross_h16b2243e
+      ? linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingnopy_implcp314version3.14
+      : CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingnopy_implcp314version3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h4e542c26
+      ? linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
+      : CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h5b02b1b7
+      ? linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
+      : CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h6e1793e7
+      ? linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
+      : CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h9c13e3d1
+      ? linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingnopy_implcp314version3.14
+      : CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingnopy_implcp314version3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h8cd563bb
+      ? linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
+      : CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h127a623d
+      ? linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
+      : CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h2b1660ab
+      ? linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
+      : CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h1d08d39e
+      ? linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformwin-64freethreadingnopy_implcp314version3.14
+      : CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformwin-64freethreadingnopy_implcp314version3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_hf3f672a8
+      ? linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformwin-64freethreadingyespy_implcp314tversion3.14
+      : CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformwin-64freethreadingyespy_implcp314tversion3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_he4c2b398
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcp313version3.13:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcp313version3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h54e7c2a4
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h77df9bbc
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h01ae21ec
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_hd5c52b01
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h262e525b
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h7c41060a
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h4cb86d66
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h799c1277
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_had887cfb
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h1da67f88
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcp313version3.13:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcp313version3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h31a5c66f
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h742fe7db
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_hbbedbed7
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_hc6072872
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h46435f26
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcp313version3.13:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_hd032b888
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_hf3eb7b87
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h17313631
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h45dd29dc
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_hadce348e
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcp313version3.13:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcp313version3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_hc360525c
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_hfbacf8d6
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.11
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h155adda0
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_h75f184ed
+      linux_aarch64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformwin-64freethreadingyespy_implcp313tversion3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_channel_sourcesconda-forge_hc0b42f79
+      ? linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingnopy_implcp314version3.14
+      : CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingnopy_implcp314version3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_hb1b18474
+      ? linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
+      : CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_hce8ca07d
+      ? linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
+      : CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_he0797cd0
+      ? linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
+      : CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h1a36e95c
+      ? linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingnopy_implcp314version3.14
+      : CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingnopy_implcp314version3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h7e47bbb2
+      ? linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
+      : CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h0d11bc35
+      ? linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
+      : CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_hf6d8170c
+      ? linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
+      : CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_hdc1d1355
+      ? linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformwin-64freethreadingnopy_implcp314version3.14
+      : CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformwin-64freethreadingnopy_implcp314version3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h1b1dccee
+      ? linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformwin-64freethreadingyespy_implcp314tversion3.14
+      : CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformwin-64freethreadingyespy_implcp314tversion3.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h0dde0b7d
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcp313version3.13:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcp313version3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h6e3dd638
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h765f0714
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h925f55ac
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h991b959b
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h7cc873c4
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h14a699a6
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h4fb4825c
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_hf7385dc0
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h5399ab63
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h7c040053
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcp313version3.13:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcp313version3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h48c44db9
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_hf8f3e508
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_hc81e83f0
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_hc81240ca
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h2c0804d0
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcp313version3.13:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h96cd4d5f
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h0a456800
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_hc8ca6385
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_hafcd0f33
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h9b44112f
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcp313version3.13:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcp313version3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h6b4485bb
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h913fc594
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.11
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_h03061f3e
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformwin-64freethreadingnopy_implcpythonversion3.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_hd70d36fc
+      linux_ppc64le_channel_sourcesconda-forgecross_target_platformwin-64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformwin-64freethreadingyespy_implcp313tversion3.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_ppc64le_channel_sourcesconda-forge_hd46fcf7d
+    maxParallel: 30
   timeoutInMinutes: 360
   variables: {}
 
