@@ -70,16 +70,23 @@ else
   PY_THREAD=""
 fi
 
-find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@CC@|${CC_FOR_TARGET}|g"  "{}" \;
-find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@CXX@|${CXX_FOR_TARGET}|g"  "{}" \;
-find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@PY_THREAD@|${PY_THREAD}|g"  "{}" \;
-find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@PY_VER@|${version}|g"  "{}" \;
-find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@_CONDA_PYTHON_SYSCONFIGDATA_NAME@|${_CONDA_PYTHON_SYSCONFIGDATA_NAME}|g"  "{}" \;
+mkdir scripts
 
-cat "${RECIPE_DIR}"/activate-cross-python.sh
+cp "${RECIPE_DIR}"/activate*.* scripts/
+cp "${RECIPE_DIR}"/deactivate*.* scripts/
 
-cp "${RECIPE_DIR}"/activate-cross-python.sh ${PREFIX}/etc/conda/activate.d/activate_z-${PKG_NAME}.sh
-cp "${RECIPE_DIR}"/deactivate-cross-python.sh ${PREFIX}/etc/conda/deactivate.d/deactivate_z-${PKG_NAME}.sh
+find scripts -name "activate*.*" -not -name "*.bak" -exec sed -i.bak "s|@CC@|${CC_FOR_TARGET}|g"  "{}" \;
+find scripts -name "activate*.*" -not -name "*.bak" -exec sed -i.bak "s|@CXX@|${CXX_FOR_TARGET}|g"  "{}" \;
+find scripts -name "activate*.*" -not -name "*.bak" -exec sed -i.bak "s|@PY_THREAD@|${PY_THREAD}|g"  "{}" \;
+find scripts -name "activate*.*" -not -name "*.bak" -exec sed -i.bak "s|@PY_VER@|${version}|g"  "{}" \;
+find scripts -name "activate*.*" -not -name "*.bak" -exec sed -i.bak "s|@_CONDA_PYTHON_SYSCONFIGDATA_NAME@|${_CONDA_PYTHON_SYSCONFIGDATA_NAME}|g"  "{}" \;
+
+rm scripts/*.bak
+
+cat scripts/activate-cross-python.sh
+
+cp scripts/activate-cross-python.sh ${PREFIX}/etc/conda/activate.d/activate_z-${PKG_NAME}.sh
+cp scripts/deactivate-cross-python.sh ${PREFIX}/etc/conda/deactivate.d/deactivate_z-${PKG_NAME}.sh
 
 # Python launcher shim program (see shim/shim.c for details)
 
