@@ -29,8 +29,7 @@ requirements:
     - sed
 {% if cross_target_platform.startswith("osx-") %}
     - clangxx_impl_{{ cross_target_platform }}
-{% endif %}
-{% if cross_target_platform.startswith("linux-") %}
+{% else %}
     - gxx_impl_{{ cross_target_platform }}
 {% endif %}
 
