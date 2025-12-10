@@ -8,230 +8,230 @@ jobs:
     vmImage: macOS-15
   strategy:
     matrix:
-      ? osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingnopy_implcp314version3.14
-      : CONFIG: osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingnopy_implcp314version3.14
+      osx_64_cross_target_platformlinux-64freethreadingnopy_implcp313version3.13:
+        CONFIG: osx_64_cross_target_platformlinux-64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgeconda-f_h712b65a2
-      ? osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
-      : CONFIG: osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-64free_h22544fda
+      osx_64_cross_target_platformlinux-64freethreadingnopy_implcp314version3.14:
+        CONFIG: osx_64_cross_target_platformlinux-64freethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgeconda-f_h02e06ca8
-      ? osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
-      : CONFIG: osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-64free_hab472e8c
+      osx_64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: osx_64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgeconda-f_hf625f8cd
-      ? osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
-      : CONFIG: osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-64free_h48f3a649
+      osx_64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: osx_64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgeconda-f_h66542637
-      ? osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
-      : CONFIG: osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-64free_h15b8b803
+      osx_64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: osx_64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgeconda-f_hdec00a37
-      ? osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
-      : CONFIG: osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-64free_hd1dd4592
+      osx_64_cross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: osx_64_cross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgeconda-f_h21796ba2
-      ? osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
-      : CONFIG: osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-64free_h4e9c4cb3
+      osx_64_cross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14:
+        CONFIG: osx_64_cross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgeconda-f_h248f7052
-      ? osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
-      : CONFIG: osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-64free_hba932e3e
+      osx_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13:
+        CONFIG: osx_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgeconda-f_h77a5a4c9
-      osx_64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcp313version3.13:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcp313version3.13
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-aarch6_hf4eabc5f
+      osx_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14:
+        CONFIG: osx_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_h7baf3c68
-      osx_64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-aarch6_h85484740
+      osx_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: osx_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_ha60799f8
-      osx_64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-aarch6_h4e18245a
+      osx_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: osx_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_hceb05ad1
-      osx_64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-aarch6_h6c1a2d02
+      osx_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: osx_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_h73a37a4a
-      osx_64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-aarch6_heac44681
+      osx_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: osx_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_h8279d41f
-      osx_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-aarch6_hc036a026
+      osx_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14:
+        CONFIG: osx_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_h3cc9ff91
-      osx_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-aarch6_hd8d5eea4
+      osx_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13:
+        CONFIG: osx_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_hb3dd48e9
-      osx_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-ppc64l_h29fa5fd5
+      osx_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14:
+        CONFIG: osx_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_hd0ba1413
-      osx_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-ppc64l_h986189bc
+      osx_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10:
+        CONFIG: osx_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_h40c0a3a3
-      osx_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-ppc64l_h365031d6
+      osx_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11:
+        CONFIG: osx_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_h4b6421de
-      osx_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-ppc64l_he23b42ea
+      osx_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12:
+        CONFIG: osx_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_hc23ba450
-      osx_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-ppc64l_hc5e99cf6
+      osx_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13:
+        CONFIG: osx_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_ha79ecf4f
-      osx_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-ppc64l_h88f45221
+      osx_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14:
+        CONFIG: osx_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_h14f9f841
-      osx_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12
+        SHORT_CONFIG: osx_64_cross_target_platformlinux-ppc64l_hc0ea61db
+      osx_64_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13:
+        CONFIG: osx_64_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_h6bf0c227
-      osx_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13
+        SHORT_CONFIG: osx_64_cross_target_platformosx-arm64fre_hd09259db
+      osx_64_cross_target_platformosx-arm64freethreadingnopy_implcp314version3.14:
+        CONFIG: osx_64_cross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_h0bc1453b
-      osx_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcp313version3.13:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
+        SHORT_CONFIG: osx_64_cross_target_platformosx-arm64fre_h08a34fcc
+      osx_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: osx_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_h78567a7d
-      osx_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10
+        SHORT_CONFIG: osx_64_cross_target_platformosx-arm64fre_h99b06b78
+      osx_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: osx_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_h674b9589
-      osx_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
+        SHORT_CONFIG: osx_64_cross_target_platformosx-arm64fre_hf0402b30
+      osx_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: osx_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_hd5b4aba4
-      osx_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
+        SHORT_CONFIG: osx_64_cross_target_platformosx-arm64fre_h69062f43
+      osx_64_cross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: osx_64_cross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_hbf8e4ee2
-      osx_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13:
-        CONFIG: osx_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
+        SHORT_CONFIG: osx_64_cross_target_platformosx-arm64fre_h2a8f987f
+      osx_64_cross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14:
+        CONFIG: osx_64_cross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_channel_sourcesconda-forgecross_t_h07e57f7f
-      ? osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingnopy_implcp314version3.14
-      : CONFIG: osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingnopy_implcp314version3.14
+        SHORT_CONFIG: osx_64_cross_target_platformosx-arm64fre_h0a421eb0
+      osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcp313version3.13:
+        CONFIG: osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecond_hafe19d8f
-      ? osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
-      : CONFIG: osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-64f_hd730d58c
+      osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcp314version3.14:
+        CONFIG: osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecond_haac5e585
-      ? osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
-      : CONFIG: osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-64f_hfb28a802
+      osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecond_h5eb1a66e
-      ? osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
-      : CONFIG: osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-64f_hb08d6013
+      osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecond_h5d7e6d36
-      ? osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
-      : CONFIG: osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-64f_hab699a89
+      osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecond_h96d7b13e
-      ? osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
-      : CONFIG: osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-64f_hd37a7628
+      osx_arm64_cross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: osx_arm64_cross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecond_h185f8eba
-      ? osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingnopy_implcp314version3.14
-      : CONFIG: osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingnopy_implcp314version3.14
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-64f_hc17bd6a3
+      osx_arm64_cross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14:
+        CONFIG: osx_arm64_cross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecond_hdb997d0d
-      ? osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
-      : CONFIG: osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-64f_hf9ec8207
+      osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13:
+        CONFIG: osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecond_h9e596ca8
-      osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcp313version3.13:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcp313version3.13
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-aar_h56550722
+      osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14:
+        CONFIG: osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_hdf978cf5
-      osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-aar_he6086040
+      osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_h8663e3c7
-      osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-aar_h6fb9df7a
+      osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_hc10f05f9
-      osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-aar_hd0f28f81
+      osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_h4f8ee21c
-      osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-aar_h1b1939ce
+      osx_arm64_cross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: osx_arm64_cross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_h6712d2b9
-      osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-aar_hcfaaaa79
+      osx_arm64_cross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14:
+        CONFIG: osx_arm64_cross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_h17bc6b27
-      osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-aar_h56485335
+      osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13:
+        CONFIG: osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_h1a715852
-      osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-ppc_h1a76e8ae
+      osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14:
+        CONFIG: osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_h7b178558
-      osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-ppc_hbac445d1
+      osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10:
+        CONFIG: osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_h13262c64
-      osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-ppc_h3f358401
+      osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11:
+        CONFIG: osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_hd8e8e604
-      osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-ppc_h4ecd0e47
+      osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12:
+        CONFIG: osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_h08b9ded3
-      osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-ppc_h869b1f0f
+      osx_arm64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13:
+        CONFIG: osx_arm64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_h6e0e25a5
-      osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-ppc_hefc19ecb
+      osx_arm64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14:
+        CONFIG: osx_arm64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_h975d6d36
-      osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12
+        SHORT_CONFIG: osx_arm64_cross_target_platformlinux-ppc_h21fea8cb
+      osx_arm64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13:
+        CONFIG: osx_arm64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_hecffa51b
-      osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13
+        SHORT_CONFIG: osx_arm64_cross_target_platformosx-64fre_hc1c3a65c
+      osx_arm64_cross_target_platformosx-64freethreadingnopy_implcp314version3.14:
+        CONFIG: osx_arm64_cross_target_platformosx-64freethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_h860f78dd
-      osx_arm64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcp313version3.13:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcp313version3.13
+        SHORT_CONFIG: osx_arm64_cross_target_platformosx-64fre_h9b4f6598
+      osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.10:
+        CONFIG: osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_hc4ef3467
-      osx_arm64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.10:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.10
+        SHORT_CONFIG: osx_arm64_cross_target_platformosx-64fre_h736e3214
+      osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.11:
+        CONFIG: osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_h09bc7a82
-      osx_arm64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.11:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
+        SHORT_CONFIG: osx_arm64_cross_target_platformosx-64fre_h087e1988
+      osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.12:
+        CONFIG: osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_h23b19359
-      osx_arm64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.12:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
+        SHORT_CONFIG: osx_arm64_cross_target_platformosx-64fre_h3b75a7a3
+      osx_arm64_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13:
+        CONFIG: osx_arm64_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_hfafc7287
-      osx_arm64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingyespy_implcp313tversion3.13:
-        CONFIG: osx_arm64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
+        SHORT_CONFIG: osx_arm64_cross_target_platformosx-64fre_he9ad6aba
+      osx_arm64_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14:
+        CONFIG: osx_arm64_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_channel_sourcesconda-forgecros_h8c8165c6
+        SHORT_CONFIG: osx_arm64_cross_target_platformosx-64fre_h17c3235a
     maxParallel: 20
   timeoutInMinutes: 360
   variables: {}
