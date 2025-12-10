@@ -50,18 +50,21 @@ case ${cross_target_platform} in
   osx-arm64)
     _CONDA_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_arm64_apple_darwin20_0_0
     ;;
+  win-64)
+    _CONDA_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_win_64
+    ;;
   *)
     exit 1
     ;;
 esac
 
 TARGET="$(get_triplet $cross_target_platform)"
-if [[ "$cross_target_platform" == linux-* ]]; then
-  CC_FOR_TARGET="${TARGET}-gcc"
-  CXX_FOR_TARGET="${TARGET}-g++"
-else
+if [[ "$cross_target_platform" == osx-* ]]; then
   CC_FOR_TARGET="${TARGET}-clang"
   CXX_FOR_TARGET="${TARGET}-clang++"
+else
+  CC_FOR_TARGET="${TARGET}-gcc"
+  CXX_FOR_TARGET="${TARGET}-g++"
 fi
 
 if [[ "$freethreading" == "yes" ]]; then
@@ -70,16 +73,23 @@ else
   PY_THREAD=""
 fi
 
-find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@CC@|${CC_FOR_TARGET}|g"  "{}" \;
-find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@CXX@|${CXX_FOR_TARGET}|g"  "{}" \;
-find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@PY_THREAD@|${PY_THREAD}|g"  "{}" \;
-find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@PY_VER@|${version}|g"  "{}" \;
-find "${RECIPE_DIR}" -name "activate*.*" -exec sed -i.bak "s|@_CONDA_PYTHON_SYSCONFIGDATA_NAME@|${_CONDA_PYTHON_SYSCONFIGDATA_NAME}|g"  "{}" \;
+mkdir scripts
 
-cat "${RECIPE_DIR}"/activate-cross-python.sh
+cp "${RECIPE_DIR}"/activate*.* scripts/
+cp "${RECIPE_DIR}"/deactivate*.* scripts/
 
-cp "${RECIPE_DIR}"/activate-cross-python.sh ${PREFIX}/etc/conda/activate.d/activate_z-${PKG_NAME}.sh
-cp "${RECIPE_DIR}"/deactivate-cross-python.sh ${PREFIX}/etc/conda/deactivate.d/deactivate_z-${PKG_NAME}.sh
+find scripts -name "activate*.*" -not -name "*.bak" -exec sed -i.bak "s|@CC@|${CC_FOR_TARGET}|g"  "{}" \;
+find scripts -name "activate*.*" -not -name "*.bak" -exec sed -i.bak "s|@CXX@|${CXX_FOR_TARGET}|g"  "{}" \;
+find scripts -name "activate*.*" -not -name "*.bak" -exec sed -i.bak "s|@PY_THREAD@|${PY_THREAD}|g"  "{}" \;
+find scripts -name "activate*.*" -not -name "*.bak" -exec sed -i.bak "s|@PY_VER@|${version}|g"  "{}" \;
+find scripts -name "activate*.*" -not -name "*.bak" -exec sed -i.bak "s|@_CONDA_PYTHON_SYSCONFIGDATA_NAME@|${_CONDA_PYTHON_SYSCONFIGDATA_NAME}|g"  "{}" \;
+
+rm scripts/*.bak
+
+cat scripts/activate-cross-python.sh
+
+cp scripts/activate-cross-python.sh ${PREFIX}/etc/conda/activate.d/activate_z-${PKG_NAME}.sh
+cp scripts/deactivate-cross-python.sh ${PREFIX}/etc/conda/deactivate.d/deactivate_z-${PKG_NAME}.sh
 
 # Python launcher shim program (see shim/shim.c for details)
 

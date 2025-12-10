@@ -1,0 +1,48 @@
+schema_version: 1
+
+context:
+  build_number: 54
+
+package:
+  name: cross-python_${{ cross_target_platform|default("linux-64") }}
+  version: ${{ version|default("0.1") }}
+
+build:
+  number: ${{ build_number }}
+  string: ${{ build_number }}_${{ py_impl }}
+  skip: win or (cross_target_platform == "osx-arm64" and (py_impl == "73_pypy" or version == "3.7")) or (cross_target_platform == target_platform)
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+  host:
+  run:
+    - python ${{ version }}.* *_${{ py_impl }}
+    - crossenv >=1.1.4
+    - rsync
+    - sed
+    - if: cross_target_platform in ("osx-64", "osx-arm64")
+      then: clangxx_impl_${{ cross_target_platform }}
+      else: gxx_impl_${{ cross_target_platform }}
+  run_exports:
+    strong:
+      - python ${{ version }}.* *_${{ py_impl }}
+
+tests:
+  - if: cross_target_platform not in ("osx-64", "osx-arm64")
+    then:
+      - script:
+        - test -f $PREFIX/etc/conda/activate.d/activate_z-cross-python_${{ cross_target_platform }}.sh
+        - echo ${{ freethreading }}
+
+about:
+  license: LicenseRef-OTHER
+  summary: A meta-package to set up a cross compiling env for python in conda-build
+  homepage: https://github.com/conda-forge/cross-python-feedstock
+
+extra:
+  recipe-maintainers:
+    - chrisburr
+    - isuruf
+  feedstock-name: cross-python
