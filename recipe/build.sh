@@ -53,6 +53,9 @@ case ${cross_target_platform} in
   win-64)
     _CONDA_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_win_64
     ;;
+  win-arm64)
+    _CONDA_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_win_arm64
+    ;;
   *)
     exit 1
     ;;

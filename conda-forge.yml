@@ -1,11 +1,17 @@
-build_platform: {osx_arm64: osx_64, linux_ppc64le: linux_64, linux_aarch64: linux_64}
-conda_forge_output_validation: true
+build_platform:
+  linux_ppc64le: linux_64
+  win_arm64: win_64
+conda_build:
+  pkg_format: '2'
 conda_build_tool: rattler-build
+conda_forge_output_validation: true
 github:
   branch_name: main
   tooling_branch_name: main
-conda_build:
-  pkg_format: '2'
-azure:
-  store_build_artifacts: true
+provider:
+  linux_aarch64: default
+  osx_arm64: default
 test: native_and_emulated
+workflow_settings:
+  store_build_artifacts:
+    - value: true

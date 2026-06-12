@@ -10,7 +10,8 @@ package:
 build:
   number: ${{ build_number }}
   string: ${{ build_number }}_${{ py_impl }}
-  skip: win or (cross_target_platform == "osx-arm64" and (py_impl == "73_pypy" or version == "3.7")) or (cross_target_platform == target_platform)
+  skip:
+    - not (build_platform == "win-64" and cross_target_platform == "win-arm64" and version == "3.14")
 
 requirements:
   build:
@@ -20,11 +21,18 @@ requirements:
   run:
     - python ${{ version }}.* *_${{ py_impl }}
     - crossenv >=1.1.4
-    - rsync
-    - sed
+    - if: unix
+      then:
+        - rsync
+        - sed
+      else:
+        - m2-sed
     - if: cross_target_platform in ("osx-64", "osx-arm64")
       then: clangxx_impl_${{ cross_target_platform }}
-      else: gxx_impl_${{ cross_target_platform }}
+    - if: cross_target_platform in ("linux-64", "linux-aarch64", "linux-ppc64le")
+      then: gxx_impl_${{ cross_target_platform }}
+    - if: cross_target_platform in ("win-arm64")
+      then: vs_${{ cross_target_platform }}
   run_exports:
     strong:
       - python ${{ version }}.* *_${{ py_impl }}
@@ -37,7 +45,8 @@ tests:
         - echo ${{ freethreading }}
 
 about:
-  license: LicenseRef-OTHER
+  license: BSD-3-Clause
+  license_file: LICENSE.txt
   summary: A meta-package to set up a cross compiling env for python in conda-build
   homepage: https://github.com/conda-forge/cross-python-feedstock
 
