@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  build_number: 54
+  build_number: 55
 
 package:
   name: cross-python_${{ cross_target_platform|default("linux-64") }}
