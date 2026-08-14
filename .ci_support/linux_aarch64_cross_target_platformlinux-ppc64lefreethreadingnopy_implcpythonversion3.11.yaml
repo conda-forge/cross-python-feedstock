@@ -13,7 +13,7 @@ channel_targets:
 cross_target_platform:
 - linux-ppc64le
 docker_image:
-- quay.io/condaforge/linux-anvil-x86_64:alma10
+- quay.io/condaforge/linux-anvil-aarch64:alma10
 freethreading:
 - 'no'
 py_impl:
