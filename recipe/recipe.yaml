@@ -45,6 +45,10 @@ tests:
 
 about:
   license: LicenseRef-OTHER
+  # The package ships only conda-forge-authored recipe scripts, which are
+  # BSD-3-Clause; this is the same text conda-smithy emits as
+  # recipe-scripts-license.txt.
+  license_file: LICENSE.txt
   summary: A meta-package to set up a cross compiling env for python in conda-build
   homepage: https://github.com/conda-forge/cross-python-feedstock
 
