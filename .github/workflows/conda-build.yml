@@ -23,8 +23,9 @@ jobs:
       matrix:
         include:
           - CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-aarc_he994de81
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -35,8 +36,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-aarc_haa10bf0d
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -47,8 +49,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-aarc_hae968332
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -59,8 +62,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-aarc_h41b5a5e2
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -71,8 +75,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-aarc_h4addbf02
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -83,8 +88,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-aarc_he49dbdc8
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -95,8 +101,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-aarc_hfdb88413
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -107,8 +114,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-ppc6_he2cebb8b
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -119,8 +127,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-ppc6_h1c0a0708
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -131,8 +140,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-ppc6_h0168ee04
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -143,8 +153,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-ppc6_h6ab29135
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -155,8 +166,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-ppc6_hc34454eb
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -167,8 +179,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-ppc6_hd31f42a5
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -179,8 +192,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-ppc6_h5eabf47c
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -191,8 +205,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-riscv64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-risc_hf993f2af
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -203,8 +218,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-riscv64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-risc_h43cf512b
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -215,8 +231,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.10
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-risc_h51abf1e0
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -227,8 +244,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-risc_h348e4b5d
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -239,8 +257,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-risc_hc031c647
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -251,8 +270,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-riscv64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-risc_hdf70bfb9
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -263,8 +283,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformlinux-riscv64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-risc_h75d0fad7
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -275,8 +296,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_64_cross_target_platformosx-64free_hd4a705c4
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -287,8 +309,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_64_cross_target_platformosx-64free_h85e56045
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -299,8 +322,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.10
+            CONFIG_SHORT: linux_64_cross_target_platformosx-64free_h300a7795
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -311,8 +335,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_64_cross_target_platformosx-64free_h7b8367ba
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -323,8 +348,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_64_cross_target_platformosx-64free_h57eb09c8
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -335,8 +361,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_64_cross_target_platformosx-64free_hcb23f077
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -347,8 +374,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_64_cross_target_platformosx-64free_h0de48762
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -359,8 +387,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_64_cross_target_platformosx-arm64f_h54c8c94c
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -371,8 +400,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_64_cross_target_platformosx-arm64f_h54b3e475
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -383,8 +413,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10
+            CONFIG_SHORT: linux_64_cross_target_platformosx-arm64f_h80f2dc6d
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -395,8 +426,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_64_cross_target_platformosx-arm64f_h6e367109
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -407,8 +439,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_64_cross_target_platformosx-arm64f_h7707338c
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -419,8 +452,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_64_cross_target_platformosx-arm64f_h146fbc32
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -431,8 +465,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_cross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_64_cross_target_platformosx-arm64f_h8f621f24
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -443,8 +478,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h3a757ac8
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -455,8 +491,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_hf13e48b9
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -467,8 +504,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h57eaff6f
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -479,8 +517,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h480e1ccb
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -491,8 +530,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_hf5ab902f
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -503,8 +543,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_hb171608a
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -515,8 +556,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_hfb867a25
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -527,8 +569,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_he3949a5a
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -539,8 +582,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h8b22f68f
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -551,8 +595,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h30cff7f7
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -563,8 +608,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_heff36280
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -575,8 +621,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h339964d5
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -587,8 +634,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_hc009aa84
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -599,8 +647,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h6affa121
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -611,8 +660,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-riscv64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_hd754e61a
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -623,8 +673,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-riscv64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h02d1e3dd
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -635,8 +686,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.10
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h99380a04
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -647,8 +699,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h8a102636
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -659,8 +712,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_haaab792c
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -671,8 +725,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-riscv64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h7e537dfe
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -683,8 +738,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-riscv64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h6fc46c2c
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -695,8 +751,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-6_h6c27f656
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -707,8 +764,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformosx-64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-6_hb1f16dc6
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -719,8 +777,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.10
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-6_hf3d36ae7
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -731,8 +790,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-6_h10f19988
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -743,8 +803,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-6_h9fac5c52
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -755,8 +816,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-6_h12e51586
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -767,8 +829,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-6_h4665e046
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -779,8 +842,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-a_h61875bce
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -791,8 +855,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-a_h4ca6d7b3
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -803,8 +868,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-a_hf0f43d31
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -815,8 +881,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-a_h2b343832
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -827,8 +894,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-a_h87b34eb6
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -839,8 +907,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-a_hd173fbd7
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -851,8 +920,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-a_ha4d2aec6
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -863,8 +933,9 @@ jobs:
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_hd8e5d2ae
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -875,8 +946,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h016277ff
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -887,8 +959,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h6119e33c
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -899,8 +972,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h7d62f0b5
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -911,8 +985,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_hf98a37cb
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -923,8 +998,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_hb17ce735
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -935,8 +1011,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h08c9ee78
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -947,8 +1024,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_he10035e3
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -959,8 +1037,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h53e78b32
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -971,8 +1050,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h0936fe3d
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -983,8 +1063,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h8535d947
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -995,8 +1076,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h6489940f
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1007,8 +1089,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_hf634ed25
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1019,8 +1102,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h46d8b2b5
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1031,8 +1115,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-riscv64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_hbac327b9
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1043,8 +1128,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-riscv64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h188d1a83
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1055,8 +1141,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.10
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h51d3511f
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1067,8 +1154,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h86c475a8
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1079,8 +1167,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_hf2dfed36
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1091,8 +1180,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-riscv64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h72c03c51
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1103,8 +1193,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-riscv64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h7ba6dbb6
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1115,8 +1206,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformosx-64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-6_h996ad18d
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1127,8 +1219,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformosx-64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-6_h938b5126
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1139,8 +1232,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.10
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-6_h56d78caf
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1151,8 +1245,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-6_hf89e43e4
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1163,8 +1258,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-6_h337cffdc
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1175,8 +1271,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-6_h955d6135
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1187,8 +1284,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-6_hdf65cdac
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1199,8 +1297,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-a_hbff16210
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1211,8 +1310,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-a_h6f57eada
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1223,8 +1323,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.10
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-a_h24f0d14f
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1235,8 +1336,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-a_hd9003ee1
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1247,8 +1349,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-a_h75b007c2
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1259,8 +1362,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-a_he7aef8b8
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1271,8 +1375,9 @@ jobs:
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-a_hb85f35ed
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
+            STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
             build_workspace_dir: build_artifacts
             docker_run_args: 
@@ -1378,3 +1483,79 @@ jobs:
         BINSTAR_TOKEN: ${{ secrets.BINSTAR_TOKEN }}
         FEEDSTOCK_TOKEN: ${{ secrets.FEEDSTOCK_TOKEN }}
         STAGING_BINSTAR_TOKEN: ${{ secrets.STAGING_BINSTAR_TOKEN }}
+
+    - name: Determine build outcome
+      # this is to merge the status of the linux/osx/win builds into
+      # something we can easily reuse during artefact generation
+      id: determine-status
+      if: ${{ always() }}
+      shell: bash
+      env:
+        OS: ${{ matrix.os }}
+      run: |
+        if [[ "$OS" == "ubuntu" ]]; then
+          STATUS=${{ steps.build-linux.outcome }}
+        elif [[ "$OS" == "macos" ]]; then
+          STATUS=${{ steps.build-macos.outcome }}
+        elif [[ "$OS" == "windows" ]]; then
+          STATUS=${{ steps.build-windows.outcome }}
+        fi
+        if [ -z "$STATUS" ]; then
+          # steps that never ran will have empty status
+          STATUS="cancelled"
+        fi
+        echo "status=$STATUS" >> $GITHUB_OUTPUT
+
+    - name: Prepare conda build artifacts
+      continue-on-error: true
+      id: prepare-artifacts
+      shell: bash
+      # we do not want to trigger artefact creation if the build was cancelled
+      if: ${{ always() && steps.determine-status.outputs.status != 'cancelled' && matrix.STORE_BUILD_ARTIFACTS }}
+      env:
+        CI: github_actions
+        CONDA_BLD_PATH: ${{ matrix.build_workspace_dir }}
+        CONFIG: ${{ matrix.CONFIG }}
+        CONFIG_SHORT: ${{ matrix.CONFIG_SHORT }}
+        JOB_STATUS: ${{ steps.determine-status.outputs.status }}
+        OS: ${{ matrix.os }}
+      run: |
+        export ARTIFACT_STAGING_DIR="$GITHUB_WORKSPACE"
+        export CI_RUN_ID=$GITHUB_RUN_ID
+        export CONDA_BLD_PATH="${CONDA_BLD_PATH/#~/${HOME}}"
+        export FEEDSTOCK_NAME="$(basename $GITHUB_REPOSITORY)"
+        export MINIFORGE_HOME="${MINIFORGE_HOME/#~/${HOME}}"
+        # Archive everything in CONDA_BLD_PATH except environments
+        # Archive the CONDA_BLD_PATH environments only when the job fails
+        # Use different prefix for successful and failed build artifacts
+        # so random failures don't prevent rebuilds from creating artifacts.
+        if [ $JOB_STATUS == "failure" ]; then
+          export BLD_ARTIFACT_PREFIX="conda_artifacts"
+          export ENV_ARTIFACT_PREFIX="conda_envs"
+        else
+          export BLD_ARTIFACT_PREFIX="conda_pkgs"
+        fi
+        if [ $OS == "windows" ]; then
+          pwsh -Command ". '.scripts/create_conda_build_artifacts.bat'"
+        else
+          ./.scripts/create_conda_build_artifacts.sh
+        fi
+
+    - name: Store conda build artifacts
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      if: ${{ always() && steps.prepare-artifacts.outcome == 'success' }}
+      with:
+        name: ${{ steps.prepare-artifacts.outputs.BLD_ARTIFACT_NAME }}
+        path: ${{ steps.prepare-artifacts.outputs.BLD_ARTIFACT_PATH }}
+        retention-days: 14
+      continue-on-error: true
+
+    - name: Store conda build environment artifacts
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      # only relevant if build failed, see above
+      if: ${{ always() && steps.determine-status.outputs.status == 'failure' && steps.prepare-artifacts.outcome == 'success' }}
+      with:
+        name: ${{ steps.prepare-artifacts.outputs.ENV_ARTIFACT_NAME }}
+        path: ${{ steps.prepare-artifacts.outputs.ENV_ARTIFACT_PATH }}
+        retention-days: 14
+      continue-on-error: true
