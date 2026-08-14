@@ -6,7 +6,7 @@ github:
   tooling_branch_name: main
 conda_build:
   pkg_format: '2'
-azure:
+workflow_settings:
   store_build_artifacts: true
 provider:
   linux_aarch64: default
