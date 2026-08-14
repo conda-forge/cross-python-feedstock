@@ -396,7 +396,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcp313version3.13:
         CONFIG: osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -407,7 +407,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcp314version3.14:
         CONFIG: osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -418,7 +418,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10:
         CONFIG: osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -429,7 +429,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11:
         CONFIG: osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -440,7 +440,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12:
         CONFIG: osx_arm64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -451,7 +451,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13:
         CONFIG: osx_arm64_cross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -462,7 +462,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14:
         CONFIG: osx_arm64_cross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -473,7 +473,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13:
         CONFIG: osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -484,7 +484,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14:
         CONFIG: osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -495,7 +495,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10:
         CONFIG: osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -506,7 +506,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11:
         CONFIG: osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -517,7 +517,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12:
         CONFIG: osx_arm64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -528,7 +528,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13:
         CONFIG: osx_arm64_cross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -539,7 +539,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14:
         CONFIG: osx_arm64_cross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -550,7 +550,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13:
         CONFIG: osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -561,7 +561,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14:
         CONFIG: osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -572,7 +572,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10:
         CONFIG: osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -583,7 +583,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11:
         CONFIG: osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -594,7 +594,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12:
         CONFIG: osx_arm64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -605,7 +605,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13:
         CONFIG: osx_arm64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -616,7 +616,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14:
         CONFIG: osx_arm64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -627,7 +627,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-riscv64freethreadingnopy_implcp313version3.13:
         CONFIG: osx_arm64_cross_target_platformlinux-riscv64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -638,7 +638,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-riscv64freethreadingnopy_implcp314version3.14:
         CONFIG: osx_arm64_cross_target_platformlinux-riscv64freethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -649,7 +649,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.10:
         CONFIG: osx_arm64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -660,7 +660,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.11:
         CONFIG: osx_arm64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -671,7 +671,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.12:
         CONFIG: osx_arm64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -682,7 +682,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-riscv64freethreadingyespy_implcp313tversion3.13:
         CONFIG: osx_arm64_cross_target_platformlinux-riscv64freethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -693,7 +693,7 @@ jobs:
       osx_arm64_cross_target_platformlinux-riscv64freethreadingyespy_implcp314tversion3.14:
         CONFIG: osx_arm64_cross_target_platformlinux-riscv64freethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -704,7 +704,7 @@ jobs:
       osx_arm64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13:
         CONFIG: osx_arm64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -715,7 +715,7 @@ jobs:
       osx_arm64_cross_target_platformosx-64freethreadingnopy_implcp314version3.14:
         CONFIG: osx_arm64_cross_target_platformosx-64freethreadingnopy_implcp314version3.14
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -726,7 +726,7 @@ jobs:
       osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.10:
         CONFIG: osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.10
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -737,7 +737,7 @@ jobs:
       osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.11:
         CONFIG: osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -748,7 +748,7 @@ jobs:
       osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.12:
         CONFIG: osx_arm64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -759,7 +759,7 @@ jobs:
       osx_arm64_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13:
         CONFIG: osx_arm64_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
@@ -770,7 +770,7 @@ jobs:
       osx_arm64_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14:
         CONFIG: osx_arm64_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
         free_disk_space: skip
         pagefile_size: 0
