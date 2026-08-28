@@ -1,33 +1,33 @@
 version:
-  - 3.10
-  - 3.11
-  - 3.12
-  - 3.13
-  - 3.13
+  - 3.10        # [not riscv64]
+  - 3.11        # [not riscv64]
+  - 3.12        # [not riscv64]
+  - 3.13        # [not riscv64]
+  - 3.13        # [not riscv64]
   - 3.14
   - 3.14
 py_impl:
-  - cpython
-  - cpython
-  - cpython
-  - cp313
-  - cp313t
+  - cpython     # [not riscv64]
+  - cpython     # [not riscv64]
+  - cpython     # [not riscv64]
+  - cp313       # [not riscv64]
+  - cp313t      # [not riscv64]
   - cp314
   - cp314t
 freethreading:
-  - no
-  - no
-  - no
-  - no
-  - yes
+  - no          # [not riscv64]
+  - no          # [not riscv64]
+  - no          # [not riscv64]
+  - no          # [not riscv64]
+  - yes         # [not riscv64]
   - no
   - yes
 channel_sources:
-  - conda-forge
-  - conda-forge
-  - conda-forge
-  - conda-forge
-  - conda-forge
+  - conda-forge # [not riscv64]
+  - conda-forge # [not riscv64]
+  - conda-forge # [not riscv64]
+  - conda-forge # [not riscv64]
+  - conda-forge # [not riscv64]
   - conda-forge
   - conda-forge
 cross_target_platform:
