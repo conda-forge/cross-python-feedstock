@@ -10,7 +10,7 @@ package:
 build:
   number: ${{ build_number }}
   string: ${{ build_number }}_${{ py_impl }}
-  skip: win or (cross_target_platform == "osx-arm64" and (py_impl == "73_pypy" or version == "3.7")) or (cross_target_platform == target_platform)
+  skip: win or (cross_target_platform == target_platform)
   variant:
     # freethreading is only referenced under `tests` for non-osx targets, so
     # rattler-build prunes it from the build env for osx cross targets and
