@@ -35,8 +35,38 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
     if [[ "${CONDA_BUILD_SYSROOT:-}" != "" ]]; then
       _SYSROOT_ARG="--sysroot $CONDA_BUILD_SYSROOT"
     fi
+
+    # crossenv>=1.6 only accepts linux_<arch> wheels unless platform tags are given.
+    # Declare the manylinux tags supported by the glibc in the sysroot.
+    _PLATFORM_TAG_ARGS=""
+    if [[ "${target_platform}" == linux-* && -f "${CONDA_BUILD_SYSROOT:-}/usr/include/features.h" ]]; then
+      _glibc_minor=$(sed -n 's/^#define[[:space:]]*__GLIBC_MINOR__[[:space:]]*\([0-9]*\).*/\1/p' "${CONDA_BUILD_SYSROOT}/usr/include/features.h")
+      if [[ "${_glibc_minor}" != "" ]]; then
+        # manylinux2014 is the oldest manylinux tag for architectures other than x86
+        _min_glibc_minor=17
+        if [[ "${machine}" == "x86_64" || "${machine}" == "i686" ]]; then
+          _min_glibc_minor=5
+        fi
+        _PLATFORM_TAG_ARGS="--platform-tag linux_${machine}"
+        for ((_m = _glibc_minor; _m >= _min_glibc_minor; _m--)); do
+          _PLATFORM_TAG_ARGS="${_PLATFORM_TAG_ARGS} --platform-tag manylinux_2_${_m}_${machine}"
+        done
+        if (( _glibc_minor >= 17 )); then
+          _PLATFORM_TAG_ARGS="${_PLATFORM_TAG_ARGS} --platform-tag manylinux2014_${machine}"
+        fi
+        if (( _glibc_minor >= 12 && _min_glibc_minor <= 12 )); then
+          _PLATFORM_TAG_ARGS="${_PLATFORM_TAG_ARGS} --platform-tag manylinux2010_${machine}"
+        fi
+        if (( _min_glibc_minor <= 5 )); then
+          _PLATFORM_TAG_ARGS="${_PLATFORM_TAG_ARGS} --platform-tag manylinux1_${machine}"
+        fi
+      fi
+      unset _glibc_minor _min_glibc_minor _m
+    fi
+
     $BUILD_PREFIX/bin/python -m crossenv $PREFIX/bin/python \
         ${_SYSROOT_ARG:-} \
+        ${_PLATFORM_TAG_ARGS} \
         --without-pip $BUILD_PREFIX/venv \
         --sysconfigdata-file "$sysconfigdata_fn" \
         --machine ${machine} \
@@ -124,7 +154,7 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
       fi
     fi
   fi
-  unset sysconfigdata_fn
+  unset sysconfigdata_fn _PLATFORM_TAG_ARGS
   export PYTHONPATH=$BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages
   echo "Finished setting up cross-python"
 fi

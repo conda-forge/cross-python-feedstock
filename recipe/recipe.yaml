@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  build_number: 56
+  build_number: 57
 
 package:
   name: cross-python_${{ cross_target_platform|default("linux-64") }}
@@ -26,7 +26,7 @@ requirements:
   host:
   run:
     - python ${{ version }}.* *_${{ py_impl }}
-    - crossenv >=1.1.4
+    - crossenv >=1.4.0
     - rsync
     - sed
     - if: cross_target_platform in ("osx-64", "osx-arm64")
