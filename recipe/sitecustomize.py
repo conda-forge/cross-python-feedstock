@@ -15,3 +15,44 @@ if _platform:
     # ".cp314-win_arm64.pyd" -> "cp314-win_arm64"
     _config_vars["SOABI"] = _ext_suffix[1:].rsplit(".", 1)[0]
     sysconfig.get_platform = lambda: _platform
+
+    if os.name != "nt":
+        # Windows target on a unix build python (clang_win-64, MSVC ABI): the
+        # linux compile flags and headers of the build python must not leak in
+        _include = os.path.join(os.environ["PREFIX"], "include")
+        _config_vars["CCSHARED"] = ""
+        _config_vars["INCLUDEPY"] = _include
+        _config_vars["CONFINCLUDEPY"] = _include
+        _config_vars["LDSHARED"] = os.environ.get("CC", "cc") + " -shared"
+
+        _get_paths = sysconfig.get_paths
+        _get_path = sysconfig.get_path
+
+        def _get_paths_for_target(*args, **kwargs):
+            paths = _get_paths(*args, **kwargs)
+            paths.update(include=_include, platinclude=_include)
+            return paths
+
+        def _get_path_for_target(name, *args, **kwargs):
+            if name in ("include", "platinclude"):
+                return _include
+            return _get_path(name, *args, **kwargs)
+
+        sysconfig.get_paths = _get_paths_for_target
+        sysconfig.get_path = _get_path_for_target
+
+        # pip installs with the build python's install scheme, posix_prefix on
+        # linux, which puts packages in lib/pythonX.Y/site-packages; a Windows
+        # python expects Lib/site-packages and Scripts
+        if "nt" in sysconfig._INSTALL_SCHEMES:
+            _get_preferred_scheme = sysconfig.get_preferred_scheme
+
+            def _get_preferred_scheme_for_target(key):
+                if key in ("prefix", "home"):
+                    return "nt"
+                if key == "user" and "nt_user" in sysconfig._INSTALL_SCHEMES:
+                    return "nt_user"
+                return _get_preferred_scheme(key)
+
+            sysconfig.get_preferred_scheme = _get_preferred_scheme_for_target
+            sysconfig.get_default_scheme = lambda: "nt"

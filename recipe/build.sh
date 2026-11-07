@@ -16,7 +16,9 @@ if [[ "${cross_target_platform}" == win-* ]]; then
   else
     PY_THREAD=""
   fi
-  PLAT_TAG="${cross_target_platform//-/_}"
+  # the python platform name of win-64 is win-amd64
+  PLAT_NAME="${cross_target_platform/win-64/win-amd64}"
+  PLAT_TAG="${PLAT_NAME//-/_}"
   PY_VER_NODOT="${version//./}"
 
   render() {
@@ -24,6 +26,7 @@ if [[ "${cross_target_platform}" == win-* ]]; then
     local content
     content="$(cat "$1")"
     content="${content//@CROSS_TARGET_PLATFORM@/${cross_target_platform}}"
+    content="${content//@PLAT_NAME@/${PLAT_NAME}}"
     content="${content//@PLAT_TAG@/${PLAT_TAG}}"
     content="${content//@PY_VER_NODOT@/${PY_VER_NODOT}}"
     content="${content//@PY_VER@/${version}}"
@@ -32,6 +35,17 @@ if [[ "${cross_target_platform}" == win-* ]]; then
   }
 
   mkdir -p "${PREFIX}/etc/conda/cross-python"
+  case "$(uname -s)" in
+    MSYS*|MINGW*|CYGWIN*) ;;
+    *)
+      # unix build machine: bash activation, clang_win-64 needs no launcher
+      render "${RECIPE_DIR}/activate-cross-python-win.sh" "${PREFIX}/etc/conda/activate.d/activate_z-${PKG_NAME}.sh"
+      cat "${PREFIX}/etc/conda/activate.d/activate_z-${PKG_NAME}.sh"
+      cp "${RECIPE_DIR}/deactivate-cross-python-win.sh" "${PREFIX}/etc/conda/deactivate.d/deactivate_z-${PKG_NAME}.sh"
+      cp "${RECIPE_DIR}/sitecustomize.py" "${PREFIX}/etc/conda/cross-python/sitecustomize.py"
+      exit 0
+      ;;
+  esac
   render "${RECIPE_DIR}/activate-cross-python.bat" "${PREFIX}/etc/conda/activate.d/activate_z-${PKG_NAME}.bat"
   cat "${PREFIX}/etc/conda/activate.d/activate_z-${PKG_NAME}.bat"
   cp "${RECIPE_DIR}/deactivate-cross-python.bat" "${PREFIX}/etc/conda/deactivate.d/deactivate_z-${PKG_NAME}.bat"
