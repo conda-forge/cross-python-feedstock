@@ -71,6 +71,12 @@ def check_activated():
     print(f"packaging first tag: {first}")
     check("packaging platform", first.platform, "win_amd64")
 
+    from pip._vendor.packaging import tags as pip_tags
+
+    pip_first = next(iter(pip_tags.sys_tags()))
+    print(f"pip packaging first tag: {pip_first}")
+    check("pip packaging platform", pip_first.platform, "win_amd64")
+
     # the clang_win-64 compiler emits x86-64 COFF objects; windows.h also
     # needs the SDK headers to be complete (shared/basetsd.h)
     with tempfile.TemporaryDirectory() as tmp:

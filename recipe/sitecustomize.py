@@ -56,3 +56,30 @@ if _platform:
 
             sysconfig.get_preferred_scheme = _get_preferred_scheme_for_target
             sysconfig.get_default_scheme = lambda: "nt"
+
+        # packaging takes the macOS tags from platform.mac_ver() and ignores
+        # sysconfig on a darwin build python, and pip vendors its own copy; pin
+        # platform_tags (a module global, looked up at call time) to the target
+        import importlib.machinery
+        import sys
+
+        _tag = _platform.replace("-", "_").replace(".", "_")
+
+        class _PlatformTagsFinder:
+            @staticmethod
+            def find_spec(name, path=None, target=None):
+                if name not in ("packaging.tags", "pip._vendor.packaging.tags"):
+                    return None
+                spec = importlib.machinery.PathFinder.find_spec(name, path, target)
+                if spec is None or spec.loader is None:
+                    return None
+                _exec_module = spec.loader.exec_module
+
+                def exec_module(module):
+                    _exec_module(module)
+                    module.platform_tags = lambda: iter([_tag])
+
+                spec.loader.exec_module = exec_module
+                return spec
+
+        sys.meta_path.insert(0, _PlatformTagsFinder)
