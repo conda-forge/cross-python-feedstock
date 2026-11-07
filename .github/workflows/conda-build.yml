@@ -542,6 +542,58 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
+          - CONFIG: linux_64_cross_target_platformwin-64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_64_cross_target_platformwin-64free_h3bafd9ba
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
+            STORE_BUILD_ARTIFACTS: True
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-latest']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_64_cross_target_platformwin-64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_64_cross_target_platformwin-64free_h6f4c6ced
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
+            STORE_BUILD_ARTIFACTS: True
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-latest']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_64_cross_target_platformwin-64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_64_cross_target_platformwin-64free_hb05eb9bd
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
+            STORE_BUILD_ARTIFACTS: True
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-latest']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_64_cross_target_platformwin-64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_64_cross_target_platformwin-64free_h17e27cd1
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
+            STORE_BUILD_ARTIFACTS: True
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-latest']
+            tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingnopy_implcp313version3.13
             CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h3a757ac8
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10

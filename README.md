@@ -612,6 +612,7 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cross--python__linux--riscv64-green.svg)](https://anaconda.org/conda-forge/cross-python_linux-riscv64) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cross-python_linux-riscv64.svg)](https://anaconda.org/conda-forge/cross-python_linux-riscv64) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cross-python_linux-riscv64.svg)](https://anaconda.org/conda-forge/cross-python_linux-riscv64) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cross-python_linux-riscv64.svg)](https://anaconda.org/conda-forge/cross-python_linux-riscv64) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cross--python__osx--64-green.svg)](https://anaconda.org/conda-forge/cross-python_osx-64) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cross-python_osx-64.svg)](https://anaconda.org/conda-forge/cross-python_osx-64) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cross-python_osx-64.svg)](https://anaconda.org/conda-forge/cross-python_osx-64) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cross-python_osx-64.svg)](https://anaconda.org/conda-forge/cross-python_osx-64) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cross--python__osx--arm64-green.svg)](https://anaconda.org/conda-forge/cross-python_osx-arm64) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cross-python_osx-arm64.svg)](https://anaconda.org/conda-forge/cross-python_osx-arm64) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cross-python_osx-arm64.svg)](https://anaconda.org/conda-forge/cross-python_osx-arm64) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cross-python_osx-arm64.svg)](https://anaconda.org/conda-forge/cross-python_osx-arm64) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-cross--python__win--64-green.svg)](https://anaconda.org/conda-forge/cross-python_win-64) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cross-python_win-64.svg)](https://anaconda.org/conda-forge/cross-python_win-64) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cross-python_win-64.svg)](https://anaconda.org/conda-forge/cross-python_win-64) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cross-python_win-64.svg)](https://anaconda.org/conda-forge/cross-python_win-64) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cross--python__win--arm64-green.svg)](https://anaconda.org/conda-forge/cross-python_win-arm64) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cross-python_win-arm64.svg)](https://anaconda.org/conda-forge/cross-python_win-arm64) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cross-python_win-arm64.svg)](https://anaconda.org/conda-forge/cross-python_win-arm64) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cross-python_win-arm64.svg)](https://anaconda.org/conda-forge/cross-python_win-arm64) |
 
 Installing cross-python
@@ -631,7 +632,7 @@ How to use
 <summary>With conda</summary>
 
 ```
-conda install cross-python_linux-64 cross-python_linux-aarch64 cross-python_linux-ppc64le cross-python_linux-riscv64 cross-python_osx-64 cross-python_osx-arm64 cross-python_win-arm64
+conda install cross-python_linux-64 cross-python_linux-aarch64 cross-python_linux-ppc64le cross-python_linux-riscv64 cross-python_osx-64 cross-python_osx-arm64 cross-python_win-64 cross-python_win-arm64
 ```
 
 </details>
@@ -640,7 +641,7 @@ conda install cross-python_linux-64 cross-python_linux-aarch64 cross-python_linu
 <summary>With mamba</summary>
 
 ```
-mamba install cross-python_linux-64 cross-python_linux-aarch64 cross-python_linux-ppc64le cross-python_linux-riscv64 cross-python_osx-64 cross-python_osx-arm64 cross-python_win-arm64
+mamba install cross-python_linux-64 cross-python_linux-aarch64 cross-python_linux-ppc64le cross-python_linux-riscv64 cross-python_osx-64 cross-python_osx-arm64 cross-python_win-64 cross-python_win-arm64
 ```
 
 </details>
@@ -650,9 +651,9 @@ mamba install cross-python_linux-64 cross-python_linux-aarch64 cross-python_linu
 
 ```
 # for adding to your local project
-pixi add cross-python_linux-64 cross-python_linux-aarch64 cross-python_linux-ppc64le cross-python_linux-riscv64 cross-python_osx-64 cross-python_osx-arm64 cross-python_win-arm64
+pixi add cross-python_linux-64 cross-python_linux-aarch64 cross-python_linux-ppc64le cross-python_linux-riscv64 cross-python_osx-64 cross-python_osx-arm64 cross-python_win-64 cross-python_win-arm64
 # for installing globally
-pixi global install cross-python_linux-64 cross-python_linux-aarch64 cross-python_linux-ppc64le cross-python_linux-riscv64 cross-python_osx-64 cross-python_osx-arm64 cross-python_win-arm64
+pixi global install cross-python_linux-64 cross-python_linux-aarch64 cross-python_linux-ppc64le cross-python_linux-riscv64 cross-python_osx-64 cross-python_osx-arm64 cross-python_win-64 cross-python_win-arm64
 ```
 
 </details>
