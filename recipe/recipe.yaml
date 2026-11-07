@@ -17,8 +17,8 @@ build:
     # win-arm64 is the only Windows cross target built from win-64
     - win and cross_target_platform != "win-arm64"
     - unix and cross_target_platform == "win-arm64"
-    # win-64 is a cross target only from linux-64 (clang_win-64 toolchain)
-    - cross_target_platform == "win-64" and target_platform != "linux-64"
+    # win-64 is a cross target only from linux-64, linux-aarch64 and osx-arm64 (clang_win-64 toolchain)
+    - cross_target_platform == "win-64" and target_platform not in ("linux-64", "linux-aarch64", "osx-arm64")
     # conda-forge ships win-arm64 and win-64 cross python only for 3.14 and later
     - cross_target_platform in ("win-arm64", "win-64") and version not in ("3.14", "3.15")
   variant:
