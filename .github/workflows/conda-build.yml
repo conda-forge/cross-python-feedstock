@@ -22,8 +22,8 @@ jobs:
       max-parallel: 50
       matrix:
         include:
-          - CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgeconda_h3c5dff6c
+          - CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-aarc_he994de81
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -35,8 +35,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgeconda_h5802dc64
+          - CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-aarc_haa10bf0d
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -48,8 +48,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgeconda_hff3f4cad
+          - CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-aarc_h55156e70
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -61,8 +61,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgeconda_h8b0bb213
+          - CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-aarc_h41b5a5e2
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -74,8 +74,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-riscv64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgeconda_h6018ce36
+          - CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-aarc_h4addbf02
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -87,8 +87,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-riscv64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgeconda_hdcaa73f7
+          - CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-aarc_he49dbdc8
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -100,8 +100,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgeconda_hb7db519f
+          - CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-aarc_hfdb88413
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -113,8 +113,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgeconda_h370e7d6c
+          - CONFIG: linux_64_cross_target_platformlinux-aarch64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-aarc_h230eedd8
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -126,8 +126,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgeconda_h05f45099
+          - CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-ppc6_he2cebb8b
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -139,8 +139,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgeconda_h6ab984d3
+          - CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-ppc6_h1c0a0708
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -152,8 +152,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h7637226c
+          - CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-ppc6_h13fc24a9
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -165,8 +165,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_ha480c82d
+          - CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-ppc6_h6ab29135
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -178,8 +178,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h29dd13d9
+          - CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-ppc6_hc34454eb
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -191,8 +191,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_hbbd267dd
+          - CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-ppc6_hd31f42a5
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -204,8 +204,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h45cdf3a7
+          - CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-ppc6_h5eabf47c
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -217,8 +217,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h38b1d062
+          - CONFIG: linux_64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-ppc6_h2977c91b
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -230,8 +230,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h34c49c32
+          - CONFIG: linux_64_cross_target_platformlinux-riscv64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-risc_hf993f2af
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -243,8 +243,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_ha5215ddf
+          - CONFIG: linux_64_cross_target_platformlinux-riscv64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-risc_h43cf512b
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -256,8 +256,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h45548c44
+          - CONFIG: linux_64_cross_target_platformlinux-riscv64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-risc_he4689b22
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -269,8 +269,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h337fe348
+          - CONFIG: linux_64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-risc_h348e4b5d
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -282,8 +282,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h2c8b291b
+          - CONFIG: linux_64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-risc_hc031c647
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -295,8 +295,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_hfef1e049
+          - CONFIG: linux_64_cross_target_platformlinux-riscv64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-risc_hdf70bfb9
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -308,8 +308,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingnopy_implcp313version3.13
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_he3f1c92e
+          - CONFIG: linux_64_cross_target_platformlinux-riscv64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-risc_h75d0fad7
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -321,8 +321,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h86a759d1
+          - CONFIG: linux_64_cross_target_platformlinux-riscv64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_64_cross_target_platformlinux-risc_h61cc152d
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -334,8 +334,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.11
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_hb39afb82
+          - CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_64_cross_target_platformosx-64free_hd4a705c4
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -347,8 +347,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.12
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h5d85602c
+          - CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_64_cross_target_platformosx-64free_h85e56045
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -360,8 +360,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingyespy_implcp313tversion3.13
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h5d3989bf
+          - CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_64_cross_target_platformosx-64free_h33aeeddf
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -373,8 +373,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_ha03b1e73
+          - CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_64_cross_target_platformosx-64free_h7b8367ba
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -386,8 +386,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcp313version3.13
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h8c09b196
+          - CONFIG: linux_64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_64_cross_target_platformosx-64free_h57eb09c8
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -399,8 +399,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h44b20cf6
+          - CONFIG: linux_64_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_64_cross_target_platformosx-64free_hcb23f077
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -412,8 +412,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h543b2834
+          - CONFIG: linux_64_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_64_cross_target_platformosx-64free_h0de48762
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -425,8 +425,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h092df182
+          - CONFIG: linux_64_cross_target_platformosx-64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_64_cross_target_platformosx-64free_h5645a53b
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -438,8 +438,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h4fed8a82
+          - CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_64_cross_target_platformosx-arm64f_h54c8c94c
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -451,8 +451,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h832a3401
+          - CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_64_cross_target_platformosx-arm64f_h54b3e475
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -464,8 +464,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h66fb394d
+          - CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_64_cross_target_platformosx-arm64f_h5b4c0207
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -477,8 +477,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h33be3632
+          - CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_64_cross_target_platformosx-arm64f_h6e367109
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -490,8 +490,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_hfd0807b2
+          - CONFIG: linux_64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_64_cross_target_platformosx-arm64f_h7707338c
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -503,8 +503,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h6adb4732
+          - CONFIG: linux_64_cross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_64_cross_target_platformosx-arm64f_h146fbc32
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -516,8 +516,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_h63b4d4a9
+          - CONFIG: linux_64_cross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_64_cross_target_platformosx-arm64f_h8f621f24
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -529,8 +529,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_64_channel_sourcesconda-forgecross_haf51f6a8
+          - CONFIG: linux_64_cross_target_platformosx-arm64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_64_cross_target_platformosx-arm64f_hc67d37b1
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -542,8 +542,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hf0a53808
+          - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h3a757ac8
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -555,8 +555,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h1dae3797
+          - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_hf13e48b9
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -568,8 +568,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h3207d5aa
+          - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h70506326
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -581,8 +581,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h0bc1c625
+          - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h480e1ccb
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -594,8 +594,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-riscv64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h5088047f
+          - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_hf5ab902f
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -607,8 +607,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-riscv64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hf673bc99
+          - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_hb171608a
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -620,8 +620,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h231558dc
+          - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_hfb867a25
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -633,8 +633,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h378be785
+          - CONFIG: linux_aarch64_cross_target_platformlinux-64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h4a7b6324
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -646,8 +646,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hecaf477e
+          - CONFIG: linux_aarch64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_he3949a5a
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -659,8 +659,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hc4661bee
+          - CONFIG: linux_aarch64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h8b22f68f
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -672,8 +672,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcp313version3.13
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h54e7c2a4
+          - CONFIG: linux_aarch64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h29737bc4
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -685,8 +685,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h22f1f305
+          - CONFIG: linux_aarch64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_heff36280
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -698,8 +698,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h01ae21ec
+          - CONFIG: linux_aarch64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h339964d5
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -711,8 +711,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hd5c52b01
+          - CONFIG: linux_aarch64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_hc009aa84
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -724,8 +724,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h262e525b
+          - CONFIG: linux_aarch64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h6affa121
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -737,8 +737,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h2ea504d5
+          - CONFIG: linux_aarch64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_hc5368b17
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -750,8 +750,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcp313version3.13
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h7c41060a
+          - CONFIG: linux_aarch64_cross_target_platformlinux-riscv64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_hd754e61a
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -763,8 +763,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hcb820c32
+          - CONFIG: linux_aarch64_cross_target_platformlinux-riscv64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h02d1e3dd
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -776,8 +776,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.11
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h799c1277
+          - CONFIG: linux_aarch64_cross_target_platformlinux-riscv64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_hce694ef0
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -789,8 +789,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcpythonversion3.12
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_had887cfb
+          - CONFIG: linux_aarch64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h8a102636
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -802,8 +802,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingyespy_implcp313tversion3.13
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h1da67f88
+          - CONFIG: linux_aarch64_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_haaab792c
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -815,8 +815,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hcfb680dd
+          - CONFIG: linux_aarch64_cross_target_platformlinux-riscv64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h7e537dfe
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -828,8 +828,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingnopy_implcp313version3.13
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h3e257fc0
+          - CONFIG: linux_aarch64_cross_target_platformlinux-riscv64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h6fc46c2c
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -841,8 +841,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hb5d4e0f5
+          - CONFIG: linux_aarch64_cross_target_platformlinux-riscv64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_aarch64_cross_target_platformlinux_h6bfbe883
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -854,8 +854,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.11
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h81805419
+          - CONFIG: linux_aarch64_cross_target_platformosx-64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-6_h6c27f656
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -867,8 +867,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.12
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_he080aeb5
+          - CONFIG: linux_aarch64_cross_target_platformosx-64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-6_hb1f16dc6
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -880,8 +880,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingyespy_implcp313tversion3.13
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hbee88d0d
+          - CONFIG: linux_aarch64_cross_target_platformosx-64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-6_h870bccd2
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -893,8 +893,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hc6a645c8
+          - CONFIG: linux_aarch64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-6_h10f19988
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -906,8 +906,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcp313version3.13
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h31a5c66f
+          - CONFIG: linux_aarch64_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-6_h9fac5c52
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -919,8 +919,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h178a85b6
+          - CONFIG: linux_aarch64_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-6_h12e51586
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -932,8 +932,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hbbedbed7
+          - CONFIG: linux_aarch64_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-6_h4665e046
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -945,8 +945,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hc6072872
+          - CONFIG: linux_aarch64_cross_target_platformosx-64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-6_h45aaa0e9
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -958,8 +958,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h46435f26
+          - CONFIG: linux_aarch64_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-a_h61875bce
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -971,8 +971,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h1c470c29
+          - CONFIG: linux_aarch64_cross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-a_h4ca6d7b3
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -984,8 +984,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hd032b888
+          - CONFIG: linux_aarch64_cross_target_platformosx-arm64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-a_h0b2c5ffe
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -997,8 +997,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hd0805756
+          - CONFIG: linux_aarch64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-a_h2b343832
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1010,8 +1010,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h17313631
+          - CONFIG: linux_aarch64_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-a_h87b34eb6
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1023,8 +1023,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_h45dd29dc
+          - CONFIG: linux_aarch64_cross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-a_hd173fbd7
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1036,8 +1036,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hadce348e
+          - CONFIG: linux_aarch64_cross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-a_ha4d2aec6
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1049,8 +1049,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_aarch64_channel_sourcesconda-forge_hac4e7617
+          - CONFIG: linux_aarch64_cross_target_platformosx-arm64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_aarch64_cross_target_platformosx-a_h64dc3afc
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1062,8 +1062,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_he42bd58d
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_hd8e5d2ae
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1075,8 +1075,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h07e44bac
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h016277ff
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1088,8 +1088,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h52cb574e
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h4aaec28e
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1101,8 +1101,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h816e6d1b
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h7d62f0b5
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1114,8 +1114,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-riscv64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_hfcde0b44
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_hf98a37cb
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1127,8 +1127,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-riscv64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h6fcfaf7e
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_hb17ce735
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1140,8 +1140,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h09a8470a
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h08c9ee78
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1153,8 +1153,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h675d49ec
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h4f6da1bc
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1166,8 +1166,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h2a6d9537
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_he10035e3
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1179,8 +1179,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h4b171c9e
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h53e78b32
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1192,8 +1192,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcp313version3.13
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h6e3dd638
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-aarch64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h48430a4f
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1205,8 +1205,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h2a4c6fb0
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h8535d947
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1218,8 +1218,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.11
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h925f55ac
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h6489940f
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1231,8 +1231,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcpythonversion3.12
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h991b959b
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_hf634ed25
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1244,8 +1244,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingyespy_implcp313tversion3.13
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h7cc873c4
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h46d8b2b5
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1257,8 +1257,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_ha60ec86e
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-aarch64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h2dfbb352
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1270,8 +1270,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcp313version3.13
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h14a699a6
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-riscv64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_hbac327b9
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1283,8 +1283,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h8e448e99
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-riscv64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h188d1a83
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1296,8 +1296,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.11
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_hf7385dc0
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-riscv64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_hccc8ea59
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1309,8 +1309,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcpythonversion3.12
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h5399ab63
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h86c475a8
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1322,8 +1322,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingyespy_implcp313tversion3.13
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h7c040053
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_hf2dfed36
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1335,8 +1335,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h3b6535ff
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-riscv64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h72c03c51
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1348,8 +1348,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingnopy_implcp313version3.13
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h28a46881
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-riscv64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h7ba6dbb6
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1361,8 +1361,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h54479c11
+          - CONFIG: linux_ppc64le_cross_target_platformlinux-riscv64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_h7e7936e8
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1374,8 +1374,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.11
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h87e7a8ba
+          - CONFIG: linux_ppc64le_cross_target_platformosx-64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-6_h996ad18d
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1387,8 +1387,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingnopy_implcpythonversion3.12
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h98c895d0
+          - CONFIG: linux_ppc64le_cross_target_platformosx-64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-6_h938b5126
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1400,8 +1400,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingyespy_implcp313tversion3.13
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h7b39707c
+          - CONFIG: linux_ppc64le_cross_target_platformosx-64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-6_hd952a9da
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1413,8 +1413,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformlinux-riscv64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_hb57fac40
+          - CONFIG: linux_ppc64le_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-6_hf89e43e4
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1426,8 +1426,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcp313version3.13
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h48c44db9
+          - CONFIG: linux_ppc64le_cross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-6_h337cffdc
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1439,8 +1439,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h2c7bfa47
+          - CONFIG: linux_ppc64le_cross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-6_h955d6135
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1452,8 +1452,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.11
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_hc81e83f0
+          - CONFIG: linux_ppc64le_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-6_hdf65cdac
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1465,8 +1465,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcpythonversion3.12
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_hc81240ca
+          - CONFIG: linux_ppc64le_cross_target_platformosx-64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-6_h8643f5b3
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1478,8 +1478,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingyespy_implcp313tversion3.13
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h2c0804d0
+          - CONFIG: linux_ppc64le_cross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-a_hbff16210
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1491,8 +1491,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h94663613
+          - CONFIG: linux_ppc64le_cross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-a_h6f57eada
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1504,8 +1504,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcp313version3.13
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h96cd4d5f
+          - CONFIG: linux_ppc64le_cross_target_platformosx-arm64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-a_haea9aa5d
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1517,8 +1517,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h0796c362
+          - CONFIG: linux_ppc64le_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-a_hd9003ee1
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1530,8 +1530,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.11
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_hc8ca6385
+          - CONFIG: linux_ppc64le_cross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-a_h75b007c2
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1543,8 +1543,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcpythonversion3.12
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_hafcd0f33
+          - CONFIG: linux_ppc64le_cross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-a_he7aef8b8
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1556,8 +1556,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingyespy_implcp313tversion3.13
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h9b44112f
+          - CONFIG: linux_ppc64le_cross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-a_hb85f35ed
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1569,8 +1569,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_ppc64le_channel_sourcesconda-forge_h4fabd6f2
+          - CONFIG: linux_ppc64le_cross_target_platformosx-arm64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_ppc64le_cross_target_platformosx-a_h0fc77e39
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1582,8 +1582,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_haa0dba13
+          - CONFIG: linux_riscv64_cross_target_platformlinux-64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_riscv64_cross_target_platformlinux_h730b4026
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1595,8 +1595,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_h8aa966dd
+          - CONFIG: linux_riscv64_cross_target_platformlinux-64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_riscv64_cross_target_platformlinux_ha22a4d86
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1608,8 +1608,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_hfdab355c
+          - CONFIG: linux_riscv64_cross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_riscv64_cross_target_platformlinux_h245abfb7
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1621,8 +1621,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-aarch64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_he4a63878
+          - CONFIG: linux_riscv64_cross_target_platformlinux-64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_riscv64_cross_target_platformlinux_h60ab8e3b
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1634,8 +1634,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_hbc8a237a
+          - CONFIG: linux_riscv64_cross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_riscv64_cross_target_platformlinux_h0a2a1da3
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1647,8 +1647,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformlinux-ppc64lefreethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_h61b7f91c
+          - CONFIG: linux_riscv64_cross_target_platformlinux-aarch64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_riscv64_cross_target_platformlinux_h4e8c05d5
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1660,8 +1660,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_hdc96a1c5
+          - CONFIG: linux_riscv64_cross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_riscv64_cross_target_platformlinux_h5ee1cf21
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1673,8 +1673,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_h259c3829
+          - CONFIG: linux_riscv64_cross_target_platformlinux-aarch64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_riscv64_cross_target_platformlinux_h8d20c6f6
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1686,8 +1686,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingnopy_implcp315version3.15
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_ha76a4fa7
+          - CONFIG: linux_riscv64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_riscv64_cross_target_platformlinux_h13fe3569
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1699,8 +1699,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgeconda-forgelabelpython_rccross_target_platformosx-arm64freethreadingyespy_implcp315tversion3.15
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_hae5fb5e6
+          - CONFIG: linux_riscv64_cross_target_platformlinux-ppc64lefreethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_riscv64_cross_target_platformlinux_h2100168d
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1712,8 +1712,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_h66a41776
+          - CONFIG: linux_riscv64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_riscv64_cross_target_platformlinux_h53a8709c
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1725,8 +1725,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgecross_target_platformlinux-64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_hb5c2a0df
+          - CONFIG: linux_riscv64_cross_target_platformlinux-ppc64lefreethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_riscv64_cross_target_platformlinux_h8afb96b6
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1738,8 +1738,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_h733d49eb
+          - CONFIG: linux_riscv64_cross_target_platformosx-64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_riscv64_cross_target_platformosx-6_h77fe6376
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1751,8 +1751,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgecross_target_platformlinux-aarch64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_hd6b6a973
+          - CONFIG: linux_riscv64_cross_target_platformosx-64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_riscv64_cross_target_platformosx-6_h8b20684d
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1764,8 +1764,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_h87d48a40
+          - CONFIG: linux_riscv64_cross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_riscv64_cross_target_platformosx-6_hd060f1f9
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1777,8 +1777,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgecross_target_platformlinux-ppc64lefreethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_hfbd5c804
+          - CONFIG: linux_riscv64_cross_target_platformosx-64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_riscv64_cross_target_platformosx-6_h4f961903
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1790,8 +1790,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_hb48cc244
+          - CONFIG: linux_riscv64_cross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_riscv64_cross_target_platformosx-a_h6eec2232
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1803,8 +1803,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgecross_target_platformosx-64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_h0466b9f9
+          - CONFIG: linux_riscv64_cross_target_platformosx-arm64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_riscv64_cross_target_platformosx-a_hf3ec1540
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1816,8 +1816,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingnopy_implcp314version3.14
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_h85837270
+          - CONFIG: linux_riscv64_cross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_riscv64_cross_target_platformosx-a_h6105828e
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1829,8 +1829,8 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_channel_sourcesconda-forgecross_target_platformosx-arm64freethreadingyespy_implcp314tversion3.14
-            CONFIG_SHORT: linux_riscv64_channel_sourcesconda-forge_h4084b4f9
+          - CONFIG: linux_riscv64_cross_target_platformosx-arm64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_riscv64_cross_target_platformosx-a_h50113312
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: True
             UPLOAD_PACKAGES: True
@@ -1842,6 +1842,58 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
+          - CONFIG: win_64_cross_target_platformwin-arm64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: win_64_cross_target_platformwin-arm64fre_hfde8dee4
+            STORE_BUILD_ARTIFACTS: True
+            UPLOAD_PACKAGES: True
+            build_platform: win-64
+            build_workspace_dir: D:\\bld\\
+            docker_run_args: 
+            free_disk_space: skip
+            os: windows
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['windows-2022']
+            tools_install_dir: D:\Miniforge
+          - CONFIG: win_64_cross_target_platformwin-arm64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: win_64_cross_target_platformwin-arm64fre_h16fa58ed
+            STORE_BUILD_ARTIFACTS: True
+            UPLOAD_PACKAGES: True
+            build_platform: win-64
+            build_workspace_dir: D:\\bld\\
+            docker_run_args: 
+            free_disk_space: skip
+            os: windows
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['windows-2022']
+            tools_install_dir: D:\Miniforge
+          - CONFIG: win_64_cross_target_platformwin-arm64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: win_64_cross_target_platformwin-arm64fre_h16440dd9
+            STORE_BUILD_ARTIFACTS: True
+            UPLOAD_PACKAGES: True
+            build_platform: win-64
+            build_workspace_dir: D:\\bld\\
+            docker_run_args: 
+            free_disk_space: skip
+            os: windows
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['windows-2022']
+            tools_install_dir: D:\Miniforge
+          - CONFIG: win_64_cross_target_platformwin-arm64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: win_64_cross_target_platformwin-arm64fre_h5287642f
+            STORE_BUILD_ARTIFACTS: True
+            UPLOAD_PACKAGES: True
+            build_platform: win-64
+            build_workspace_dir: D:\\bld\\
+            docker_run_args: 
+            free_disk_space: skip
+            os: windows
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['windows-2022']
+            tools_install_dir: D:\Miniforge
     steps:
 
     - name: Checkout code
@@ -1852,6 +1904,8 @@ jobs:
       run: |
         if [[ "$(uname -m)" == "x86_64" ]]; then
           docker run --rm --privileged multiarch/qemu-user-static:register --reset --credential yes
+        elif [[ "$(uname -m)" == "aarch64" ]]; then
+          docker run --rm --privileged --entrypoint /opt/docker/bin/register-binfmt ${{ matrix.DOCKER_IMAGE }} aarch64
         fi
 
     - name: Build on Linux
@@ -1973,6 +2027,7 @@ jobs:
         CONFIG: ${{ matrix.CONFIG }}
         CONFIG_SHORT: ${{ matrix.CONFIG_SHORT }}
         JOB_STATUS: ${{ steps.determine-status.outputs.status }}
+        MINIFORGE_HOME: ${{ matrix.tools_install_dir }}
         OS: ${{ matrix.os }}
       run: |
         export ARTIFACT_STAGING_DIR="$GITHUB_WORKSPACE"
@@ -1985,8 +2040,9 @@ jobs:
         # Use different prefix for successful and failed build artifacts
         # so random failures don't prevent rebuilds from creating artifacts.
         if [ $JOB_STATUS == "failure" ]; then
-          export BLD_ARTIFACT_PREFIX="conda_artifacts"
+          export BLD_ARTIFACT_PREFIX="conda_pkgs_failed"
           export ENV_ARTIFACT_PREFIX="conda_envs"
+          export WRK_ARTIFACT_PREFIX="conda_work"
         else
           export BLD_ARTIFACT_PREFIX="conda_pkgs"
         fi
@@ -1997,20 +2053,32 @@ jobs:
         fi
 
     - name: Store conda build artifacts
-      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-      if: ${{ always() && steps.prepare-artifacts.outcome == 'success' }}
+      uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+      if: ${{ always() && steps.prepare-artifacts.outcome == 'success' && steps.prepare-artifacts.outputs.BLD_ARTIFACT_PATH != '' }}
       with:
         name: ${{ steps.prepare-artifacts.outputs.BLD_ARTIFACT_NAME }}
         path: ${{ steps.prepare-artifacts.outputs.BLD_ARTIFACT_PATH }}
         retention-days: 14
+        archive: false
+      continue-on-error: true
+
+    - name: Store conda work directory artifacts
+      uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+      if: ${{ always() && steps.prepare-artifacts.outcome == 'success' && steps.prepare-artifacts.outputs.WRK_ARTIFACT_PATH != '' }}
+      with:
+        name: ${{ steps.prepare-artifacts.outputs.WRK_ARTIFACT_NAME }}
+        path: ${{ steps.prepare-artifacts.outputs.WRK_ARTIFACT_PATH }}
+        retention-days: 14
+        archive: false
       continue-on-error: true
 
     - name: Store conda build environment artifacts
-      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
       # only relevant if build failed, see above
-      if: ${{ always() && steps.determine-status.outputs.status == 'failure' && steps.prepare-artifacts.outcome == 'success' }}
+      if: ${{ always() && steps.prepare-artifacts.outcome == 'success' && steps.prepare-artifacts.outputs.ENV_ARTIFACT_PATH != '' }}
       with:
         name: ${{ steps.prepare-artifacts.outputs.ENV_ARTIFACT_NAME }}
         path: ${{ steps.prepare-artifacts.outputs.ENV_ARTIFACT_PATH }}
         retention-days: 14
+        archive: false
       continue-on-error: true
