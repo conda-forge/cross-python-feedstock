@@ -1114,6 +1114,58 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
+          - CONFIG: linux_aarch64_cross_target_platformwin-64freethreadingnopy_implcp314version3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformwin-6_hb89df7c8
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
+            STORE_BUILD_ARTIFACTS: True
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-24.04-arm']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_aarch64_cross_target_platformwin-64freethreadingnopy_implcp315version3.15
+            CONFIG_SHORT: linux_aarch64_cross_target_platformwin-6_h85389c6e
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
+            STORE_BUILD_ARTIFACTS: True
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-24.04-arm']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_aarch64_cross_target_platformwin-64freethreadingyespy_implcp314tversion3.14
+            CONFIG_SHORT: linux_aarch64_cross_target_platformwin-6_hca440de0
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
+            STORE_BUILD_ARTIFACTS: True
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-24.04-arm']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_aarch64_cross_target_platformwin-64freethreadingyespy_implcp315tversion3.15
+            CONFIG_SHORT: linux_aarch64_cross_target_platformwin-6_h55588339
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
+            STORE_BUILD_ARTIFACTS: True
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-24.04-arm']
+            tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_cross_target_platformlinux-64freethreadingnopy_implcp313version3.13
             CONFIG_SHORT: linux_ppc64le_cross_target_platformlinux_hd8e5d2ae
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10

@@ -593,6 +593,34 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cross_target_platformosx-64freethreadingyespy_implcp315tversion3.15" alt="variant">
                 </a>
               </td>
+            </tr><tr>
+              <td>osx_arm64_cross_target_platformwin-64freethreadingnopy_implcp314version3.14</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cross_target_platformwin-64freethreadingnopy_implcp314version3.14" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_cross_target_platformwin-64freethreadingnopy_implcp315version3.15</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cross_target_platformwin-64freethreadingnopy_implcp315version3.15" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_cross_target_platformwin-64freethreadingyespy_implcp314tversion3.14</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cross_target_platformwin-64freethreadingyespy_implcp314tversion3.14" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_cross_target_platformwin-64freethreadingyespy_implcp315tversion3.15</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10723&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cross-python-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cross_target_platformwin-64freethreadingyespy_implcp315tversion3.15" alt="variant">
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>

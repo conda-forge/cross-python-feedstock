@@ -888,6 +888,50 @@ jobs:
         tools_install_dir: ~/miniforge3
         vm_image: macOS-15-arm64
         CONFIG_SHORT: osx_arm64_cross_target_platformosx-64fre_hd460890e
+      osx_arm64_cross_target_platformwin-64freethreadingnopy_implcp314version3.14:
+        CONFIG: osx_arm64_cross_target_platformwin-64freethreadingnopy_implcp314version3.14
+        UPLOAD_PACKAGES: 'True'
+        build_workspace_dir: ~/miniforge3/conda-bld
+        free_disk_space: skip
+        pagefile_size: 0
+        resize_partitions: false
+        store_build_artifacts: true
+        tools_install_dir: ~/miniforge3
+        vm_image: macOS-15-arm64
+        CONFIG_SHORT: osx_arm64_cross_target_platformwin-64fre_h3fe15b1a
+      osx_arm64_cross_target_platformwin-64freethreadingnopy_implcp315version3.15:
+        CONFIG: osx_arm64_cross_target_platformwin-64freethreadingnopy_implcp315version3.15
+        UPLOAD_PACKAGES: 'True'
+        build_workspace_dir: ~/miniforge3/conda-bld
+        free_disk_space: skip
+        pagefile_size: 0
+        resize_partitions: false
+        store_build_artifacts: true
+        tools_install_dir: ~/miniforge3
+        vm_image: macOS-15-arm64
+        CONFIG_SHORT: osx_arm64_cross_target_platformwin-64fre_h31ab0449
+      osx_arm64_cross_target_platformwin-64freethreadingyespy_implcp314tversion3.14:
+        CONFIG: osx_arm64_cross_target_platformwin-64freethreadingyespy_implcp314tversion3.14
+        UPLOAD_PACKAGES: 'True'
+        build_workspace_dir: ~/miniforge3/conda-bld
+        free_disk_space: skip
+        pagefile_size: 0
+        resize_partitions: false
+        store_build_artifacts: true
+        tools_install_dir: ~/miniforge3
+        vm_image: macOS-15-arm64
+        CONFIG_SHORT: osx_arm64_cross_target_platformwin-64fre_h4fa454b2
+      osx_arm64_cross_target_platformwin-64freethreadingyespy_implcp315tversion3.15:
+        CONFIG: osx_arm64_cross_target_platformwin-64freethreadingyespy_implcp315tversion3.15
+        UPLOAD_PACKAGES: 'True'
+        build_workspace_dir: ~/miniforge3/conda-bld
+        free_disk_space: skip
+        pagefile_size: 0
+        resize_partitions: false
+        store_build_artifacts: true
+        tools_install_dir: ~/miniforge3
+        vm_image: macOS-15-arm64
+        CONFIG_SHORT: osx_arm64_cross_target_platformwin-64fre_h2ef3aa84
     maxParallel: 50
   timeoutInMinutes: 360
   variables: {}
