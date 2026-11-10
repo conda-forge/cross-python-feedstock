@@ -1,0 +1,27 @@
+@echo off
+if not "%CONDA_BUILD%" == "1" exit /b 0
+if "%CONDA_BUILD_STATE%" == "TEST" exit /b 0
+
+if exist "%BUILD_PREFIX%\etc\conda\cross-python\host-python.exe" (
+  del /f "%PREFIX%\python.exe"
+  move /y "%BUILD_PREFIX%\etc\conda\cross-python\host-python.exe" "%PREFIX%\python.exe" >nul
+)
+
+set "PYTHON=%_CONDA_BACKUP_CROSS_PYTHON_PYTHON%"
+set "PATH=%_CONDA_BACKUP_CROSS_PYTHON_PATH%"
+set "PYTHONPATH=%_CONDA_BACKUP_CROSS_PYTHON_PYTHONPATH%"
+set "_CONDA_BACKUP_CROSS_PYTHON_PYTHON="
+set "_CONDA_BACKUP_CROSS_PYTHON_PATH="
+set "_CONDA_BACKUP_CROSS_PYTHON_PYTHONPATH="
+rem the vs activation may have set this before us
+set "VSCMD_ARG_TGT_ARCH=%_CONDA_BACKUP_CROSS_PYTHON_VSCMD_ARG_TGT_ARCH%"
+set "_CONDA_BACKUP_CROSS_PYTHON_VSCMD_ARG_TGT_ARCH="
+
+set "CROSS_PYTHON_PLATFORM="
+set "CROSS_PYTHON_EXT_SUFFIX="
+set "SETUPTOOLS_EXT_SUFFIX="
+set "DIST_EXTRA_CONFIG="
+set "PIP_PREFIX="
+set "PYO3_CROSS_LIB_DIR="
+set "PYO3_CROSS_PYTHON_VERSION="
+set "PYO3_CROSS_PYTHON_IMPLEMENTATION="

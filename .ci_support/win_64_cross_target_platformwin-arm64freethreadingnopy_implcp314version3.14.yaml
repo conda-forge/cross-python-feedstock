@@ -1,0 +1,23 @@
+c_compiler:
+- vs2022
+c_stdlib:
+- vs
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+cross_target_platform:
+- win-arm64
+freethreading:
+- 'no'
+py_impl:
+- cp314
+target_platform:
+- win-64
+version:
+- '3.14'
+zip_keys:
+- - version
+  - py_impl
+  - channel_sources
+  - freethreading

@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  build_number: 56
+  build_number: 58
 
 package:
   name: cross-python_${{ cross_target_platform|default("linux-64") }}
@@ -10,7 +10,17 @@ package:
 build:
   number: ${{ build_number }}
   string: ${{ build_number }}_${{ py_impl }}
-  skip: win or (cross_target_platform == target_platform)
+  # also on Windows, where bash comes from m2-bash in the build env
+  script: build.sh
+  skip:
+    - cross_target_platform == target_platform
+    # win-arm64 is the only Windows cross target built from win-64
+    - win and cross_target_platform != "win-arm64"
+    - unix and cross_target_platform == "win-arm64"
+    # win-64 is a cross target only from linux-64, linux-aarch64 and osx-arm64 (clang_win-64 toolchain)
+    - cross_target_platform == "win-64" and target_platform not in ("linux-64", "linux-aarch64", "osx-arm64")
+    # conda-forge ships win-arm64 and win-64 cross python only for 3.14 and later
+    - cross_target_platform in ("win-arm64", "win-64") and version not in ("3.14", "3.15")
   variant:
     # freethreading is only referenced under `tests` for non-osx targets, so
     # rattler-build prunes it from the build env for osx cross targets and
@@ -23,25 +33,96 @@ requirements:
   build:
     - ${{ compiler('c') }}
     - ${{ stdlib('c') }}
+    - if: win
+      then:
+        - m2-bash
+        - m2-coreutils
   host:
   run:
     - python ${{ version }}.* *_${{ py_impl }}
-    - crossenv >=1.1.4
-    - rsync
-    - sed
+    - if: unix and cross_target_platform != "win-64"
+      then:
+        - crossenv >=1.1.4
+        - rsync
+        - sed
     - if: cross_target_platform in ("osx-64", "osx-arm64")
       then: clangxx_impl_${{ cross_target_platform }}
-      else: gxx_impl_${{ cross_target_platform }}
+      else:
+        - if: cross_target_platform == "win-arm64"
+          then: vs_${{ cross_target_platform }}
+          else:
+            - if: cross_target_platform == "win-64"
+              then: clang_${{ cross_target_platform }}
+              else: gxx_impl_${{ cross_target_platform }}
   run_exports:
     strong:
       - python ${{ version }}.* *_${{ py_impl }}
 
 tests:
-  - if: cross_target_platform not in ("osx-64", "osx-arm64")
+  - if: unix and cross_target_platform not in ("osx-64", "osx-arm64", "win-64")
     then:
       - script:
         - test -f $PREFIX/etc/conda/activate.d/activate_z-cross-python_${{ cross_target_platform }}.sh
         - echo ${{ freethreading }}
+  - if: unix and cross_target_platform == "win-64"
+    then:
+      - files:
+          recipe:
+            - smoketest/*
+        requirements:
+          run:
+            - pip
+            - setuptools
+            - packaging
+        script:
+          env:
+            # rattler-build does not pass CI to the test env; the winsdk and
+            # msvc-headers-libs activations need it to pick their CI download dir
+            CI: ${{ env.get("CI", default="") }}
+          content:
+            - test -f $PREFIX/etc/conda/activate.d/activate_z-cross-python_${{ cross_target_platform }}.sh
+            - test -f $PREFIX/etc/conda/deactivate.d/deactivate_z-cross-python_${{ cross_target_platform }}.sh
+            - test -f $PREFIX/etc/conda/cross-python/sitecustomize.py
+            - echo ${{ freethreading }}
+            # run the activation as a downstream build would, then check the
+            # environment it sets and what the build python reports
+            - export CONDA_BUILD=1
+            - export CONDA_BUILD_STATE=
+            - export BUILD_PREFIX=$PREFIX
+            - source $PREFIX/etc/conda/activate.d/activate_z-cross-python_${{ cross_target_platform }}.sh
+            - python smoketest/check_activation_unix_win.py activated
+            - source $PREFIX/etc/conda/deactivate.d/deactivate_z-cross-python_${{ cross_target_platform }}.sh
+            - python smoketest/check_activation_unix_win.py deactivated
+  - if: win
+    then:
+      - files:
+          recipe:
+            - smoketest/*
+        requirements:
+          run:
+            - pip
+            - setuptools
+            - packaging
+        script:
+          - if not exist %PREFIX%\etc\conda\activate.d\activate_z-cross-python_${{ cross_target_platform }}.bat exit 1
+          - if not exist %PREFIX%\etc\conda\deactivate.d\deactivate_z-cross-python_${{ cross_target_platform }}.bat exit 1
+          - if not exist %PREFIX%\etc\conda\cross-python\sitecustomize.py exit 1
+          - echo ${{ freethreading }}
+          # T2/T3: run the activation as a downstream build would, then check
+          # the environment it sets and what the build python reports
+          - set CONDA_BUILD=1
+          - set CONDA_BUILD_STATE=
+          - set "BUILD_PREFIX=%PREFIX%"
+          - set "_SMOKE_PATH=%PATH%"
+          - set "_SMOKE_VSCMD=%VSCMD_ARG_TGT_ARCH%"
+          - call %PREFIX%\etc\conda\activate.d\activate_z-cross-python_${{ cross_target_platform }}.bat
+          - python smoketest\check_activation.py ${{ cross_target_platform }}
+          # T4: the vs_win-arm64 compiler emits ARM64 objects
+          - python smoketest\check_compiler.py smoketest\smoke.c
+          - call %PREFIX%\etc\conda\deactivate.d\deactivate_z-cross-python_${{ cross_target_platform }}.bat
+          - python smoketest\check_deactivation.py
+          # T5: a literal %PREFIX%\python.exe must reach the build python
+          - python smoketest\smoke_shim.py %PREFIX%\etc\conda\activate.d\activate_z-cross-python_${{ cross_target_platform }}.bat %PREFIX%\etc\conda\deactivate.d\deactivate_z-cross-python_${{ cross_target_platform }}.bat --strict
 
 about:
   license: LicenseRef-OTHER

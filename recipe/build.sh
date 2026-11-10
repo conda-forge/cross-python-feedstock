@@ -7,6 +7,56 @@ set -xeuo pipefail
 mkdir -p ${PREFIX}/etc/conda/activate.d
 mkdir -p ${PREFIX}/etc/conda/deactivate.d
 
+# Windows: there is no _sysconfigdata and crossenv only supports unix build
+# machines, so instead of a crossenv venv the activation points the build
+# python at the target through environment variables and sitecustomize.py.
+if [[ "${cross_target_platform}" == win-* ]]; then
+  if [[ "${freethreading}" == "yes" ]]; then
+    PY_THREAD="t"
+  else
+    PY_THREAD=""
+  fi
+  # the python platform name of win-64 is win-amd64
+  PLAT_NAME="${cross_target_platform/win-64/win-amd64}"
+  PLAT_TAG="${PLAT_NAME//-/_}"
+  PY_VER_NODOT="${version//./}"
+
+  render() {
+    # render SRC DST: fill in the @...@ placeholders of a template
+    local content
+    content="$(cat "$1")"
+    content="${content//@CROSS_TARGET_PLATFORM@/${cross_target_platform}}"
+    content="${content//@PLAT_NAME@/${PLAT_NAME}}"
+    content="${content//@PLAT_TAG@/${PLAT_TAG}}"
+    content="${content//@PY_VER_NODOT@/${PY_VER_NODOT}}"
+    content="${content//@PY_VER@/${version}}"
+    content="${content//@PY_THREAD@/${PY_THREAD}}"
+    printf '%s\n' "${content}" > "$2"
+  }
+
+  mkdir -p "${PREFIX}/etc/conda/cross-python"
+  case "$(uname -s)" in
+    MSYS*|MINGW*|CYGWIN*) ;;
+    *)
+      # unix build machine: bash activation, clang_win-64 needs no launcher
+      render "${RECIPE_DIR}/activate-cross-python-win.sh" "${PREFIX}/etc/conda/activate.d/activate_z-${PKG_NAME}.sh"
+      cat "${PREFIX}/etc/conda/activate.d/activate_z-${PKG_NAME}.sh"
+      cp "${RECIPE_DIR}/deactivate-cross-python-win.sh" "${PREFIX}/etc/conda/deactivate.d/deactivate_z-${PKG_NAME}.sh"
+      cp "${RECIPE_DIR}/sitecustomize.py" "${PREFIX}/etc/conda/cross-python/sitecustomize.py"
+      exit 0
+      ;;
+  esac
+  render "${RECIPE_DIR}/activate-cross-python.bat" "${PREFIX}/etc/conda/activate.d/activate_z-${PKG_NAME}.bat"
+  cat "${PREFIX}/etc/conda/activate.d/activate_z-${PKG_NAME}.bat"
+  cp "${RECIPE_DIR}/deactivate-cross-python.bat" "${PREFIX}/etc/conda/deactivate.d/deactivate_z-${PKG_NAME}.bat"
+  cp "${RECIPE_DIR}/sitecustomize.py" "${PREFIX}/etc/conda/cross-python/sitecustomize.py"
+  # x64 launcher the activation puts in place of the target python.exe (see
+  # shim/shim_win.c); MSYS must not rewrite the cl arguments as paths
+  MSYS2_ARG_CONV_EXCL='*' cl.exe -nologo -O2 -W3 "${RECIPE_DIR}\\shim\\shim_win.c" \
+    -Fe"${PREFIX}\\etc\\conda\\cross-python\\python-shim.exe"
+  exit 0
+fi
+
 get_cpu_arch() {
   local CPU_ARCH
   if [[ "$1" == *"-64" ]]; then
