@@ -126,5 +126,12 @@ if [[ "${CONDA_BUILD:-0}" == "1" && "${CONDA_BUILD_STATE}" != "TEST" ]]; then
   fi
   unset sysconfigdata_fn
   export PYTHONPATH=$BUILD_PREFIX/venv/lib/python@PY_VER@@PY_THREAD@/site-packages
+  # CMake >= 4.1 (policy CMP0190) refuses to look for the Python interpreter together with
+  # Development components when cross-compiling unless an emulator is defined. The python
+  # in $PREFIX is a shim that runs natively, so define the emulator as empty.
+  if [[ "${CMAKE_ARGS:-}" != *"Python3_CROSSCOMPILING_EMULATOR"* ]]; then
+    export _CONDA_BACKUP_CROSS_PYTHON_CMAKE_ARGS="${CMAKE_ARGS:-}"
+    export CMAKE_ARGS="${CMAKE_ARGS:-} -DPython_CROSSCOMPILING_EMULATOR= -DPython3_CROSSCOMPILING_EMULATOR="
+  fi
   echo "Finished setting up cross-python"
 fi
